@@ -57,11 +57,11 @@ $current_login_ip = $log[0]['log_ip'];
                                         <tbody>
                                             <tr>
                                                 <th>Username</th>
-                                                <td>star</td>
+                                                <td><?php echo $USER['Name'];?></td>
                                             </tr>
                                             <tr>
                                                 <th>Email address</th>
-                                                <td>apollon71star@gmail.com<a href="/?to=setting" class="btn btn-sm btn-primary float-right">Change</a></td>
+                                                <td><?php echo $USER['Email'];?><a href="/?to=setting" class="btn btn-sm btn-primary float-right">Change</a></td>
                                             </tr>
                                             <tr>
                                                 <th>Password</th>
