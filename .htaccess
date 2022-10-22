@@ -1,0 +1,80 @@
+#Options -Indexes
+IndexIgnore *.php *.html *.js *.css *.jpg *.png *.mp4 *.ttf
+
+RewriteEngine on
+RewriteCond %{QUERY_STRING} ^([0-9]+)$ [NC,OR]
+RewriteCond %{QUERY_STRING} ^(.*)\?([0-9]+)(.*)$ [NC,OR]
+RewriteCond %{QUERY_STRING} ^([0-9]+\.[0-9])(.*)$ [NC,OR]
+RewriteCond %{QUERY_STRING} ^(.*)\?([0-9]+\.[0-9])(.*)$ [NC]
+RewriteRule ^(.*)$ %{HTTP_REFERER} [L]
+
+RewriteCond %{HTTPS} on
+
+RewriteCond %{HTTP_HOST} ^(www.)?globalnos.com$
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^(|/)$ ./
+RewriteRule ^root(|/)$ ./root.php
+RewriteRule ^login(|/)$ ./login.php
+RewriteRule ^register(|/)$ ./register.php
+RewriteRule ^maintenance(|/)$ ./maintenance.php
+
+RewriteRule ^home(|/)$ ./index.php?to=home
+RewriteRule ^cart(|/)$ ./index.php?to=cart
+RewriteRule ^settings(|/)$ ./index.php?to=settings
+RewriteRule ^log(|/)$ ./index.php?to=log
+RewriteRule ^payreq(|/)$ ./index.php?to=payreq
+RewriteRule ^store(|/)$ ./index.php?to=store
+RewriteRule ^add-cart(|/)$ ./index.php?to=add-cart
+RewriteRule ^coins(|/)$ ./index.php?to=coins
+RewriteRule ^news/([^/]*)$ ./index.php?to=news&page=$1&index=$2 [L]
+RewriteRule ^guides/([^/]*)$ ./index.php?to=guides&index=$1 [L]
+RewriteRule ^support(|/)$ ./index.php?to=support
+RewriteRule ^admin(|/)$ ./index.php?to=admin
+RewriteRule ^family(|/)$ ./index.php?to=family
+RewriteRule ^roulette(|/)$ ./index.php?to=roulette
+RewriteRule ^schedule(|/)$ ./index.php?to=schedule
+RewriteRule ^slot-machine(|/)$ ./index.php?to=slot
+RewriteRule ^consult(|/)$ ./php/query.php
+RewriteRule ^logout(|/)$ ./php/query.php?from=Logout
+RewriteRule ^index(|/)$ ./index.php
+RewriteRule ^news(|/)$ ./index.php?to=news&&page=-1
+RewriteRule ^guides(|/)$ ./index.php?to=guides
+RewriteRule ^downloads(|/)$ ./index.php?to=downloads
+RewriteRule ^ranking(|/)$ ./index.php?to=ranking
+RewriteRule ^rules(|/)$ ./index.php?to=rules
+RewriteRule ^guides(|/)$ ./index.php?to=guides
+RewriteRule ^buy_credit(|/)$ ./index.php?to=donate
+RewriteRule ^setting(|/)$ ./index.php?to=setting
+ErrorDocument 404 http://localhost/
+
+#Evitar escaneos, manipulacion e inyeccion SQL (SQL, XSS, etc)
+    
+    RewriteCond %{HTTP_USER_AGENT} ^$ [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^(-|\.|â€™) [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^(java|curl|wget)(.*) [NC,OR]
+    RewriteCond %{HTTP_REFERER} ^(.*)(%00|%08|%09|%0A|%0B|%0C|%0D|%0E|%0F|%2C|<|>|â€™|%3C|%3E|%26%23|%27|%60)(.*) [NC,OR]
+    RewriteCond %{QUERY_STRING} ^(.*)(%00|%08|%09|%0A|%0B|%0C|%0D|%0E|%0F|%2C|%3C|%3E|%27|%26%23|%60)(.*) [NC,OR]
+    RewriteCond %{HTTP_COOKIE} ^(.*)(<|>|â€™|%3C|%3E|%27)(.*) [NC]
+    #RewriteRule ^(.*)$ index.php [NC]
+     
+    #Evita manipulacion en la URL
+     
+    RewriteCond %{THE_REQUEST} ^.*(\\r|\\n|%0A|%0D).* [NC,OR]
+    RewriteCond %{HTTP_REFERER} ^(.*)(<|>|â€™|%0A|%0D|%27|%3C|%3E|%00).* [NC,OR]
+    RewriteCond %{HTTP_COOKIE} ^.*(<|>|â€™|%0A|%0D|%27|%3C|%3E|%00).* [NC,OR]
+    RewriteCond %{REQUEST_URI} ^/(,|;|:|<|>|â€>|â€<|/|\\\.\.\\).{0,9999}.* [NC,OR]
+    RewriteCond %{HTTP_USER_AGENT} ^$ [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^(java|curl|wget).* [NC,OR]
+    RewriteCond %{HTTP_USER_AGENT} ^.*(winhttp|HTTrack|clshttp|archiver|loader|email|harvest|extract|grab|miner).* [NC,OR]
+    RewriteCond %{HTTP_USER_AGENT} ^.*(libwww|curl|wget|python|nikto|scan).* [NC,OR]
+    RewriteCond %{HTTP_USER_AGENT} ^.*(<|>|â€™|%0A|%0D|%27|%3C|%3E|%00).* [NC,OR]
+    RewriteCond %{QUERY_STRING} ^.*(;|<|>|â€™|â€|\)|%0A|%0D|%22|%27|%3C|%3E|%00).*(/\*|union|select|insert|cast|set|declare|drop|update|md5|benchmark).* [NC,OR]
+    RewriteCond %{QUERY_STRING} ^.*(localhost|loopback|127\.0\.0\.1).* [NC,OR]
+    RewriteCond %{QUERY_STRING} ^.*(<|>|â€™|%0A|%0D|%27|%3C|%3E|%00).* [NC]
+    #RewriteRule ^(.*)$ index.php [NC]
+     
+    #Complica los ataques Remote File include y Local File include
+    RewriteCond %{REQUEST_METHOD} GET
+
