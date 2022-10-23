@@ -16,11 +16,15 @@
             $i = 0;
             foreach ($top_player as $player) { 
                 $i++;    
+                $temp = $con->query('SET search_path TO accounts;')->fetchAll();
+                $SQL_AUTH_CHECK = $con->select("accounts","Authority",["Id" => $player[CHAR_USR_ID]]);//('SELECT "Authority" FROM ' . USER . ' WHERE "Id" = ?');
+                $AUTH = $SQL_AUTH_CHECK[0];
+                if ($AUTH >= 0 && $AUTH <= 2) { $RANK++;
             ?>
             <li class="top-title">
                 <span class="top-number"><?php echo $i; ?></span> <span class="top-name"><a href=""><?php echo $player['Name']; ?></a></span> <span class="top-lvl"><?php echo $player['Level']; ?></span>
             </li>
-            <?php } ?>
+            <?php } } ?>
         </ul>
     </div>
     <div class="buttons-block-1">
