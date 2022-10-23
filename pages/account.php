@@ -199,18 +199,6 @@ $current_login_ip = $log[0]['log_ip'];
 
                                                     <div class="table-responsive-sm">
                                                         <table class="table dmn-rankings-table table-striped">
-                                                            <thead>
-                                                                <tr>
-                                                                    <th class="text-center">#</th>
-                                                                    <th>Name</th>
-                                                                    <th>Image</th>
-                                                                    <th class="text-center">Price</th>
-                                                                    <th class="text-center"></th>
-                                                                    <th class="text-center">Qty</th>
-                                                                    <th>Total price</th>
-                                                                    <th>Action</th>
-                                                                </tr>
-                                                            </thead>
                                                             <tbody class="shopitem">
                                                                 <?php
                                                                 $sql_related_item = $con->select("shopitems", "*", ["visibility" => 1, "ORDER" => "productid"]);
@@ -219,7 +207,6 @@ $current_login_ip = $log[0]['log_ip'];
                                                                     $i++;
                                                                 ?>
                                                                     <tr class="category-<?php echo $item['categoriesid']; ?>" >
-                                                                        <td class="text-center"><?php echo $i; ?></td>
                                                                         <td><?php echo $item['name']; ?></td>
                                                                         <td>
                                                                             <img src="./assets/img/items/<?php echo $item['vnum']; ?>.png" height="40px" width="40px"></td>

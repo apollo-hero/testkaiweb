@@ -43,7 +43,7 @@
                                             <thead>
                                                 <tr>
                                                     <th>RANK</th>
-                                                    <th></th>
+                                                    <th>Class</th>
                                                     <th class="text-center">NAME</th>
                                                     <th class="text-center">LEVEL</th>
                                                 </tr>

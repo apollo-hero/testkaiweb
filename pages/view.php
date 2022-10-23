@@ -9,7 +9,7 @@
     </div>
     <div class="flex flex-col w-full justify-center p-2 gap-8">
         <div class="flex w-fulll">
-            <img src='https://dynzen.to/media/news/news_big_3.png' class="w-full h-full">
+            <img src='--------' class="w-full h-full">
             </img>
         </div>
         <p class="text-decor-top relative">
@@ -94,7 +94,7 @@
             ?>
         </div>
         <div class="w-full h-full">
-            <img src='https://dynzen.to/media/news/3_1.png' class="w-full h-full" />
+            <img src='--------' class="w-full h-full" />
 
         </div>
         <div class="flex flex-col gap-4 ml-4">
