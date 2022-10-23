@@ -21,7 +21,6 @@
 
         <div class="flex flex-column w-100 justify-center p-2  max-w-3xl">
 
-            <img src="/assets/divider.svg" class="mb-4" />
             <p class=" relative text-stone-500 mb-4 sm:ml-5">
             <p class=" relative text-stone-500 mb-4 sm:ml-5">
             <h1 class="text text-2xl font-bold mb-4">General Changes</h1>
@@ -149,7 +148,6 @@
             <div class="flex w-100 justify-content-center">
                 <img src='../../assets/img/media2/28.png' width="80%" />
             </div>
-            <img src="/assets/divider.svg" class="mb-4" />
             <h1 class="text text-2xl font-bold mb-4 sm:ml-5">Upgrade System</h1>
             <p class="text-stone-500 mb-4">
                 Upgrade system will be working the same as Trophy System with the difference that it will be only for Weapon Skins. You can get this item from shop or by defeating Raid Boss from Act4.
