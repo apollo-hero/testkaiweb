@@ -45,7 +45,7 @@ RewriteRule ^downloads(|/)$ ./index.php?to=downloads
 RewriteRule ^ranking(|/)$ ./index.php?to=ranking
 RewriteRule ^rules(|/)$ ./index.php?to=rules
 RewriteRule ^guides(|/)$ ./index.php?to=guides
-RewriteRule ^buy_credit(|/)$ ./index.php
+RewriteRule ^buy_credit(|/)$ ./index.php?to=donate
 RewriteRule ^setting(|/)$ ./index.php?to=setting
 RewriteRule ^account(|/)$ ./index.php?to=account
 ErrorDocument 404 http://localhost/
