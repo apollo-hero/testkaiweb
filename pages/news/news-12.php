@@ -146,16 +146,16 @@
                 We know well that players are realy competitive when we talk about PvE, so we have improved even more the way to know who is the top damage of raid.
             </p>
             <br />
-            <div class="flex w-100">
-                <img src='../../assets/img/media2/28.png' width="100%" />
+            <div class="flex w-100 justify-content-center">
+                <img src='../../assets/img/media2/28.png' width="80%" />
             </div>
             <img src="/assets/divider.svg" class="mb-4" />
             <h1 class="text text-2xl font-bold mb-4 sm:ml-5">Upgrade System</h1>
             <p class="text-stone-500 mb-4">
                 Upgrade system will be working the same as Trophy System with the difference that it will be only for Weapon Skins. You can get this item from shop or by defeating Raid Boss from Act4.
             </p>
-            <div class="flex w-100 mb-5">
-                <img src='../../assets/img/media2/27.png' class="w-100 h-full" />
+            <div class="flex w-100 mb-5 justify-content-center">
+                <img src='../../assets/img/media2/27.png' width="80%" />
             </div>
             <div class="flex flex-column gap-1 ml-12 sm:ml-16">
             </div>
@@ -446,8 +446,8 @@
                     }
                     ?>
                 </div>
-                <div class="flex w-100">
-                    <img src='../../assets/img/media2/26.png' width="100%" />
+                <div class="flex w-100 justify-content-center">
+                    <img src='../../assets/img/media2/26.png' width="80%" />
                 </div>
                 <br />
                 <div class="flex flex-column mb-4 sm:ml-5 ">
@@ -470,8 +470,8 @@
                     }
                     ?>
                 </div>
-                <div class="flex w-100">
-                    <img src='../../assets/img/media2/14.png' width="100%" />
+                <div class="flex w-100 justify-content-center">
+                    <img src='../../assets/img/media2/14.png' width="80%" />
                     <?php
                     ?>
                 </div>
@@ -494,8 +494,8 @@
                     }
                     ?>
                 </div>
-                <div class="flex w-100">
-                    <img src='../../assets/img/media2/25.png' width="100%" />
+                <div class="flex w-100 justify-content-center">
+                    <img src='../../assets/img/media2/25.png' width="80%" />
                     <?php
                     ?>
                 </div>

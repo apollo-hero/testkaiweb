@@ -127,7 +127,8 @@
                             <?php
 
                             if ($TO == 'home')
-                                include FOLD . "/account.php";
+                                include FOLD . "/init.php";
+                            elseif ($TO == 'account') include FOLD . "/account.php";
                             elseif ($TO == 'settings') include FOLD . "/settings.php";
                             elseif ($TO == 'setting') include FOLD . "/setting.php";
                             elseif ($TO == 'donate') include FOLD . "/buy_coin.php";

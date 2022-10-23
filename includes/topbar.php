@@ -38,7 +38,7 @@
                             <li><a href="/admin">Admin</a></li>
                         <?php } ?>
                         <li><a href="javascript:;">Coins: <?php echo $USER['Coins']; ?></a></li>
-                        <li><a href="/">Account Panel</a></li>
+                        <li><a href="/account">Account Panel</a></li>
                         <li><a href="/buy_credit">Buy Credits</a></li>
                         <li><a href="/setting">Settings</a></li>
                         <li><a href="/logout">Logout</a></li>

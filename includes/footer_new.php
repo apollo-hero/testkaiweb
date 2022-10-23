@@ -21,9 +21,9 @@
 			<div class="footer-logo"><a href="/"><img src="https://godsmu.org/assets/godsmu/images/logo-footer.png?v=1.2" alt="" data-xblocker="passed" style="visibility: visible;"></a></div>
 			<div class="footer-block-r">
                 <div class="flex gap-2 mb-5">
-                    <a class="text-info" href="https://forum.ragezone.com/f888/nostale-kaisen-private-server-1207260/#post9138118" target="_blank"><span class="iconify" data-icon=""></span>Ragezone</a>/
-                    <a class="text-info" href="https://www.elitepvpers.com/forum/nostale-pserver-advertising/5055213-international-kaisen-official-thread.html" target="_blank"><span class="iconify" data-icon=""></span>Elitepvpers</a>/
-                    <a class="text-info" href="https://discord.gg/8hEW5kMhWK" target="_blank"><span class="iconify" data-icon=""></span>Discord</a>
+                    <a class="footer-text" href="https://forum.ragezone.com/f888/nostale-kaisen-private-server-1207260/#post9138118" target="_blank"><span class="iconify" data-icon=""></span>Ragezone</a>/
+                    <a class="footer-text" href="https://www.elitepvpers.com/forum/nostale-pserver-advertising/5055213-international-kaisen-official-thread.html" target="_blank"><span class="iconify" data-icon=""></span>Elitepvpers</a>/
+                    <a class="footer-text" href="https://discord.gg/8hEW5kMhWK" target="_blank"><span class="iconify" data-icon=""></span>Discord</a>
                 </div>
 			</div>			
 		</div>

@@ -2085,8 +2085,12 @@ box-shadow: 0px 10px 20px 0px rgb(74 104 169 / 0.5);
   --tw-border-opacity: 1;
   border-color: hsl(var(--n) / var(--tw-border-opacity));
   --tw-bg-opacity: 1;
-  background-color: #0ca6e9;
+  background-color: #130407;
   --tw-text-opacity: 1;
   color: hsl(var(--nc) / var(--tw-text-opacity));
   border-radius: var(--rounded-badge, 1.9rem);
+}
+
+.footer-text {
+  color: #ff8a56 !important;
 }

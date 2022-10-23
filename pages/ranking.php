@@ -42,7 +42,6 @@
                                         <table class="table dmn-rankings-table table-striped">
                                             <thead>
                                                 <tr>
-                                                    <th class="text-center">#</th>
                                                     <th>RANK</th>
                                                     <th></th>
                                                     <th class="text-center">NAME</th>
@@ -54,24 +53,29 @@
                                                     $temp = $con->query('SET search_path TO characters;')->fetchAll();
                                                     $SQL_RANKING_REP = $con->select("characters","*",["ORDER" =>["Level" => "DESC"]]);//('SELECT * FROM ' . CHAR . ' ORDER BY "Level" DESC');
                                                     $RANK = 0;
-                                                    
+                                                    $i = 0;
                                                     foreach( $SQL_RANKING_REP as $REP ){
-
+                                                        $i++;
                                                         $temp = $con->query('SET search_path TO accounts;')->fetchAll();
                                                         $SQL_AUTH_CHECK = $con->select("accounts","Authority",["Id" => $REP[CHAR_USR_ID]]);//('SELECT "Authority" FROM ' . USER . ' WHERE "Id" = ?');
                                                         $AUTH = $SQL_AUTH_CHECK[0];
                                                         if ($AUTH >= 0 && $AUTH <= 2) { $RANK++; ?>
                                                 <tr>
-                                                    <td class="text-center">1 </td>
                                                     <td><?php echo "#" . $RANK; ?></td>
                                                     <td>
                                                         <?php
-                                                        if ($RANK == 1)
-                                                            echo "<span style='color: #C9B037'><i class='fad fa-trophy-alt'></i></span>";
-                                                        elseif ($RANK == 2)
-                                                            echo "<span style='color: #D7D7D7'><i class='fad fa-trophy-alt'></i></span>";
-                                                        elseif ($RANK == 3)
-                                                            echo "<span style='color: #AD8A56'><i class='fad fa-trophy-alt'></i></span>";
+                                                        if ($REP['Class'] == 0)
+                                                        // echo "<span style='color: #C9B037'><i class='fad fa-trophy-alt'></i></span>";
+                                                        echo "adventure";
+                                                    elseif ($REP['Class'] == 1)
+                                                        // echo "<span style='color: #D7D7D7'><i class='fad fa-trophy-alt'></i></span>";
+                                                        echo "swordsman";
+                                                    elseif ($REP['Class'] == 2)
+                                                        // echo "<span style='color: #AD8A56'><i class='fad fa-trophy-alt'></i></span>";
+                                                        echo "archer";
+                                                    elseif ($REP['Class'] == 3)
+                                                        // echo "<span style='color: #AD8A56'><i class='fad fa-trophy-alt'></i></span>";
+                                                        echo "MAGE";
                                                         ?>
                                                     </td>
                                                     <td class="text-center"><?php echo $REP[CHAR_NICK]; ?></td>
@@ -97,7 +101,6 @@
                                         <table class="table dmn-rankings-table table-striped">
                                             <thead>
                                                 <tr>
-                                                    <th class="text-center">#</th>
                                                     <th>RANK</th>
                                                     <th>Class</th>
                                                     <th class="text-center">NAME</th>
@@ -121,16 +124,21 @@
 
                                                     ?>
                                                 <tr>
-                                                    <td class="text-center">1</td>
                                                     <td><?php echo "#" . $RANK; ?></td>
                                                     <td>
                                                     <?php
-                                                        if ($RANK == 1)
-                                                            echo "<span style='color: #C9B037'><i class='fad fa-trophy-alt'></i></span>";
-                                                        elseif ($RANK == 2)
-                                                            echo "<span style='color: #D7D7D7'><i class='fad fa-trophy-alt'></i></span>";
-                                                        elseif ($RANK == 3)
-                                                            echo "<span style='color: #AD8A56'><i class='fad fa-trophy-alt'></i></span>";
+                                                        if ($REP['Class'] == 0)
+                                                        // echo "<span style='color: #C9B037'><i class='fad fa-trophy-alt'></i></span>";
+                                                        echo "adventure";
+                                                    elseif ($REP['Class'] == 1)
+                                                        // echo "<span style='color: #D7D7D7'><i class='fad fa-trophy-alt'></i></span>";
+                                                        echo "swordsman";
+                                                    elseif ($REP['Class'] == 2)
+                                                        // echo "<span style='color: #AD8A56'><i class='fad fa-trophy-alt'></i></span>";
+                                                        echo "archer";
+                                                    elseif ($REP['Class'] == 3)
+                                                        // echo "<span style='color: #AD8A56'><i class='fad fa-trophy-alt'></i></span>";
+                                                        echo "MAGE";
                                                         ?>
                                                     </td>
                                                     <td class="text-center"><?php echo $REP[CHAR_NICK]; ?></td>
@@ -156,9 +164,8 @@
                                         <table class="table dmn-rankings-table table-striped">
                                             <thead>
                                                 <tr>
-                                                    <th class="text-center">#</th>
                                                     <th>RANK</th>
-                                                    <th></th>
+                                                    <th>Class</th>
                                                     <th class="text-center">NAME</th>
                                                     <th class="text-center">REPUTATION</th>
                                                 </tr>
@@ -178,16 +185,21 @@
 
                                                 if ($AUTH >= 0 && $AUTH <= 2) { $RANK++; ?>
                                                 <tr>
-                                                    <td class="text-center">1</td>
                                                     <td><?php echo "#" . $RANK; ?></td>
                                                     <td>
                                                         <?php
-                                                            if ($RANK == 1)
-                                                                echo "<span style='color: #C9B037'><i class='fad fa-trophy-alt'></i></span>";
-                                                            elseif ($RANK == 2)
-                                                                echo "<span style='color: #D7D7D7'><i class='fad fa-trophy-alt'></i></span>";
-                                                            elseif ($RANK == 3)
-                                                                echo "<span style='color: #AD8A56'><i class='fad fa-trophy-alt'></i></span>";
+                                                            if ($REP['Class'] == 0)
+                                                                // echo "<span style='color: #C9B037'><i class='fad fa-trophy-alt'></i></span>";
+                                                                echo "adventure";
+                                                            elseif ($REP['Class'] == 1)
+                                                                // echo "<span style='color: #D7D7D7'><i class='fad fa-trophy-alt'></i></span>";
+                                                                echo "swordsman";
+                                                            elseif ($REP['Class'] == 2)
+                                                                // echo "<span style='color: #AD8A56'><i class='fad fa-trophy-alt'></i></span>";
+                                                                echo "archer";
+                                                            elseif ($REP['Class'] == 3)
+                                                                // echo "<span style='color: #AD8A56'><i class='fad fa-trophy-alt'></i></span>";
+                                                                echo "MAGE";
                                                         ?>
                                                     </td>
                                                     <td class="text-center"><?php echo $REP[CHAR_NICK]; ?></td>
