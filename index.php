@@ -45,6 +45,7 @@
     <link href="<?php echo $site['assets']['css']; ?>/toast.css" rel="stylesheet" />
     <link href="<?php echo $site['assets']['css']; ?>/notice.css" rel="stylesheet" />
     <link href="https://godsmu.org/assets/default_assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="<?php echo $site['assets']['css']; ?>/wheel-roulette.css" rel="stylesheet" />
     <script src="<?php echo $site['assets']['javascript']; ?>/jquery-3.6.0.min.js"></script>
     <script src="<?php echo $site['assets']['javascript']; ?>/jquery-ui.min.js"></script>
     <script src="<?php echo $site['assets']['javascript']; ?>/toast.js"></script>
@@ -141,7 +142,7 @@
 
                             elseif ($TO == 'support') include FOLD . "/support.php";
                             elseif ($TO == 'family') include FOLD . "/family.php";
-                            elseif ($TO == 'roulette') include FOLD . "/home.php";
+                            elseif ($TO == 'roulette') include FOLD . "/roulette.php";
                             ?>
                         </div>
                         <div class="drawer-side flex md:w-64" onclick="$('#sidebar-drawer').click()">

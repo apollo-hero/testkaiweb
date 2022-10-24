@@ -50,6 +50,9 @@ $current_login_ip = $log[0]['log_ip'];
                                 <li class="nav-item">
                                     <a class="nav-link" id="character-services-tab" data-toggle="tab" href="#character-services" role="tab" aria-controls="character-services" aria-selected="false">Shop services</a>
                                 </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="wheel-fortune-tab" data-toggle="tab" href="#wheel-fortune" role="tab" aria-controls="wheel-fortune" aria-selected="false">wheel fortune</a>
+                                </li>
                             </ul>
                             <div class="tab-content" id="myTabContent">
                                 <div class="tab-pane fade p-2 active show" id="acc-info" role="tabpanel" aria-labelledby="acc-info-tab">
@@ -169,7 +172,7 @@ $current_login_ip = $log[0]['log_ip'];
                                     <div id="top_list" class="rankings">
                                         <div class="row">
                                             <div class="col-12">
-                                                <div id="rankings_select_DEFAULT" class="text-center">
+                                                <div id="rankings_select_DEFAULT" class="">
                                                     <?php
                                                     $sql_category_item = $con->select("categoriesshop", "*", ["visibility" => 1, "ORDER" => "categoriesid"]);
                                                     $i = 0;
@@ -231,7 +234,7 @@ $current_login_ip = $log[0]['log_ip'];
                                                                         <td price="<?php echo $item['price']; ?>">
                                                                             <input type="number" value="0" class="input input-bordered w-20 InputQty InputQty-<?php echo $i;?>" name="InputQty" min="1" max="99">
                                                                         </td>
-                                                                        <td class="price"></td>
+                                                                        <td class="price" style="width:70px;"></td>
                                                                         <td>
                                                                         <a href="javascript:;" class="btn btn-sm btn-primary float-right btn-buy buy" pro_id="<?php echo $item['productid'];?>" itemid="<?php echo $i;?>">Buy</a>
                                                                         </td>
@@ -245,6 +248,10 @@ $current_login_ip = $log[0]['log_ip'];
                                             </div>
                                         </div>
                                     </div>
+                                </div>
+                                <div class="tab-pane fade p-2" id="wheel-fortune" role="tabpanel" aria-labelledby="wheel-fortune-tab">
+                                    <?php include 'roulette_new.php'; ?>
+                                    <?php include 'roulette.php'; ?>
                                 </div>
                             </div>
                         </div>

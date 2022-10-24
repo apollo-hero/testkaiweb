@@ -1,0 +1,85 @@
+.wheel {
+    position: relative; 
+    height: 424px; 
+    width: 424px; 
+    background-image: url(../assets/img/games/wheel.png);
+    display:inline-block;
+    margin:0px 10px
+}
+
+.wheel-field {
+    height: 382px;
+    width: 76px;
+    position: absolute;
+    background-size: 76px 122px; 
+    background-repeat: no-repeat;
+    left: 173px; 
+    top: 21px; 
+}
+
+.wheel-field.jackpot {
+    background-image: url(../assets/img/games/wheel_field_jackpot.png);
+}
+
+.wheel-field.drawn {
+    background-image: url(../assets/img/games/wheel_field_drawn.png);
+}
+
+.wheel-reward {
+	position: absolute;
+    height: 32px; 
+    width: 32px;
+	opacity: 0;
+}
+
+.wheel-button-play {
+    position: absolute; 
+    left:152px; 
+    top:154px; 
+    cursor: var(--nt-cursor-pointer);
+    width:116px; 
+    height:116px;
+}
+
+.wheel-button-play p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:#FFF; 
+    font-weight: bold; 
+    font-size: 17px; 
+    text-align: center;
+    text-shadow: var(--nt-txt-shadow);
+    user-select: none;
+}
+
+.wheel-rewards-slot {
+    height: 60px;
+    width: 60px;
+    display: inline-block;
+    position: absolute;
+    opacity: 0;
+}
+
+.wheel-rewards-slot.opacity1 {
+    opacity: 0;
+    animation: full_opacity 1s forwards;
+}
+
+
+@keyframes full_opacity {
+    0% { opacity: 0; }
+    100% { opacity: 1;}
+  }
+
+.wheel-rewards-slot .wheel-rewards-group {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.wheel-rewards-slot .wheel-rewards-group > div {
+    margin: -8px -9px
+}
