@@ -1,46 +1,36 @@
-<h6>RELEVANT INFORMATION</h6>
+<h6>Terms of Service</h6>
 <p>
-	It is a necessary requirement for the acquisition of the products offered on this site, that you read and accept the following Terms and Conditions that are written below. The use of our services as well as the purchase of our products will imply that you have read and accepted the Terms and Conditions of Use in this document. All the products that are offered by our website could be created, collected, sent or presented by a third website and in this case they would be subject to their own Terms and Conditions. In some cases, to acquire a product, the user will need to register, with the entry of reliable personal data and definition of a password.
+	It is a necessity that you read and agree the following Terms & Conditions before you may purchase any of the items on this website. It will be assumed that you have read and accepted the Terms and Conditions of Use in this document if you use our services or buy one of our goods. All of the items that are available on our website could have been made, gathered, shipped, or displayed by a different website, in which case they would be governed by that website's terms and conditions. In certain circumstances, a user must register in order to purchase a product, providing accurate personal information and creating a password.
 </p>
 <p>
-	The user can choose and change the password for their account administration access at any time, if they have registered and that it is necessary for the purchase of any of our products. <?php echo $site['domain']; ?> does not assume responsibility in the event that it gives said key to third parties.
+	You must agree to and abide by these terms in order to access and use the service.
 </p>
 <p>
-	All purchases and transactions carried out through this website are subject to a confirmation and verification process, which could include validation of the payment method, invoice validation (if any) and compliance with the conditions required by the selected payment method. In some cases, verification via email may be required.
+	such Terms. All users, visitors, and other individuals who use or use the Service are subject to these Terms.
 </p>
 <p>
-	The prices of the virtual products offered on this website are valid only for purchases made on it.
+	You agree to be bound by these Terms by accessing or using the Service. You are not permitted to access the Service if you disagree with any part of the terms.
 </p>
-<h6>LICENSE</h6>
+<h6>Termination</h6>
 <p>
-	<?php echo $site['name']; ?> through its website grants a license for users to use the products that are sold on this website in accordance with the Terms and Conditions described in this document.
+	<?php echo $site['name']; ?> Without limitation, if you violate the Terms, we have the right to immediately terminate or suspend your use of our Service without warning or responsibility.
+The Terms' ownership provisions, warranty disclaimers, indemnification, and liability restrictions are just a few of the clauses that will always apply even after they are terminated.
 </p>
-<h6>UNAUTHORIZED USE</h6>
+<h6>Changes</h6>
 <p>
-	If applicable (for sale of software, templates, or other design and programming product) you may not place one of our products, modified or unmodified, on a CD, website or any other medium and offer them for redistribution. or resale of any kind.
+	We have the right to change these Terms at any time and at our sole discretion. We'll aim to provide you at least 30 days' notice if the change is significant before the new terms go into effect. We reserve the right to judge what constitutes a substantial change.
 </p>
-<h6>PROPERTY</h6>
+<h6>Virtual Products</h6>
 <p>
-	You cannot declare intellectual or exclusive property to any of our virtual products, modified or unmodified. All virtual products are the property of the content providers. Unless otherwise specified, our virtual products are provided without warranty of any kind, express or implied. Under no circumstances will this server be liable for any damages including, but not limited to, direct, indirect, special, incidental or consequential damages or other losses resulting from the use or inability to use our virtual products.
+	You are not permitted to claim ownership of any of our virtual products, whether they have been updated or not. The owners of all virtual goods are the content suppliers. Unless otherwise stated, we make no explicit or implied warranties on our virtual items. Under no circumstances will this server be liable for any losses resulting from the use or inability to use our virtual products, including but not limited to direct, indirect, special, incidental, or consequential losses.
 </p>
-<h6>REFUND AND GUARANTEE POLICY</h6>
+<h6>REFUND POLICY</h6>
 <p>
-	In the case of products that are irrevocable non-tangible merchandise, we do not issue refunds after the product is shipped, you have the responsibility to understand before buying. We ask you to read carefully before purchasing. We only make exceptions to this rule when the description does not match the product. There are some products that may have a guarantee and possibility of reimbursement but this will be specified when purchasing the product. In such cases the warranty will only cover system failures and will only be effective when the product has been used correctly. The warranty does not cover regret or wrong purchase. The terms of the warranty are associated with malfunctions under normal conditions of the products and these terms will only be effective if the equipment has been used correctly. This includes:
-</p>
-<p>
-	- According to the technical specifications indicated for each virtual product.<br>
-	- In specific use for the function with which it was designed.
-</p>
-<h6>ANTI-FRAUD CHECK</h6>
-<p>
-	The customer's purchase can be postponed for anti-fraud verification. It can also be suspended for a longer time for a more rigorous investigation, to avoid fraudulent transactions.
+	You must be aware before purchasing if the goods is an irreversible non-tangible good as we cannot offer returns once the item has been dispatched. Please read this entire page before making a purchase. We only deviate from this guideline when the product description does not match the item. Some items could come with a warranty and the chance of a refund, however this will be stated when the product is purchased. In certain circumstances, the warranty will only apply to system failures and be valid only if the device has been used according to instructions. Remorse or incorrect purchases are not covered by the guarantee. The warranty's provisions cover faults that occur under regular circumstances. Only after the equipment has been utilized properly will the of the goods and these terms take effect. This includes:
 </p>
 <h6>PRIVACY</h6>
 <p>
-	<?php echo $site['domain']; ?> guarantees that the personal information that you send has the necessary security. The data entered by the user or in the case of requiring a validation of the orders will not be delivered to third parties, unless it must be disclosed in compliance with a court order or legal requirements.
-</p>
-<p>
-	Subscription to advertising email newsletters is voluntary and could be selected when creating your account.
+	<?php echo $site['name']; ?> assures the essential security for the personal information you transmit. Except when it's necessary to comply with a court order or other legal requirements, the user's input data or order validation criteria won't be provided to third parties.
 </p>
 <p>
 	<?php echo $site['name']; ?> reserves the rights to change or modify these terms without prior notice.

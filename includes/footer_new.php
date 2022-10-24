@@ -15,15 +15,14 @@
 		</div><!-- footer-block-t -->
 		<div class="footer-end flex-s-c">
 			<div class="footer-block-coperite">
-				<span class="copyright">Copyright 2022 © <a href="#">GodsMu.org</a></span><br><br>
+				<span class="copyright">Copyright 2022 © <a href="#">Apolys.com</a></span><br><br>
 				<span><a href="/rules">Terms of Service &amp; Privacy Policy</a></span>
 			</div>
-			<div class="footer-logo"><a href="/"><img src="https://godsmu.org/assets/godsmu/images/logo-footer.png?v=1.2" alt="" data-xblocker="passed" style="visibility: visible;"></a></div>
 			<div class="footer-block-r">
                 <div class="flex gap-2 mb-5">
-                    <a class="text-info" href="https://forum.ragezone.com/f888/nostale-kaisen-private-server-1207260/#post9138118" target="_blank"><span class="iconify" data-icon=""></span>Ragezone</a>/
-                    <a class="text-info" href="https://www.elitepvpers.com/forum/nostale-pserver-advertising/5055213-international-kaisen-official-thread.html" target="_blank"><span class="iconify" data-icon=""></span>Elitepvpers</a>/
-                    <a class="text-info" href="https://discord.gg/8hEW5kMhWK" target="_blank"><span class="iconify" data-icon=""></span>Discord</a>
+                    <a class="text-info" href='<?php echo $link_url['site_link_ragezone'] ; ?>' target="_blank"><span class="iconify" data-icon=''></span>Ragezone</a>/
+            <a class="text-info" href='<?php echo $link_url['site_link_elitepvpers'] ; ?>' target="_blank"><span class="iconify" data-icon=''></span>Elitepvpers</a>/
+            <a class="text-info" href='<?php echo $link_url['site_social_discord']; ?>' target="_blank"><span class="iconify" data-icon=''></span>Discord</a>
                 </div>
 			</div>			
 		</div>
