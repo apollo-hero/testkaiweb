@@ -1,7 +1,6 @@
 <div class="topPanel">
     <div class="topPanel-wrapper flex-s-c">
         <div class="topPanel-wrapper_left flex-c">
-            <!-- <a href="https://godsmu.org/" class="logo-mini bright"><img src="https://godsmu.org/assets/godsmu/images/logo-mini.png" alt="logo"></a> -->
             <ul class="menu flex-c-c">
                 <li><a href="/news">News</a></li>
                 <li><a href="" onclick="new modal('#register_modal');return false">Registration</a></li>
@@ -15,7 +14,6 @@
         <?php
         if (!isset($_SESSION['USER_ID']) || $_SESSION['USER_ID'] == NULL) { ?>
             <div class="topPanel-wrapper_right flex-c">
-                <!-- <a href="https://godsmu.org/registration" class="sign-in">Sign Up</a> <span>or</span> -->
                 <a href="" class="button" onclick="new modal('#signin_modal');return false">Sign In</a>
             </div>
         <?php } else {
@@ -39,7 +37,7 @@
                         <?php } ?>
                         <li><a href="javascript:;">Coins: <?php echo $USER['Coins']; ?></a></li>
                         <li><a href="/account">Account Panel</a></li>
-                        <li><a href="/buy_credit">Buy Credits</a></li>
+                        <li><a href="/account">Buy Coins</a></li>
                         <li><a href="/setting">Settings</a></li>
                         <li><a href="/logout">Logout</a></li>
                     </ul>
@@ -129,7 +127,8 @@
     <a href="#" id="close_modal" class="close_mw"></a>
     <h3>Terms of Service and Policy</h3>
     <div class="modal_form">
-        <h6>RELEVANT INFORMATION</h6>
+        <h6>INFORMATION</h6>
+        <h6>Exploiting bugs</h6>
         <p>
             It is a necessary requirement for the acquisition of the products offered on this site, that you read and accept the following Terms and Conditions that are written below. The use of our services as well as the purchase of our products will imply that you have read and accepted the Terms and Conditions of Use in this document. All the products that are offered by our website could be created, collected, sent or presented by a third website and in this case they would be subject to their own Terms and Conditions. In some cases, to acquire a product, the user will need to register, with the entry of reliable personal data and definition of a password.
         </p>

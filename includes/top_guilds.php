@@ -17,7 +17,7 @@
             foreach ($top_player as $player) { 
                 
                 $temp = $con->query('SET search_path TO accounts;')->fetchAll();
-                if ($player['Name'] != "blabla"){
+                if ($player['Name'] != "Apolys"){
                     $i++;
                     // $SQL_AUTH_CHECK = $con->select("accounts","Authority",["Id" => $player[CHAR_USR_ID]]);//('SELECT "Authority" FROM ' . USER . ' WHERE "Id" = ?');
                     // $AUTH = $SQL_AUTH_CHECK[0];

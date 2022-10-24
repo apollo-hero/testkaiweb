@@ -48,7 +48,7 @@ $current_login_ip = $log[0]['log_ip'];
                                     <a class="nav-link" id="user-services-tab" data-toggle="tab" href="#user-services" role="tab" aria-controls="user-services" aria-selected="false">Buy Coins</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" id="character-services-tab" data-toggle="tab" href="#character-services" role="tab" aria-controls="character-services" aria-selected="false">Shop services</a>
+                                    <a class="nav-link" id="character-services-tab" data-toggle="tab" href="#character-services" role="tab" aria-controls="character-services" aria-selected="false">Shop</a>
                                 </li>
                             </ul>
                             <div class="tab-content" id="myTabContent">

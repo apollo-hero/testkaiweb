@@ -25,7 +25,7 @@ $USER = $SQL_USER_DATA[0];
                     <div class="row">
                         <div class="col-12">
                             <h2 class="title">Change Password</h2>
-                            <form method="post" action="https://godsmu.org/settings" id="password_change_form">
+                            <form method="post" action="https://Apolys.org/settings" id="password_change_form">
                                 <div class="form-group">
                                     <label class="control-label">Old Password</label>
                                     <input type="password" class="form-control" name="InputActualPassword" id="InputActualPassword" value="">

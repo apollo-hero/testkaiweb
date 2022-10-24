@@ -12,13 +12,13 @@
         <div class="dmn-content">
             <div class="dmn-page-box">
                 <div class="dmn-page-title">
-                    <h1>Rankings</h1>
+                    <h1>Ranking</h1>
                 </div>
                 <div class="dmn-page-content">
                     <div class="row">
                         <div class="col-12">
                             <h2 class="title">
-                                List LEVEL, HEROIC LEVEL and REPUTATION 
+                                <!--Ranking-->
                                 <nav class="nav nav-pills justify-content-center float-center">
                                 </nav>
                             </h2>
@@ -224,7 +224,7 @@
                             <!-- <div class="row mb-5">
                                 <div class="col-12">
                                     <div class="mx-auto" style="width: 350px;">
-                                        <form method="post" action="https://godsmu.org/rankings/search/DEFAULT">
+                                        <form method="post" action="https://Apolys.org/rankings/search/DEFAULT">
                                             <div class="form-row align-items-center">
                                                 <div class="col-auto">
                                                     <label class="sr-only" for="inlineFormInput">Name</label>

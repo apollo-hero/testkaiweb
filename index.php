@@ -26,13 +26,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="keywords" content="GodsMu Season 17, MMORPG, Season 17, Kundun Memphis, Lemuria Mage">
+    <meta name="keywords" content="Apolys Season 17, MMORPG, Season 17, Kundun Memphis, Lemuria Mage">
     <meta name="description" content="Fight to be the top1! All in your hands!">
     <meta name="google-site-verification" content="DJv89q-eHOQvXAcRQNV9iEfxo-5y_0pyIgQYijgg_SA">
     <meta name="yandex-verification" content="8f2d70814ae84d53">
     <meta property="og:title" content="testkaiweb">
     <meta property="og:image" content="<?php echo $site['favicon']['path']; ?>">
-    <meta property="og:url" content="https://godsmu.org/">
+    <meta property="og:url" content="https://apolys.org/">
     <meta property="og:description" content="Fight to be the top1! All in your hands!">
     <meta property="og:type" content="website">
     <title>testkaiweb</title>
@@ -100,6 +100,7 @@
                             }
                         }
                         elseif ($TO == 'downloads') include FOLD . "/download.php";
+                        elseif ($TO == "home") include FOLD . "/init.php";
                     ?>
                 <!-- <div class="w-full" style='margin-top:-60px'>
                     <?php //include "includes/footer.php"; ?>
