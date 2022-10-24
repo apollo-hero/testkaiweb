@@ -21,7 +21,6 @@
 
         <div class="flex flex-column w-100 justify-center p-2  max-w-3xl">
             
-            <img  src="/assets/divider.svg" class="mb-4" />
             <p class=" relative text-stone-500 mb-4 sm:mb-8">
                 Thanks a gain for all your feedback. We listen almost every single feedback from our comunity and implemented everything we could to  make a good gameplay. We're constantly working hard to provide new content & create a fun and fair server where the time you spent is recognisesd and we are closer with every patch to that goal.</p>
             <h1 class="text text-2xl font-bold mb-4">General Changes</h1>
@@ -52,7 +51,7 @@
                 for ($i = 0; $i < count($items); $i++) {
                 ?>
                     <div class="flex gap-4 ml-8 sm:ml-12 items-center text-stone-500">
-                        <span class="iconify" data-icon='eva:arrow-ios-forward-fill'></span>
+                        
                         <h3><?php echo $items[$i] ?></h3>
                     </div>
                 <?php
@@ -65,7 +64,7 @@
                 for ($i = 0; $i < count($items); $i++) {
                 ?>
                     <div class="flex gap-4 ml-8 sm:ml-12 items-center text-stone-500">
-                        <span class="iconify" data-icon='eva:arrow-ios-forward-fill'></span>
+                        
                         <h3><?php echo $items[$i] ?></h3>
                     </div>
                 <?php
@@ -92,7 +91,7 @@
                 for ($i = 0; $i < count($items); $i++) {
                 ?>
                     <div class="flex gap-4 ml-8 sm:ml-12 items-center text-yellow-400 text-sm">
-                        <span class="iconify" data-icon='eva:arrow-ios-forward-fill'></span>
+                        
                         <h3><?php echo $items[$i] ?></h3>
 
                     </div>
@@ -106,7 +105,7 @@
                 for ($i = 0; $i < count($items); $i++) {
                 ?>
                     <div class="flex gap-4 ml-8 sm:ml-12 items-center text-stone-500">
-                        <span class="iconify" data-icon='eva:arrow-ios-forward-fill'></span>
+                        
                         <h3><?php echo $items[$i] ?></h3>
                     </div>
                 <?php
@@ -122,7 +121,7 @@
                 for ($i = 0; $i < count($items); $i++) {
                 ?>
                     <div class="flex gap-4 ml-8 sm:ml-12 items-center text-yellow-400 text-sm">
-                        <span class="iconify" data-icon='eva:arrow-ios-forward-fill'></span>
+                        
                         <h3><?php echo $items[$i] ?></h3>
 
                     </div>
@@ -136,7 +135,7 @@
                 for ($i = 0; $i < count($items); $i++) {
                 ?>
                     <div class="flex gap-4 ml-8 sm:ml-12 items-center text-stone-500">
-                        <span class="iconify" data-icon='eva:arrow-ios-forward-fill'></span>
+                        
                         <h3><?php echo $items[$i] ?></h3>
                     </div>
                 <?php
@@ -152,7 +151,7 @@
                 for ($i = 0; $i < count($items); $i++) {
                 ?>
                     <div class="flex gap-4 ml-8 sm:ml-12 items-center text-yellow-400 text-sm">
-                        <span class="iconify" data-icon='eva:arrow-ios-forward-fill'></span>
+                        
                         <h3><?php echo $items[$i] ?></h3>
 
                     </div>
@@ -176,7 +175,7 @@
                 for ($i = 0; $i < count($items); $i++) {
                 ?>
                     <div class="flex gap-4 ml-8 sm:ml-12 items-center text-stone-500">
-                        <span class="iconify" data-icon='eva:arrow-ios-forward-fill'></span>
+                        
                         <h3><?php echo $items[$i] ?></h3>
                     </div>
                 <?php
@@ -199,7 +198,7 @@
                 for ($i = 0; $i < count($items); $i++) {
                 ?>
                     <div class="flex gap-4 ml-8 sm:ml-12 items-center text-stone-500">
-                        <span class="iconify" data-icon='eva:arrow-ios-forward-fill'></span>
+                        
                         <h3><?php echo $items[$i] ?></h3>
                     </div>
                 <?php
@@ -219,7 +218,7 @@
                 for ($i = 0; $i < count($items); $i++) {
                 ?>
                     <div class="flex gap-4 ml-8 sm:ml-12 items-center text-stone-500">
-                        <span class="iconify" data-icon='eva:arrow-ios-forward-fill'></span>
+                        
                         <h3><?php echo $items[$i] ?></h3>
                     </div>
                 <?php
@@ -241,7 +240,7 @@
                 for ($i = 0; $i < count($items); $i++) {
                 ?>
                     <div class="flex gap-4 ml-8 sm:ml-12 items-center text-stone-500">
-                        <span class="iconify" data-icon='eva:arrow-ios-forward-fill'></span>
+                        
                         <h3><?php echo $items[$i] ?></h3>
                     </div>
                 <?php
@@ -261,7 +260,7 @@
                 for ($i = 0; $i < count($items); $i++) {
                 ?>
                     <div class="flex gap-4 ml-8 sm:ml-12 items-center text-stone-500">
-                        <span class="iconify" data-icon='eva:arrow-ios-forward-fill'></span>
+                        
                         <h3><?php echo $items[$i] ?></h3>
                     </div>
                 <?php
@@ -280,7 +279,7 @@
                 for ($i = 0; $i < count($items); $i++) {
                 ?>
                     <div class="flex gap-4 ml-8 sm:ml-12 items-center text-stone-500">
-                        <span class="iconify" data-icon='eva:arrow-ios-forward-fill'></span>
+                        
                         <h3><?php echo $items[$i] ?></h3>
                     </div>
                 <?php
@@ -299,7 +298,7 @@
                 for ($i = 0; $i < count($items); $i++) {
                 ?>
                     <div class="flex gap-4 ml-8 sm:ml-12 items-center text-stone-500">
-                        <span class="iconify" data-icon='eva:arrow-ios-forward-fill'></span>
+                        
                         <h3><?php echo $items[$i] ?></h3>
                     </div>
                 <?php

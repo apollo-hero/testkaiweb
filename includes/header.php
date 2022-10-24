@@ -7,21 +7,21 @@
         <a href="/" class="bright"><img src="../assets/img/banners/logo.png" alt="Logo" data-xblocker="passed" style="visibility: visible;"></a>
     </div>
     <!--logo-->
-    <div class="headerBlock flex-s-c">
+    <!--<div class="headerBlock flex-s-c">
         <div class="register-buttons flex-s-c">
             <a href="" onclick="new modal('#register_modal');return false" class="h-button download">
                 <p>Register</p>
                 <span>Just few clicks</span>
             </a>
-        </div>
+        </div>-->
         <!--headerButtons-->
-        <div class="download-buttons flex-s-c">
+        <!--<div class="download-buttons flex-s-c">
             <a href="?to=downloads" class="h-button download">
                 <p>Download</p>
                 <span>Full Client</span>
             </a>
         </div>
-    </div>
+    </div>-->
 	
 	
 	        <!-- <div class="headerButtons radial">

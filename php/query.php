@@ -1861,25 +1861,5 @@
 				echo "<script>alert('Message sent');window.location='./index';</script>";
 			} else echo "<script>alert('Please don't leave any field empty');window.location='./index';</script>";
 		}
-
-		elseif ($from == 'getRoulette') {
-		
-			$temp = $con->query('SET search_path TO web;')->fetchAll();
-
-			$sql = "select * from rouletteweb where \"Rare\" = '0' order by RANDOM() limit 1";
-    
-      		$jackpots = $con->query($sql)->fetchAll();
-
-			$sql = "select * from rouletteweb where \"Rare\" = '1' order by RANDOM() limit 10";
-
-			$rare = $con->query($sql)->fetchAll();
-
-			$sql = "select * from rouletteweb where \"Rare\" = '2' order by RANDOM() limit 5";
-
-			$common = $con->query($sql)->fetchAll();
-			
-			echo json_encode(["status"=>"ok", "jackpot"=>$jackpots, "rare" => $rare, "common" => $common]);
-
-		}
 	}
 ?>

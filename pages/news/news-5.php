@@ -21,7 +21,6 @@
 
         <div class="flex flex-column w-100 justify-center p-2  max-w-3xl">
             
-            <img  src="/assets/divider.svg" class="mb-4" />
             <p class=" relative text-stone-500 mb-4 sm:mb-8">
                 We have changed so many things in our gameplay to make it more enjoyable and a bit faster the progress startig  from removing some quests that are usseles and changing the way you can get items/pets/costumes.</p>
             <h1 class="text text-2xl font-bold mb-4">General Changes</h1>
@@ -31,7 +30,7 @@
                 for ($i = 0; $i < count($items); $i++) {
                 ?>
                     <div class="flex gap-4 ml-8 sm:ml-12 items-center text-stone-500">
-                        <span class="iconify" data-icon='eva:arrow-ios-forward-fill'></span>
+                        
                         <h3><?php echo $items[$i] ?></h3>
                     </div>
                 <?php

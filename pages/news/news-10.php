@@ -13,20 +13,11 @@
                 </div>
 
             </div>
-            <div class="flex w-100 ">
-                <img src='https://nkaisen.com/assets/img/media1/10.png' class="w-100 h-full">
-                </img>
-            </div>
         </div>
 
         <div class="flex flex-column w-100 justify-center p-2  max-w-3xl">
             
-            <img  src="/assets/divider.svg" class="mb-4" />
-            <p class=" relative text-stone-500 mb-4 sm:mb-8">
-                We approached Act 6.2 by distributing more monsters on key maps and also adjusted certain Act 6.2 equipment we felt would help assisting with levelling further. Our balance decisions have been based around key releases such as Act 7.1 where again this act will require adjustments to fit our goal.</p>
-                You can find all changes applied to Act 6.2 below:</p>
-			<p class=" relative text-stone-500 mb-4 sm:mb-8">
-            <h1 class="text text-2xl font-bold mb-4">General Changes</h1>
+            <h1 class="text text-2xl font-bold mb-4">Changes</h1>
             <div class="flex flex-column mb-4 sm:mb-8 ">
                 <?php
                 $items = ["Hero lvl 25 required to join act 6.2 Maps", 
@@ -47,152 +38,14 @@
                 for ($i = 0; $i < count($items); $i++) {
                 ?>
                     <div class="flex gap-4 ml-8 sm:ml-12 items-center text-stone-500">
-                        <span class="iconify" data-icon='eva:arrow-ios-forward-fill'></span>
+                        
                         <h3><?php echo $items[$i] ?></h3>
                     </div>
                 <?php
                 }
                 ?>
             </div>
-            <div class="flex flex-column mb-4 sm:mb-8 ">
-                <?php
-                $items = ["Added Changer Class Equipment/Sps/Skins:"];
-                for ($i = 0; $i < count($items); $i++) {
-                ?>
-                    <div class="flex gap-4 ml-8 sm:ml-12 items-center text-stone-500">
-                        <span class="iconify" data-icon='eva:arrow-ios-forward-fill'></span>
-                        <h3><?php echo $items[$i] ?></h3>
-                    </div>
-                <?php
-                }
-                ?>
-			</div>
-            <div class="flex flex-column  gap-1 ml-8  mb-4 sm:mb-8">
-                <?php
-                $items = ["You can change every sp without lose perfections or Lvl SP 1-8", 
-						  "Works for Equipment Level 85/88/90",
-						  "Works for Hero Equipment 25/28 Hellord & Heavenly",
-						  "Works for Hero Equipment 45/48"];
-                for ($i = 0; $i < count($items); $i++) {
-                ?>
-                    <div class="flex gap-4 ml-8 sm:ml-12 items-center text-yellow-400 text-sm">
-                        <span class="iconify" data-icon='eva:arrow-ios-forward-fill'></span>
-                        <h3><?php echo $items[$i] ?></h3>
-
-                    </div>
-                <?php
-                }
-                ?>
-            </div>
-            <div class="flex flex-column mb-4 sm:mb-8 ">
-                <?php
-                $items = ["Nerfed the following Monster on attack effect from act 4:"];
-                for ($i = 0; $i < count($items); $i++) {
-                ?>
-                    <div class="flex gap-4 ml-8 sm:ml-12 items-center text-stone-500">
-                        <span class="iconify" data-icon='eva:arrow-ios-forward-fill'></span>
-                        <h3><?php echo $items[$i] ?></h3>
-                    </div>
-                <?php
-                }
-                ?>
-			</div>
-            <div class="flex flex-column  gap-1 ml-8  mb-4 sm:mb-8">
-                <?php
-                $items = ["There is a 15% chance of causing  Weaken Defence Power —> 4%", 
-						  "There is a 18% chance of causing  Shock —> 5"];
-                for ($i = 0; $i < count($items); $i++) {
-                ?>
-                    <div class="flex gap-4 ml-8 sm:ml-12 items-center text-yellow-400 text-sm">
-                        <span class="iconify" data-icon='eva:arrow-ios-forward-fill'></span>
-                        <h3><?php echo $items[$i] ?></h3>
-
-                    </div>
-                <?php
-                }
-                ?>
-            </div>
-            <div class="flex flex-column mb-4 sm:mb-8 ">
-                <?php
-                $items = ["Increased the amount of monsters inside the following Act 6.2 maps:"];
-                for ($i = 0; $i < count($items); $i++) {
-                ?>
-                    <div class="flex gap-4 ml-8 sm:ml-12 items-center text-stone-500">
-                        <span class="iconify" data-icon='eva:arrow-ios-forward-fill'></span>
-                        <h3><?php echo $items[$i] ?></h3>
-                    </div>
-                <?php
-                }
-                ?>
-			</div>
-            <div class="flex flex-column  gap-1 ml-8  mb-4 sm:mb-8">
-                <?php
-                $items = ["Ancelloan's Will 1", 
-						  "Ancelloan's Will 2", 
-						  "Ancelloan's Will 3", 
-						  "Ancelloan's Will 4", 
-						  "Ancelloan's Will 5", 
-						  "Ancelloan's Will 6",];
-                for ($i = 0; $i < count($items); $i++) {
-                ?>
-                    <div class="flex gap-4 ml-8 sm:ml-12 items-center text-yellow-400 text-sm">
-                        <span class="iconify" data-icon='eva:arrow-ios-forward-fill'></span>
-                        <h3><?php echo $items[$i] ?></h3>
-
-                    </div>
-                <?php
-                }
-                ?>
-            </div>
-            <div class="flex flex-column mb-4 sm:mb-8 ">
-                <?php
-                $items = ["All monsters from Act 6.2 maps drop the following items:"];
-                for ($i = 0; $i < count($items); $i++) {
-                ?>
-                    <div class="flex gap-4 ml-8 sm:ml-12 items-center text-stone-500">
-                        <span class="iconify" data-icon='eva:arrow-ios-forward-fill'></span>
-                        <h3><?php echo $items[$i] ?></h3>
-                    </div>
-                <?php
-                }
-                ?>
-			</div>
-            <div class="flex flex-column  gap-1 ml-8  mb-4 sm:mb-8">
-                <?php
-                $items = ["Shining Green Soul", 
-						  "Shining Red Soul", 
-						  "Shining Blue Soul", 
-						  "Angel's Feather", 
-						  "Fernon's Energy", 
-						  "Cylloan Spring Water", 
-						  "Gillion", 
-						  "Fernon Gloves", 
-						  "Fernon Boots", 
-						  "Element of Balance",];
-                for ($i = 0; $i < count($items); $i++) {
-                ?>
-                    <div class="flex gap-4 ml-8 sm:ml-12 items-center text-yellow-400 text-sm">
-                        <span class="iconify" data-icon='eva:arrow-ios-forward-fill'></span>
-                        <h3><?php echo $items[$i] ?></h3>
-
-                    </div>
-                <?php
-                }
-                ?>
-            </div>
-            <div class="flex flex-column mb-4 sm:mb-8 ">
-                <?php
-                $items = ["Sellable Item from act 6.2 are the following:"];
-                for ($i = 0; $i < count($items); $i++) {
-                ?>
-                    <div class="flex gap-4 ml-8 sm:ml-12 items-center text-stone-500">
-                        <span class="iconify" data-icon='eva:arrow-ios-forward-fill'></span>
-                        <h3><?php echo $items[$i] ?></h3>
-                    </div>
-                <?php
-                }
-                ?>
-			</div>
+			<h1 class="text text-2xl font-bold mb-4">Balance</h1>
             <div class="flex flex-column  gap-1 ml-8  mb-4 sm:mb-8">
                 <?php
                 $items = ["Shining Green Soul = 35k", 
@@ -208,7 +61,7 @@
                 for ($i = 0; $i < count($items); $i++) {
                 ?>
                     <div class="flex gap-4 ml-8 sm:ml-12 items-center text-yellow-400 text-sm">
-                        <span class="iconify" data-icon='eva:arrow-ios-forward-fill'></span>
+                        
                         <h3><?php echo $items[$i] ?></h3>
 
                     </div>
@@ -219,7 +72,6 @@
            
 
             <!-- Raid -->
-            <img  src="/assets/divider.svg" class="mb-4" />
             <h1 class="text text-2xl font-bold mb-4 sm:mb-8">Reworked Equipment</h1>
             <p class="text-stone-500 mb-4">
                 Reworked Act 6.2 Equipment stats:
@@ -484,7 +336,7 @@
                 for ($i = 0; $i < count($items); $i++) {
                 ?>
                     <div class="flex gap-4 ml-8 sm:ml-12 items-center text-stone-500">
-                        <span class="iconify" data-icon='eva:arrow-ios-forward-fill'></span>
+                        
                         <h3><?php echo $items[$i] ?></h3>
                     </div>
                 <?php
@@ -684,7 +536,7 @@
                 for ($i = 0; $i < count($items); $i++) {
                 ?>
                     <div class="flex gap-4 ml-8 sm:ml-12 items-center text-stone-500">
-                        <span class="iconify" data-icon='eva:arrow-ios-forward-fill'></span>
+                        
                         <h3><?php echo $items[$i] ?></h3>
                     </div>
                 <?php
@@ -707,7 +559,7 @@
                 for ($i = 0; $i < count($items); $i++) {
                 ?>
                     <div class="flex gap-4 ml-8 sm:ml-12 items-center text-stone-500">
-                        <span class="iconify" data-icon='eva:arrow-ios-forward-fill'></span>
+                        
                         <h3><?php echo $items[$i] ?></h3>
                     </div>
                 <?php
@@ -726,7 +578,7 @@
                 for ($i = 0; $i < count($items); $i++) {
                 ?>
                     <div class="flex gap-4 ml-8 sm:ml-12 items-center text-stone-500">
-                        <span class="iconify" data-icon='eva:arrow-ios-forward-fill'></span>
+                        
                         <h3><?php echo $items[$i] ?></h3>
                     </div>
                 <?php
