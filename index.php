@@ -39,12 +39,12 @@
     <link rel="icon" type="<?php echo $site['favicon']['type']; ?>" href="<?php echo $site['favicon']['path']; ?>">
     <link href="<?php echo $site['assets']['css']; ?>/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="<?php echo $site['assets']['css']; ?>/swiper.min.css" rel="stylesheet">
-    <link href="<?php echo $site['assets']['css']; ?>/godsmu.css" rel="stylesheet" type="text/css">
+    <link href="<?php echo $site['assets']['css']; ?>/resourcex.css" rel="stylesheet" type="text/css">
     <link href="<?php echo $site['assets']['css']; ?>/font.css" rel="stylesheet">
     <link href="<?php echo $site['assets']['css']; ?>/dmncms.css" rel="stylesheet">
     <link href="<?php echo $site['assets']['css']; ?>/toast.css" rel="stylesheet" />
     <link href="<?php echo $site['assets']['css']; ?>/notice.css" rel="stylesheet" />
-    <link href="https://godsmu.org/assets/default_assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://localhost/assets/default_assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="<?php echo $site['assets']['css']; ?>/wheel-roulette.css" rel="stylesheet" />
     <script src="<?php echo $site['assets']['javascript']; ?>/jquery-3.6.0.min.js"></script>
     <script src="<?php echo $site['assets']['javascript']; ?>/jquery-ui.min.js"></script>
