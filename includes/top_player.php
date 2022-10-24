@@ -14,6 +14,7 @@
             </li>
             <?php 
             $i = 0;
+            $RANK = 0;
             foreach ($top_player as $player) { 
                 $temp = $con->query('SET search_path TO accounts;')->fetchAll();
                 $SQL_AUTH_CHECK = $con->select("accounts","Authority",["Id" => $player[CHAR_USR_ID]]);//('SELECT "Authority" FROM ' . USER . ' WHERE "Id" = ?');
