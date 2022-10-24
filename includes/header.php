@@ -14,7 +14,17 @@
                 <span>Just few clicks</span>
             </a>
         </div>
-        <!-- <div class="headerButtons radial">
+        <!--headerButtons-->
+        <div class="download-buttons flex-s-c">
+            <a href="?to=downloads" class="h-button download">
+                <p>Download</p>
+                <span>Full Client</span>
+            </a>
+        </div>
+    </div>
+	
+	
+	        <!-- <div class="headerButtons radial">
             <div class="radial-stat ">
                 <div class="circle-online">
                     <div class="serverInfo">
@@ -26,14 +36,6 @@
             </div>
 
         </div> -->
-        <!--headerButtons-->
-        <div class="download-buttons flex-s-c">
-            <a href="?to=downloads" class="h-button download">
-                <p>Download</p>
-                <span>Full Client (1.5Gb)</span>
-            </a>
-        </div>
-    </div>
     <!--headerBlock-->
     <!-- animations -->
     <div class="sparks2">
