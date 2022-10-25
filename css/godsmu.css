@@ -377,7 +377,6 @@ header { height: 710px; position: relative; }
   text-shadow: rgb(0 0 0 / 0.7) 0px 1px 0px;
 }
 
- }
 .h-button.download span {
  color: #1bcdff; 
 }
@@ -2098,4 +2097,53 @@ box-shadow: 0px 10px 20px 0px rgb(74 104 169 / 0.5);
 .category, .all {
   width: 132px;
   margin: 3px 1px;
+}
+
+.items-group {
+    border: 1px solid #999;
+    padding: 1px;
+    margin: 2px 4px;
+    display: inline-block;
+    background: #FFF2;
+}
+
+.nt-slot-item, .nt-slot-item2, .nt-slot-item3 {
+  position: relative;
+  display: inline-block;
+  background-image: url(/images/nt-images/item-slot.png);
+  width: 42px;
+  height: 42px;
+  color: #FFF;
+  margin: 1px;
+}
+
+
+.nt-slot-item img {
+  max-width: 38px;
+  max-height: 38px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  user-select: none;
+}
+
+.nt-slot-item .amount, .nt-slot-item2 .amount {
+  position: absolute;
+  width: auto;
+  height: 9px;
+  bottom: -15px;
+  right: 2px;
+  font-size: 10px;
+  color: #fff;
+  border-top: 1px #656564 solid;
+  text-shadow: #000 1px 1px 0px;
+  border-top-left-radius: 2px;
+  border-left: 1px #656564 solid;
+  font-weight: normal;
+  background: rgba(0,0,0,0.7);
+  text-align: right;
+  padding-right: 1px;
+  padding-bottom: 2px;
+  pointer-events: none;
 }

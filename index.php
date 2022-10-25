@@ -44,7 +44,7 @@
     <link href="<?php echo $site['assets']['css']; ?>/dmncms.css" rel="stylesheet">
     <link href="<?php echo $site['assets']['css']; ?>/toast.css" rel="stylesheet" />
     <link href="<?php echo $site['assets']['css']; ?>/notice.css" rel="stylesheet" />
-    <link href="<?php echo $site['assets']['css']; ?>/ng.css" rel="stylesheet" />
+    <!-- <link href="<?php echo $site['assets']['css']; ?>/ng.css" rel="stylesheet" /> -->
     <!-- <link href="https://localhost/assets/default_assets/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
     <link href="<?php echo $site['assets']['css']; ?>/wheel-roulette.css" rel="stylesheet" />
     <script src="<?php echo $site['assets']['javascript']; ?>/jquery-3.6.0.min.js"></script>
