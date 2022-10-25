@@ -1886,11 +1886,11 @@
 		
 				  $jackpots = $con->query($sql)->fetchAll();
 	
-				$sql = "select * from rouletteweb where \"Rare\" = '1' order by RANDOM() limit 10";
+				$sql = "select * from rouletteweb where \"Rare\" = '1' order by RANDOM() limit 5";
 	
 				$rare = $con->query($sql)->fetchAll();
 	
-				$sql = "select * from rouletteweb where \"Rare\" = '2' order by RANDOM() limit 5";
+				$sql = "select * from rouletteweb where \"Rare\" = '2' order by RANDOM() limit 10";
 	
 				$common = $con->query($sql)->fetchAll();
 				$items = array();
@@ -1899,25 +1899,25 @@
 				}
 	
 				for ($i=0 ; $i<5; $i++){
-					$items[3+$i*7] = $common[$i]['ID'];
-					$items[4+$i*7] = $common[$i]['ID']; 
-					$items[5+$i*7] = $common[$i]['ID'];
-					$items[6+$i*7] = $common[$i]['ID'];
-					$items[7+$i*7] = $common[$i]['ID'];
-					$items[8+$i*7] = $common[$i]['ID'];
-					$items[9+$i*7] = $common[$i]['ID'];
+					$items[3+$i*7] = $rare[$i]['ID'];
+					$items[4+$i*7] = $rare[$i]['ID']; 
+					$items[5+$i*7] = $rare[$i]['ID'];
+					$items[6+$i*7] = $rare[$i]['ID'];
+					$items[7+$i*7] = $rare[$i]['ID'];
+					$items[8+$i*7] = $rare[$i]['ID'];
+					$items[9+$i*7] = $rare[$i]['ID'];
 				}
 	
-				$items[39] = $common[3];
-				$items[38] = $common[4];
+				$items[39] = $rare[3];
+				$items[38] = $rare[4];
 	
 				for ($i=0 ; $i<10; $i++){
-					$items[41+$i*6] = $rare[$i]['ID'];
-					$items[42+$i*6] = $rare[$i]['ID']; 
-					$items[43+$i*6] = $rare[$i]['ID'];
-					$items[44+$i*6] = $rare[$i]['ID'];
-					$items[45+$i*6] = $rare[$i]['ID'];
-					$items[40+$i*6] = $rare[$i]['ID'];
+					$items[41+$i*6] = $common[$i]['ID'];
+					$items[42+$i*6] = $common[$i]['ID'];
+					$items[43+$i*6] = $common[$i]['ID'];
+					$items[44+$i*6] = $common[$i]['ID'];
+					$items[45+$i*6] = $common[$i]['ID'];
+					$items[40+$i*6] = $common[$i]['ID'];
 				}
 	
 				$reward = $items[rand(0,100)];
