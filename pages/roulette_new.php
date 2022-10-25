@@ -1,4 +1,5 @@
 <div id="imgkolo" class="wheel">
+    <!-- <input type="checkbox" name="sound" id="sound"> -->
     <img class="wheel-field jackpot" src="../assets/img/games/none.png" style="transform:rotate(0deg)">
     <img class="wheel-field jackpot" src="../assets/img/games/none.png" style="display:none; transform:rotate(180deg)">
     <img class="wheel-field drawn" src="../assets/img/games/none.png" style="opacity: 1; transform: rotate(0deg);">
@@ -94,7 +95,7 @@ $(document).ready(function(){
                         const items = data.rare.concat(data.common);
                         for (let index = 0; index < items.length; index++) {
                             if(items[index].ID == reward_id){
-                                drawn_reward = index;
+                                drawn_reward = index+1;
                                 vnum = items[index].VNUM;
                                 amount = items[index].Amount;
                             }                        
@@ -171,7 +172,7 @@ var drawn_reward_details;
 var spinning;
 var slowing;
 
-var tick_sound = new Audio("/sounds/tick.mp3");
+var tick_sound = new Audio("../assets/tick.mp3");
 
 var slowing_function = function(){
     slowing = setInterval(function(){
@@ -180,11 +181,11 @@ var slowing_function = function(){
         if (degree >= 360){degree -= 360;}
         tick_delay += Math.pow(tick_delay / 25, 2);
         ticks++;
-        if ($('input[name="sounds"]').val() == "1"){
+        // if ($('input[name="sounds"]').val() == "1"){
             tick_sound.pause();
             tick_sound.currentTime = 0
             tick_sound.play();
-        }
+        // }
 
         $('.wheel-field.drawn').css('transform', 'rotate('+degree+'deg)')
 
@@ -218,7 +219,14 @@ var start_spin = function(){
     spinning = setInterval(function(){
         degree += 22.5;
         if (degree >= 360){degree -= 360;}
-        ticks++;    
+        ticks++;   
+        
+        // if ($('input[name="sounds"]').val() == "1"){
+            tick_sound.pause();
+            tick_sound.currentTime = 0
+            tick_sound.play();
+        // }
+
         console.log(ticks, drawn_reward);
         if (ticks > 32 && ticks % 16 == drawn_reward){
             clearInterval(spinning);

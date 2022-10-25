@@ -1893,34 +1893,48 @@
 				$sql = "select * from rouletteweb where \"Rare\" = '2' order by RANDOM() limit 10";
 	
 				$common = $con->query($sql)->fetchAll();
-				$items = array();
-				for ($i=0 ; $i<3; $i++){
-					$items[$i] = $jackpots[0]['ID']; 
+
+				$values = array('jackpot','rare','common');
+				$weights = array(3,37,60);
+
+				$weighted_value = weighted_random($values, $weights);
+
+				if($weighted_value == "jackpot"){
+					$reward = $jackpots[0]['ID'];
+				} elseif ($weighted_value == "rare"){
+					$reward = $rare[rand(0,4)]['ID'];
+				} else {
+					$reward = $common[rand(0, 9)]['ID'];
 				}
+
+				// $items = array();
+				// for ($i=0 ; $i<3; $i++){
+				// 	$items[$i] = $jackpots[0]['ID']; 
+				// }
 	
-				for ($i=0 ; $i<5; $i++){
-					$items[3+$i*7] = $rare[$i]['ID'];
-					$items[4+$i*7] = $rare[$i]['ID']; 
-					$items[5+$i*7] = $rare[$i]['ID'];
-					$items[6+$i*7] = $rare[$i]['ID'];
-					$items[7+$i*7] = $rare[$i]['ID'];
-					$items[8+$i*7] = $rare[$i]['ID'];
-					$items[9+$i*7] = $rare[$i]['ID'];
-				}
+				// for ($i=0 ; $i<5; $i++){
+				// 	$items[3+$i*7] = $rare[$i]['ID'];
+				// 	$items[4+$i*7] = $rare[$i]['ID']; 
+				// 	$items[5+$i*7] = $rare[$i]['ID'];
+				// 	$items[6+$i*7] = $rare[$i]['ID'];
+				// 	$items[7+$i*7] = $rare[$i]['ID'];
+				// 	$items[8+$i*7] = $rare[$i]['ID'];
+				// 	$items[9+$i*7] = $rare[$i]['ID'];
+				// }
 	
-				$items[39] = $rare[3];
-				$items[38] = $rare[4];
+				// $items[39] = $rare[3];
+				// $items[38] = $rare[4];
 	
-				for ($i=0 ; $i<10; $i++){
-					$items[41+$i*6] = $common[$i]['ID'];
-					$items[42+$i*6] = $common[$i]['ID'];
-					$items[43+$i*6] = $common[$i]['ID'];
-					$items[44+$i*6] = $common[$i]['ID'];
-					$items[45+$i*6] = $common[$i]['ID'];
-					$items[40+$i*6] = $common[$i]['ID'];
-				}
+				// for ($i=0 ; $i<10; $i++){
+				// 	$items[41+$i*6] = $common[$i]['ID'];
+				// 	$items[42+$i*6] = $common[$i]['ID'];
+				// 	$items[43+$i*6] = $common[$i]['ID'];
+				// 	$items[44+$i*6] = $common[$i]['ID'];
+				// 	$items[45+$i*6] = $common[$i]['ID'];
+				// 	$items[40+$i*6] = $common[$i]['ID'];
+				// }
 	
-				$reward = $items[rand(0,100)];
+				// $reward = $items[rand(0,100)];
 	
 				echo json_encode(["status"=>"ok", "reward"=>$reward, "jackpot"=>$jackpots, "rare" => $rare, "common" => $common]);
 			}
@@ -1944,5 +1958,20 @@
 			$arr = array(['success'=>true,'message'=>'success', 'balance'=>$USER['Coins']]);
 			echo json_encode($arr);
 		}
+	}
+
+	function weighted_random($values, $weights){ 
+		$count = count($values); 
+		$i = 0; 
+		$n = 0; 
+		$num = mt_rand(0, array_sum($weights)); 
+		while($i < $count){
+			$n += $weights[$i]; 
+			if($n >= $num){
+				break; 
+			}
+			$i++; 
+		} 
+		return $values[$i]; 
 	}
 ?>
