@@ -50,8 +50,9 @@
     font-weight: bold; 
     font-size: 17px; 
     text-align: center;
-    text-shadow: var(--nt-txt-shadow);
     user-select: none;
+    line-height: 23px;
+    text-shadow: 0 0 2px #000, 0 0 2px #000, 0 0 2px #000, 0 0 2px #000, 0 0 2px #000, 0 0 2px #000, 0 0 2px #000;
 }
 
 .wheel-rewards-slot {
