@@ -60,11 +60,11 @@ $current_login_ip = $log[0]['log_ip'];
                                         <tbody>
                                             <tr>
                                                 <th>Username</th>
-                                                <td><?php echo $USER['Name'];?></td>
+                                                <td><?php echo $USER['Name']; ?></td>
                                             </tr>
                                             <tr>
                                                 <th>Email address</th>
-                                                <td><?php echo $USER['Email'];?><a href="/?to=setting" class="btn btn-sm btn-primary float-right">Change</a></td>
+                                                <td><?php echo $USER['Email']; ?><a href="/?to=setting" class="btn btn-sm btn-primary float-right">Change</a></td>
                                             </tr>
                                             <tr>
                                                 <th>Password</th>
@@ -180,21 +180,22 @@ $current_login_ip = $log[0]['log_ip'];
                                                     ?>
                                                         <a href="javascript:;" class="btn btn-primary category" id="<?php echo $RELATED['categoriesid']; ?>"><?php echo $RELATED['name']; ?></a>
                                                     <?php } ?>
-                                                        <a href="javascript:;" class="btn btn-primary all">all</a>
+                                                    <a href="javascript:;" class="btn btn-primary all">all</a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div id="rankings_content_DEFAULT" style="padding: 10px;">
                                             <script type="text/javascript">
-                                                $(".category").on('click', function(){
-                                                    var category_id = $(this).attr("id");console.log(category_id);
+                                                $(".category").on('click', function() {
+                                                    var category_id = $(this).attr("id");
+                                                    console.log(category_id);
                                                     $('.shopitem > tr').css("display", "none");
                                                     $('.category-' + category_id).css("display", "table-row");
-                                                }) 
-                                                
-                                                $(".all").on('click', function(){
+                                                })
+
+                                                $(".all").on('click', function() {
                                                     $('.shopitem > tr').css("display", "table-row");
-                                                }) 
+                                                })
                                             </script>
 
                                             <div class="row">
@@ -209,10 +210,11 @@ $current_login_ip = $log[0]['log_ip'];
                                                                 foreach ($sql_related_item as $item) {
                                                                     $i++;
                                                                 ?>
-                                                                    <tr class="category-<?php echo $item['categoriesid']; ?>" >
+                                                                    <tr class="category-<?php echo $item['categoriesid']; ?>">
                                                                         <td><?php echo $item['name']; ?></td>
                                                                         <td>
-                                                                            <img src="./assets/img/items/<?php echo $item['vnum']; ?>.png" height="40px" width="40px"></td>
+                                                                            <img src="./assets/img/items/<?php echo $item['vnum']; ?>.png" height="40px" width="40px">
+                                                                        </td>
                                                                         <td class="text-center unit-pirce">
                                                                             <span class="font-bold"><?php echo $item['price']; ?></span>
                                                                             <span class="iconify text-warning" data-icon="majesticons:coins"></span>
@@ -232,13 +234,13 @@ $current_login_ip = $log[0]['log_ip'];
                                                                             </select>
                                                                         </td>
                                                                         <td price="<?php echo $item['price']; ?>">
-                                                                            <input type="number" value="0" class="input input-bordered w-20 InputQty InputQty-<?php echo $i;?>" name="InputQty" min="1" max="99">
+                                                                            <input type="number" value="0" class="input input-bordered w-20 InputQty InputQty-<?php echo $i; ?>" name="InputQty" min="1" max="99">
                                                                         </td>
                                                                         <td class="price" style="width:70px;"></td>
                                                                         <td>
-                                                                        <a href="javascript:;" class="btn btn-sm btn-primary float-right btn-buy buy" pro_id="<?php echo $item['productid'];?>" itemid="<?php echo $i;?>">Buy</a>
+                                                                            <a href="javascript:;" class="btn btn-sm btn-primary float-right btn-buy buy" pro_id="<?php echo $item['productid']; ?>" itemid="<?php echo $i; ?>">Buy</a>
                                                                         </td>
-                                                                    </form>
+                                                                        </form>
                                                                     </tr>
                                                                 <?php } ?>
                                                             </tbody>
@@ -251,7 +253,61 @@ $current_login_ip = $log[0]['log_ip'];
                                 </div>
                                 <div class="tab-pane fade p-2 text-center" id="wheel-fortune" role="tabpanel" aria-labelledby="wheel-fortune-tab">
                                     <?php include 'roulette_new.php'; ?>
-                                    <?php include 'roulette.php'; ?>
+                                    <div class="w-100">
+                                        <select class="form-control w-100 mb-3" id="wheel-character">
+                                            <option value="" disabled="" selected="">Select character</option>
+                                            <?php
+                                            $temp = $con->query('SET search_path TO characters;');
+                                            $sql_character = $con->select("characters", "*", ["AccountId" => $_SESSION['USER_ID']]); //('SELECT "Name", "Id" FROM ' . CHAR . ' WHERE "AccountId" = ?');
+                                            // var_dump($sql_character);
+                                            foreach ($sql_character as $CHARACTER) {
+                                                if (substr($CHARACTER[CHAR_NICK], 1, 7) != "DELETED") {
+                                                    echo "<option value='" . $CHARACTER[CHAR_ID] . "'>" . $CHARACTER[CHAR_NICK] . "</option>";
+                                                }
+                                            } ?>
+                                        </select>
+                                    </div>
+                                    <div class="w-100">
+                                        <div class="zawartosc-relative left wheel-rewards">
+                                            <div class="rewards-show-box" style="">
+                                                <p class="flex-break">Jackpot</p>
+                                                <?php 
+                                                    $temp = $con->query('SET search_path TO web;')->fetchAll();
+
+                                                    $sql = "select * from rouletteweb where \"Rare\" = '0'";
+                                            
+                                                    $jackpots = $con->query($sql)->fetchAll();
+
+                                                    foreach ($jackpots as $jackpot) {
+                                                ?>
+                                                <div class="items-group">
+                                                    <a href="javascript:;" class="nt-slot-item hover-show-name " data-element-type="item">
+                                                        <img src="<?php echo $site['assets']['images'] . '/items/' . $jackpot['VNUM'] ?>.png">
+                                                        <p class="amount"><?php echo $jackpot['Amount']; ?></p>
+                                                    </a>
+                                                </div>
+                                                <?php } ?>
+
+                                                <p class="flex-break" style="margin-top:15px">Other</p>
+                                                <?php 
+                                                    $temp = $con->query('SET search_path TO web;')->fetchAll();
+
+                                                    $sql = "select * from rouletteweb where \"Rare\" != '0'";
+                                            
+                                                    $others = $con->query($sql)->fetchAll();
+
+                                                    foreach ($others as $item){
+                                                ?>
+                                                <div class="items-group">
+                                                    <a href="javascript:;" class="nt-slot-item hover-show-name " data-element-type="item" data-id="2159" data-name="Partner Medicine<br>" data-amount="50">
+                                                        <img src="<?php echo $site['assets']['images'] . '/items/' . $item['VNUM'] ?>.png">
+                                                        <p class="amount"><?php echo $item['Amount'];?></p>
+                                                    </a>
+                                                </div>
+                                                <?php } ?>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -262,134 +318,134 @@ $current_login_ip = $log[0]['log_ip'];
     </div>
 </main>
 <script type="text/javascript">
-$(".InputQty").on('change', function(){
-    console.log("ss")
-    var amount = parseInt($(this).val());
-    if (amount < 1) {
-        $(this).val(1);
-        amount = 1;
-    }
-    
-    var total = parseInt($(this).parent().attr('price')) * amount;console.log(total);
-    $(this).parent().next().text(total);
+    $(".InputQty").on('change', function() {
+        console.log("ss")
+        var amount = parseInt($(this).val());
+        if (amount < 1) {
+            $(this).val(1);
+            amount = 1;
+        }
 
-    if (amount > 0) {
+        var total = parseInt($(this).parent().attr('price')) * amount;
+        console.log(total);
+        $(this).parent().next().text(total);
 
-        $(".btn-buy").prop('disabled', false);
+        if (amount > 0) {
 
-    } else {
-        $(".btn-buy").attr('disabled', 'disabled');
-    }
+            $(".btn-buy").prop('disabled', false);
 
-})
-var coin = <?php echo $USER['Coins']; ?>;
-$(document).ready(function() {
-         $(".buy").on('click',function() {
+        } else {
+            $(".btn-buy").attr('disabled', 'disabled');
+        }
+
+    })
+    var coin = <?php echo $USER['Coins']; ?>;
+    $(document).ready(function() {
+        $(".buy").on('click', function() {
 
             var total = parseInt($(this).parent().prev().text());
             // var total = parseInt($("#buy-price").val()) * amount;
             var itemid = $(this).attr("itemid");
             var amount = $(".InputQty-" + itemid).val();
-            var character = $(".charactor-" + itemid ).val();
+            var character = $(".charactor-" + itemid).val();
             var _error = false;
             if (coin <= 0 || total > coin) {
-            //    $.toast({
-            //       heading: 'Validation Error',
-            //       icon: 'error',
-            //       text: "Not enough coin",
-            //       position: 'top-right',
+                //    $.toast({
+                //       heading: 'Validation Error',
+                //       icon: 'error',
+                //       text: "Not enough coin",
+                //       position: 'top-right',
 
-            //    });
-            notice('error', 'error', 'Not enough coin');
-               _error = true;
-               return;
+                //    });
+                notice('error', 'error', 'Not enough coin');
+                _error = true;
+                return;
             }
             if (amount <= 0) {
-            //    $.toast({
-            //       heading: 'Validation Error',
-            //       icon: 'error',
-            //       text: "Amount should to be greater or equal than 1",
-            //       position: 'top-right',
+                //    $.toast({
+                //       heading: 'Validation Error',
+                //       icon: 'error',
+                //       text: "Amount should to be greater or equal than 1",
+                //       position: 'top-right',
 
-            //    });
+                //    });
                 notice('error', 'error', "Amount should to be greater or equal than 1");
-               _error = true;
-               return;
+                _error = true;
+                return;
             }
 
             if (character == "") {
-            //    $.toast({
-            //       heading: 'Validation Error',
-            //       icon: 'error',
-            //       text: "Please select your character",
-            //       position: 'top-right',
+                //    $.toast({
+                //       heading: 'Validation Error',
+                //       icon: 'error',
+                //       text: "Please select your character",
+                //       position: 'top-right',
 
-            //    });
+                //    });
                 notice('error', 'error', "Please select your character");
-               _error = true;
-               return;
+                _error = true;
+                return;
             }
 
             var data = {
-               InputItemID: $(this).attr('pro_id'),
-               InputItemQuantity: amount,
+                InputItemID: $(this).attr('pro_id'),
+                InputItemQuantity: amount,
             }
 
             if (!_error)
-               $.ajax({
-                  type: 'POST',
-                  url: 'consult?from=store&&target=AddToCart',
-                  data,
-               }).done(function(result) {
-                  $.ajax({
-                     type: 'POST',
-                     url: 'consult?from=store&&target=Checkout',
-                     data: {
-                        "SelectCharacter": character,
-                        "inputTotal": total,
-                     },
-                  }).done(function(rs) {
+                $.ajax({
+                    type: 'POST',
+                    url: 'consult?from=store&&target=AddToCart',
+                    data,
+                }).done(function(result) {
+                    $.ajax({
+                        type: 'POST',
+                        url: 'consult?from=store&&target=Checkout',
+                        data: {
+                            "SelectCharacter": character,
+                            "inputTotal": total,
+                        },
+                    }).done(function(rs) {
 
-                     var result = JSON.parse(rs)[0];
+                        var result = JSON.parse(rs)[0];
 
-                     if (result.success) {
+                        if (result.success) {
 
-                        // $.toast({
-                        //    heading: 'Success',
-                        //    icon: 'success',
-                        //    text: result.message,
-                        //    position: 'top-right',
-                        // });
-                        notice('success', 'success', result.message);
-                        setTimeout(() => {
-                           location.reload();
-                        }, 3000);
-                     } else {
-                        // $.toast({
-                        //    heading: 'Failed',
-                        //    icon: 'error',
-                        //    text: result.message,
-                        //    position: 'top-right',
+                            // $.toast({
+                            //    heading: 'Success',
+                            //    icon: 'success',
+                            //    text: result.message,
+                            //    position: 'top-right',
+                            // });
+                            notice('success', 'success', result.message);
+                            setTimeout(() => {
+                                location.reload();
+                            }, 3000);
+                        } else {
+                            // $.toast({
+                            //    heading: 'Failed',
+                            //    icon: 'error',
+                            //    text: result.message,
+                            //    position: 'top-right',
 
-                        // });
-                        notice('error', 'error', result.message);
-                     }
-                  }).fail(function(result) {
-                    //  $.toast({
-                    //     heading: 'Failed',
-                    //     icon: 'error',
-                    //     text: 'whoops! Not bought,',
-                    //     position: 'top-right',
+                            // });
+                            notice('error', 'error', result.message);
+                        }
+                    }).fail(function(result) {
+                        //  $.toast({
+                        //     heading: 'Failed',
+                        //     icon: 'error',
+                        //     text: 'whoops! Not bought,',
+                        //     position: 'top-right',
 
-                    //  });
-                    notice('error', 'error', "whoops! Not bought");
-                  });
+                        //  });
+                        notice('error', 'error', "whoops! Not bought");
+                    });
 
-               }).fail(function(data) {
-                  console.log(data);
-               });
+                }).fail(function(data) {
+                    console.log(data);
+                });
 
-         });
-      });
-
+        });
+    });
 </script>
