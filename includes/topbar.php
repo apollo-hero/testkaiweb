@@ -35,7 +35,7 @@
                         if ($USER['Authority'] == 30000) { ?>
                             <li><a href="/admin">Admin</a></li>
                         <?php } ?>
-                        <li><a href="javascript:;">Coins: <?php echo $USER['Coins']; ?></a></li>
+                        <li><a href="javascript:;" id="balance">Coins: <?php echo $USER['Coins']; ?></a></li>
                         <li><a href="/account">Account Panel</a></li>
                         <li><a href="/account">Buy Coins</a></li>
                         <li><a href="/setting">Settings</a></li>

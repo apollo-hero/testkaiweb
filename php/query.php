@@ -1863,23 +1863,86 @@
 		}
 
 		elseif ($from == 'getRoulette') {
-		
-			$temp = $con->query('SET search_path TO web;')->fetchAll();
 
-			$sql = "select * from rouletteweb where \"Rare\" = '0' order by RANDOM() limit 1";
-    
-      		$jackpots = $con->query($sql)->fetchAll();
+			$temp = $con->query('SET search_path TO accounts;')->fetchAll();
 
-			$sql = "select * from rouletteweb where \"Rare\" = '1' order by RANDOM() limit 10";
+			$SQL_USER_DATA = $con->select("accounts", "*", ["Id" => $_SESSION['USER_ID']]); //('SELECT * FROM ' . USER . ' WHERE "Id" = ?');
 
-			$rare = $con->query($sql)->fetchAll();
+			$USER = $SQL_USER_DATA[0];
 
-			$sql = "select * from rouletteweb where \"Rare\" = '2' order by RANDOM() limit 5";
 
-			$common = $con->query($sql)->fetchAll();
+			if ($USER['Coins'] < 150) {
+				echo json_encode(["status"=>"failed", "message"=>'no enough balance']);
 			
-			echo json_encode(["status"=>"ok", "jackpot"=>$jackpots, "rare" => $rare, "common" => $common]);
+			}
+			else{
+				$coin = $USER['Coins'] - 150;
+				$temp = $con->query('SET search_path TO accounts;')->fetchAll();
+				$coin_update = $con->update("accounts",["Coins" => $coin],["Id" => $_SESSION['USER_ID']]);
 
+				$temp = $con->query('SET search_path TO web;')->fetchAll();
+
+				$sql = "select * from rouletteweb where \"Rare\" = '0' order by RANDOM() limit 1";
+		
+				  $jackpots = $con->query($sql)->fetchAll();
+	
+				$sql = "select * from rouletteweb where \"Rare\" = '1' order by RANDOM() limit 10";
+	
+				$rare = $con->query($sql)->fetchAll();
+	
+				$sql = "select * from rouletteweb where \"Rare\" = '2' order by RANDOM() limit 5";
+	
+				$common = $con->query($sql)->fetchAll();
+				$items = array();
+				for ($i=0 ; $i<3; $i++){
+					$items[$i] = $jackpots[0]['ID']; 
+				}
+	
+				for ($i=0 ; $i<5; $i++){
+					$items[3+$i*7] = $common[$i]['ID'];
+					$items[4+$i*7] = $common[$i]['ID']; 
+					$items[5+$i*7] = $common[$i]['ID'];
+					$items[6+$i*7] = $common[$i]['ID'];
+					$items[7+$i*7] = $common[$i]['ID'];
+					$items[8+$i*7] = $common[$i]['ID'];
+					$items[9+$i*7] = $common[$i]['ID'];
+				}
+	
+				$items[39] = $common[3];
+				$items[38] = $common[4];
+	
+				for ($i=0 ; $i<10; $i++){
+					$items[41+$i*6] = $rare[$i]['ID'];
+					$items[42+$i*6] = $rare[$i]['ID']; 
+					$items[43+$i*6] = $rare[$i]['ID'];
+					$items[44+$i*6] = $rare[$i]['ID'];
+					$items[45+$i*6] = $rare[$i]['ID'];
+					$items[40+$i*6] = $rare[$i]['ID'];
+				}
+	
+				$reward = $items[rand(0,100)];
+	
+				echo json_encode(["status"=>"ok", "reward"=>$reward, "jackpot"=>$jackpots, "rare" => $rare, "common" => $common]);
+			}
+		
+			
+
+		}
+
+		elseif ($from == 'sendItem') {
+
+			$temp = $con->query('SET search_path TO accounts;')->fetchAll();
+
+			$SQL_USER_DATA = $con->select("accounts", "*", ["Id" => $_SESSION['USER_ID']]); //('SELECT * FROM ' . USER . ' WHERE "Id" = ?');
+
+			$USER = $SQL_USER_DATA[0];
+
+			$vnum = htmlentities($_POST['vnum']);
+			$amount = htmlentities($_POST['amount']);
+			$char_id = htmlentities($_POST['char_id']);
+			SendItem($vnum, $amount, $char_id);
+			$arr = array(['success'=>true,'message'=>'success', 'balance'=>$USER['Coins']]);
+			echo json_encode($arr);
 		}
 	}
 ?>
