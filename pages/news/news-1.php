@@ -21,7 +21,6 @@
 
         <div class="flex flex-column w-100 justify-content-center p-2  max-w-3xl">
             
-            <img  src="/assets/divider.svg" class="mb-4" />
             <p class=" relative text-stone-500 mb-4 sm:mb-8">
                 We approached Act 6.1 by distributing more monsters on key maps and also adjusted certain Act 6.1 equipment we felt would help assisting with levelling further. Our balance decisions have been based around key releases such as Act 7.1 where again this act will require adjustments to fit our goal.</p>
                 You can find all changes applied to Act 6.1 below:</p>
@@ -33,7 +32,7 @@
                 for ($i = 0; $i < count($items); $i++) {
                 ?>
                     <div class="flex gap-4 ml-8 sm:ml-12 items-center text-stone-500">
-                        <span class="iconify" data-icon='eva:arrow-ios-forward-fill'></span>
+                        
                         <h3><?php echo $items[$i] ?></h3>
                     </div>
                 <?php
@@ -46,7 +45,7 @@
                 for ($i = 0; $i < count($items); $i++) {
                 ?>
                     <div class="flex gap-4 ml-8 sm:ml-12 items-center text-yellow-400 text-sm">
-                        <span class="iconify" data-icon='eva:arrow-ios-forward-fill'></span>
+                        
                         <h3><?php echo $items[$i] ?></h3>
 
                     </div>
@@ -60,7 +59,7 @@
                 for ($i = 0; $i < count($items); $i++) {
                 ?>
                     <div class="flex gap-4 ml-8 sm:ml-12 items-center text-stone-500">
-                        <span class="iconify" data-icon='eva:arrow-ios-forward-fill'></span>
+                        
                         <h3><?php echo $items[$i] ?></h3>
                     </div>
                 <?php
@@ -73,7 +72,7 @@
                 for ($i = 0; $i < count($items); $i++) {
                 ?>
                     <div class="flex gap-4 ml-8 sm:ml-12 items-center text-yellow-400 text-sm">
-                        <span class="iconify" data-icon='eva:arrow-ios-forward-fill'></span>
+                        
                         <h3><?php echo $items[$i] ?></h3>
 
                     </div>
@@ -84,7 +83,6 @@
            
 
             <!-- Raid -->
-            <img  src="/assets/divider.svg" class="mb-4" />
             <h1 class="text text-2xl font-bold mb-4 sm:mb-8">Reworked Equipment</h1>
             <p class="text-stone-500 mb-4">
                 We took a hard look at every item from act 6.1 to bring a perfect balance to gameplay!

@@ -251,7 +251,7 @@ $current_login_ip = $log[0]['log_ip'];
                                         </div>
                                     </div>
                                 </div>
-                                <div class="tab-pane fade p-2 text-center" id="wheel-fortune" role="tabpanel" aria-labelledby="wheel-fortune-tab">
+                                <div class="tab-pane fade p-2" id="wheel-fortune" role="tabpanel" aria-labelledby="wheel-fortune-tab">
                                     <?php include 'roulette_new.php'; ?>
                                     <div class="w-100">
                                         <select class="form-control w-100 mb-3" id="wheel-character">

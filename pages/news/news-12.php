@@ -44,7 +44,7 @@
                 for ($i = 0; $i < count($items); $i++) {
                 ?>
                     <div class="flex ml-5 sm:ml-12 items-center text-stone-500">
-                        <span class="iconify" data-icon='eva:arrow-ios-forward-fill'></span>
+                        
                         <h3><?php echo $items[$i] ?></h3>
                     </div>
                 <?php
@@ -57,7 +57,7 @@
                 for ($i = 0; $i < count($items); $i++) {
                 ?>
                     <div class="flex ml-5 sm:ml-12 items-center text-stone-500">
-                        <span class="iconify" data-icon='eva:arrow-ios-forward-fill'></span>
+                        
                         <h3><?php echo $items[$i] ?></h3>
                     </div>
                 <?php
@@ -164,7 +164,7 @@
                     for ($i = 0; $i < count($items); $i++) {
                     ?>
                         <div class="flex ml-5 sm:ml-12 items-center text-stone-500">
-                            <span class="iconify" data-icon='eva:arrow-ios-forward-fill'></span>
+                            
                             <h3><?php echo $items[$i] ?></h3>
                         </div>
                     <?php
@@ -437,7 +437,7 @@
                     for ($i = 0; $i < count($items); $i++) {
                     ?>
                         <div class="flex ml-5 sm:ml-12 items-center text-stone-500">
-                            <span class="iconify" data-icon='eva:arrow-ios-forward-fill'></span>
+                            
                             <h3><?php echo $items[$i] ?></h3>
                         </div>
                     <?php
@@ -461,7 +461,7 @@
                     for ($i = 0; $i < count($items); $i++) {
                     ?>
                         <div class="flex ml-5 sm:ml-12 items-center text-stone-500">
-                            <span class="iconify" data-icon='eva:arrow-ios-forward-fill'></span>
+                            
                             <h3><?php echo $items[$i] ?></h3>
                         </div>
                     <?php
@@ -485,7 +485,7 @@
                     for ($i = 0; $i < count($items); $i++) {
                     ?>
                         <div class="flex ml-5 sm:ml-12 items-center text-stone-500">
-                            <span class="iconify" data-icon='eva:arrow-ios-forward-fill'></span>
+                            
                             <h3><?php echo $items[$i] ?></h3>
                         </div>
                     <?php

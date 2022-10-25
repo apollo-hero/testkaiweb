@@ -21,7 +21,6 @@
 
         <div class="flex flex-column w-100 justify-center p-2  max-w-3xl">
             
-            <img  src="/assets/divider.svg" class="mb-4" />
             <p class=" relative text-stone-500 mb-4 sm:mb-8">
             <h1 class="text text-2xl font-bold mb-4">General Changes</h1>
             <div class="flex flex-column mb-4 sm:mb-8 ">
@@ -30,7 +29,7 @@
                 for ($i = 0; $i < count($items); $i++) {
                 ?>
                     <div class="flex gap-4 ml-8 sm:ml-12 items-center text-stone-500">
-                        <span class="iconify" data-icon='eva:arrow-ios-forward-fill'></span>
+                        
                         <h3><?php echo $items[$i] ?></h3>
                     </div>
                 <?php
@@ -44,7 +43,7 @@
                 for ($i = 0; $i < count($items); $i++) {
                 ?>
                     <div class="flex gap-4 ml-8 sm:ml-12 items-center text-yellow-400 text-sm">
-                        <span class="iconify" data-icon='eva:arrow-ios-forward-fill'></span>
+                        
                         <h3><?php echo $items[$i] ?></h3>
 
                     </div>
@@ -59,7 +58,7 @@
                 for ($i = 0; $i < count($items); $i++) {
                 ?>
                     <div class="flex gap-4 ml-8 sm:ml-12 items-center text-yellow-400 text-sm">
-                        <span class="iconify" data-icon='eva:arrow-ios-forward-fill'></span>
+                        
                         <h3><?php echo $items[$i] ?></h3>
 
 
@@ -71,7 +70,7 @@
             <div class="flex flex-column gap-4 ml-4 mb-4">
 
                 <div class="flex gap-4 ml-8 sm:ml-12 items-center">
-                    <span class="iconify" data-icon='eva:arrow-ios-forward-fill'></span>
+                    
                     <h3 class='text-stone-500'>Added IP Check For kill Character to avoid people abusing reputation.</h3>
 
                 </div>
@@ -82,7 +81,7 @@
             <div class="flex flex-column gap-4 ml-4 mb-4">
 
                 <div class="flex gap-4 ml-8 sm:ml-12 items-center">
-                    <span class="iconify" data-icon='eva:arrow-ios-forward-fill'></span>
+                    
                     <h3 class='text-stone-500'>When inside the following maps "Frozen King" buff will be applied to all players:</h3>
                 </div>
 
@@ -93,7 +92,7 @@
                 for ($i = 0; $i < count($items); $i++) {
                 ?>
                     <div class="flex text-sm gap-4 ml-8 sm:ml-12 items-center text-yellow-400">
-                        <span class="iconify" data-icon='eva:arrow-ios-forward-fill'></span>
+                        
                         <h3><?php echo $items[$i] ?></h3>
                     </div>
                 <?php
@@ -101,7 +100,6 @@
                 ?>
             </div>
             <!-- Raid -->
-            <img  src="/assets/divider.svg" class="mb-4" />
             <h1 class="text text-2xl font-bold mb-4 sm:mb-8">Raid Changes</h1>
             <p class="text-stone-500 mb-4">
                 We have made a lot of changes at how the current Raids work in Glacernon. Some of the changes we have applied was adding nice rewards inside the boxes so even f2p players have the posibility to get.<br/><br/>
@@ -115,7 +113,7 @@
                 for ($i = 0; $i < count($items); $i++) {
                 ?>
                     <div class="flex gap-4 ml-8 sm:ml-12 items-center">
-                        <span class="iconify" data-icon='eva:arrow-ios-forward-fill'></span>
+                        
                         <h3><?php echo $items[$i] ?></h3>
                     </div>
                 <?php

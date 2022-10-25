@@ -3,6 +3,90 @@
     <img class="wheel-field jackpot" src="../assets/img/games/none.png" style="display:none; transform:rotate(180deg)">
     <img class="wheel-field drawn" src="../assets/img/games/none.png" style="opacity: 1; transform: rotate(0deg);">
 
+
+    <div class="wheel-rewards-slot jackpot opacity1" style="top:25px; left:181px;">
+        <div class="wheel-rewards-group">
+            <div class="nt-item-small"><img src="/images/icons/4508.png"></div>
+        </div>
+    </div>
+    <div class="wheel-rewards-slot other opacity1" style="top:40px; left:238px;">
+        <div class="wheel-rewards-group">
+            <div class="nt-item-small"><img src="/images/icons/2809.png"></div>
+        </div>
+    </div>
+    <div class="wheel-rewards-slot other opacity1" style="top:73px; left:292px;">
+        <div class="wheel-rewards-group">
+            <div class="nt-item-small"><img src="/images/icons/1744.png"></div>
+        </div>
+    </div>
+    <div class="wheel-rewards-slot other opacity1" style="top:123px; left:328px;">
+        <div class="wheel-rewards-group">
+            <div class="nt-item-small"><img src="/images/icons/2998.png"></div>
+        </div>
+    </div>
+    <div class="wheel-rewards-slot other opacity1" style="top:181px; left:340px;">
+        <div class="wheel-rewards-group">
+            <div class="nt-item-small"><img src="/images/icons/4010.png"></div>
+            <div class="nt-item-small"><img src="/images/icons/4011.png"></div>
+        </div>
+    </div>
+    <div class="wheel-rewards-slot other opacity1" style="top:243px; left:328px;">
+        <div class="wheel-rewards-group">
+            <div class="nt-item-small"><img src="/images/icons/4058.png"></div>
+        </div>
+    </div>
+    <div class="wheel-rewards-slot other opacity1" style="top:295px; left:295px;">
+        <div class="wheel-rewards-group">
+            <div class="nt-item-small"><img src="/images/icons/2953.png"></div>
+        </div>
+    </div>
+    <div class="wheel-rewards-slot other opacity1" style="top:330px; left:240px;">
+        <div class="wheel-rewards-group">
+            <div class="nt-item-small"><img src="/images/icons/2810.png"></div>
+        </div>
+    </div>
+    <div class="wheel-rewards-slot other opacity1" style="top:340px; left:180px;">
+        <div class="wheel-rewards-group">
+            <div class="nt-item-small"><img src="/images/icons/4295.png"></div>
+        </div>
+    </div>
+    <div class="wheel-rewards-slot other opacity1" style="top:330px; left:120px;">
+        <div class="wheel-rewards-group">
+            <div class="nt-item-small"><img src="/images/icons/4078.png"></div>
+        </div>
+    </div>
+    <div class="wheel-rewards-slot other opacity1" style="top:295px; left:70px;">
+        <div class="wheel-rewards-group">
+            <div class="nt-item-small"><img src="/images/icons/2915.png"></div>
+        </div>
+    </div>
+    <div class="wheel-rewards-slot other opacity1" style="top:243px; left:38px;">
+        <div class="wheel-rewards-group">
+            <div class="nt-item-small"><img src="/images/icons/2789.png"></div>
+        </div>
+    </div>
+    <div class="wheel-rewards-slot other opacity1" style="top:181px; left:22px;">
+        <div class="wheel-rewards-group">
+            <div class="nt-item-small"><img src="/images/icons/1841.png"></div>
+        </div>
+    </div>
+    <div class="wheel-rewards-slot other opacity1" style="top:123px; left:38px;">
+        <div class="wheel-rewards-group">
+            <div class="nt-item-small"><img src="/images/icons/4078.png"></div>
+        </div>
+    </div>
+    <div class="wheel-rewards-slot other opacity1" style="top:73px; left:73px;">
+        <div class="wheel-rewards-group">
+            <div class="nt-item-small"><img src="/images/icons/4010.png" style="width: 31.5333px; height: 31.5333px; max-width: 114.134px; max-height: 114.134px;"></div>
+            <div class="nt-item-small"><img src="/images/icons/4011.png" style="width: 31.5333px; height: 31.5333px; max-width: 114.134px; max-height: 114.134px;"></div>
+        </div>
+    </div>
+    <div class="wheel-rewards-slot other opacity1" style="top:40px; left:122px;">
+        <div class="wheel-rewards-group">
+            <div class="nt-item-small"><img src="/images/icons/2326.png"></div>
+        </div>
+    </div>
+
     <div class="wheel-button-play" data-status="0">
         <p>Spin <br>150 Coins</p>
     </div>
@@ -29,8 +113,6 @@ var postions = [
         {"top" : '40', "left" : '122'},
     ];
     
-var vnum = 0;
-var amount = 0;
 $(document).ready(function(){
     $(document).on('click', '.delete-all-rewards:not(.disabled)', function() {
         if (confirm("Are you sure, you want to delete all items?")){
@@ -62,20 +144,7 @@ $(document).ready(function(){
     });
 
     $(document).on('click', '.wheel-button-play', function() {
-        // setTimeout(start_spin, 1000);return;
-        var character = $('#wheel-character').val();console.log($(this).data('status')==0);
-        if (!character) {
-                //    $.toast({
-                //       heading: 'Validation Error',
-                //       icon: 'error',
-                //       text: "Please select your character",
-                //       position: 'top-right',
-
-                //    });
-                notice('error', 'error', "Please select your character");
-                _error = true;
-                return;
-            }
+        // setTimeout(start_spin, 1000);
         if ($(this).data('status') == 0){
             prepare_spin();
             $.ajax({    
@@ -83,61 +152,46 @@ $(document).ready(function(){
                 data: {
                 },
                 success: function(data){
+                    console.log(data);
 
-                    if (data.status == "failed"){
-                        notice('error', 'error', data.message);
+                    const items = data.rare.concat(data.common);
+
+                    console.log(items);
+                    var html = '<div class="wheel-rewards-slot jackpot opacity1" style="top:' + postions[0].top + 'px; left:' + postions[0].left + 'px;">';
+                        html +=    '<div class="wheel-rewards-group">';
+                        html +=       '<div class="nt-item-small">';
+                        html +=         '<img src="<?php echo $site['assets']['images'] . '/items/' ?>' + data.jackpot[0].VNUM +'.png">';
+                        html +=       '</div>';
+                        html +=     '</div>';
+                        html += '</div>';
+
+                    for (let i = 0; i < 15; i++) {
+                        html += '<div class="wheel-rewards-slot jackpot opacity1" style="top:' + postions[i+1].top + 'px; left:' + postions[i+1].left + 'px;">';
+                        html +=    '<div class="wheel-rewards-group">';
+                        html +=       '<div class="nt-item-small">';
+                        html +=         '<img src="<?php echo $site['assets']['images'] . '/items/' ?>' + items[i].VNUM +'.png">';
+                        html +=       '</div>';
+                        html +=     '</div>';
+                        html += '</div>';    
                     }
 
+                    html += '<div class="wheel-button-play" data-status="0">';
+                    html +=     '<p>Clean</p>';
+                    html += '</div>';
+
+                    $('#imgkolo').append(html);
+                    
                     if (data.status === "ok"){
 
-                        var reward_id = data.reward;
-                        const items = data.rare.concat(data.common);
-                        for (let index = 0; index < items.length; index++) {
-                            if(items[index].ID == reward_id){
-                                drawn_reward = index;
-                                vnum = items[index].VNUM;
-                                amount = items[index].Amount;
-                            }                        
-                        }
-
-                        if(data.jackpot[0].ID == reward_id){
-                            drawn_reward = 0;
-                            vnum = data.jackpot[0].VNUM;
-                            amount = data.jackpot[0].Amount;
-                        }
-
-                        console.log(items);
-                        var html = '<div class="wheel-rewards-slot jackpot opacity1" style="top:' + postions[0].top + 'px; left:' + postions[0].left + 'px;">';
-                            html +=    '<div class="wheel-rewards-group">';
-                            html +=       '<div class="nt-item-small">';
-                            html +=         '<img src="<?php echo $site['assets']['images'] . '/items/' ?>' + data.jackpot[0].VNUM +'.png">';
-                            html +=       '</div>';
-                            html +=     '</div>';
-                            html += '</div>';
-
-                        for (let i = 0; i < 15; i++) {
-                            html += '<div class="wheel-rewards-slot jackpot opacity1" style="top:' + postions[i+1].top + 'px; left:' + postions[i+1].left + 'px;">';
-                            html +=    '<div class="wheel-rewards-group">';
-                            html +=       '<div class="nt-item-small">';
-                            html +=         '<img src="<?php echo $site['assets']['images'] . '/items/' ?>' + items[i].VNUM +'.png">';
-                            html +=       '</div>';
-                            html +=     '</div>';
-                            html += '</div>';    
-                        }
-
-                        $('#imgkolo').append(html);
-                        
-                        
-
-                        // drawn_reward = 0;
-                        // drawn_reward_details = data.reward_items;
+                        drawn_reward = data.reward_slot;
+                        drawn_reward_details = data.reward_items;
 
                         
                         $('.wheel-field.drawn').animate({opacity: '1'}, 500)
                         setTimeout(start_spin, 1000); //it's just animation, reward is already known
                     } else {
                         $('.wheel-button-play').data('status', 0);
-                        $('.wheel-button-play').find('p').html('Spin <br>150 Coins');
+                        $('.wheel-button-play').find('p').html('Spin');
                     }
                 },
                 error: function(request, status, error){
@@ -145,7 +199,7 @@ $(document).ready(function(){
                         $('.wheel-button-play').find('p').html('Wait...');
                         setTimeout(function() {
                             $('.wheel-button-play').data('status', 0);
-                            $('.wheel-button-play').find('p').html('Spin <br>150 Coins');
+                            $('.wheel-button-play').find('p').html('Spin');
                             $('.span-double-jackpot').removeClass('disabled');
                         }, 2000);
                     }
@@ -193,8 +247,7 @@ var slowing_function = function(){
         else { //IT STOPPED! CONGRATZ
             var animate_slot = drawn_reward - 4
             bounce_won($('.wheel-rewards-slot:eq('+animate_slot+') img'));
-            // add_to_saved();
-            add_to_item();
+            add_to_saved();
             $('.wheel-button-play').data('status', 2);
             $('.wheel-button-play').find('p').html('Clean');
         }
@@ -208,18 +261,17 @@ function prepare_spin(){
 }
 
 var start_spin = function(){
-    console.log( $('.wheel-button-play').data('status'));
+    console.log("ss");
     drawn_reward += 4; //
     if (drawn_reward > 15){drawn_reward -= 16;}
     $('.wheel-button-play').data('status', 1);
-    console.log( $('.wheel-button-play').data('status'));
     $('.wheel-button-play').find('p').html('Wait...');
 
     spinning = setInterval(function(){
         degree += 22.5;
         if (degree >= 360){degree -= 360;}
         ticks++;    
-        console.log(ticks, drawn_reward);
+        
         if (ticks > 32 && ticks % 16 == drawn_reward){
             clearInterval(spinning);
             slowing_function()
@@ -269,24 +321,6 @@ function add_to_saved(){
     $('.delete-all-rewards').removeClass('disabled');
 }
 
-function add_to_item(){
-    console.log("tt");
-    $.ajax({    
-                url: '/consult?from=sendItem', type: 'POST', dataType: 'JSON',
-                data: {
-                    vnum: Number(vnum), 
-                    amount: Number(amount),
-                    char_id: $('#wheel-character').val()
-                },
-                success: function(data){
-                    notice('success', 'success', 'sent the item succesfully');
-                },
-                error: function(request, status, error){
-                    
-                }
-            });
-}
-
 function clean_wheel(){
     $('.wheel-button-play').data('status', -1);
     
@@ -298,7 +332,7 @@ function clean_wheel(){
     setTimeout(function() {
         $('.wheel-rewards-group .nt-item-small').remove();
         $('.wheel-button-play').data('status', 0);
-        $('.wheel-button-play').find('p').html('Spin<br>150 Coins');
+        $('.wheel-button-play').find('p').html('Spin');
         $('.span-double-jackpot').removeClass('disabled');
     }, 700);
 }
