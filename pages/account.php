@@ -180,7 +180,7 @@ $current_login_ip = $log[0]['log_ip'];
                                                     ?>
                                                         <a href="javascript:;" class="btn btn-primary category" id="<?php echo $RELATED['categoriesid']; ?>"><?php echo $RELATED['name']; ?></a>
                                                     <?php } ?>
-                                                    <a href="javascript:;" class="btn btn-primary all">all</a>
+                                                    <!-- <a href="javascript:;" class="btn btn-primary all">all</a> -->
                                                 </div>
                                             </div>
                                         </div>
@@ -205,7 +205,7 @@ $current_login_ip = $log[0]['log_ip'];
                                                         <table class="shop_table table dmn-rankings-table table-striped all_shop">
                                                             <tbody class="shopitem">
                                                                 <?php
-                                                                $sql_related_item = $con->select("shopitems", "*", ["visibility" => 1, "ORDER" => "productid"]);
+                                                                $sql_related_item = $con->select("shopitems", "*", ["visibility" => 1, "ORDER" => "productid", "LIMIT" => 30]);
                                                                 $i = 0;
                                                                 foreach ($sql_related_item as $item) {
                                                                     $i++;
@@ -250,7 +250,7 @@ $current_login_ip = $log[0]['log_ip'];
                                                             <tbody class="shopitem">
                                                                 <?php
                                                                 $temp = $con->query('SET search_path TO web;');
-                                                                $sql_related_item = $con->select("shopitems", "*", ["visibility" => 1, "ORDER" => "productid", "categoriesid" => $category['categoriesid']]);
+                                                                $sql_related_item = $con->select("shopitems", "*", ["visibility" => 1, "ORDER" => "productid", "categoriesid" => $category['categoriesid'], "LIMIT" => 30]);
                                                                 $i = 0;
                                                                 foreach ($sql_related_item as $item) {
                                                                     $i++;
