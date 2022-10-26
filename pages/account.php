@@ -260,7 +260,7 @@ $current_login_ip = $log[0]['log_ip'];
                                                                         <td>
                                                                             <img src="./assets/img/items/<?php echo $item['vnum']; ?>.png" height="40px" width="40px">
                                                                         </td>
-                                                                        <td class="text-center unit-pirce" style="width: 150px;">
+                                                                        <td class="text-center unit-pirce">
                                                                             <span class="font-bold"><?php echo $item['price']; ?></span>
                                                                             <span class="iconify text-warning" data-icon="majesticons:coins"></span>
                                                                         </td>

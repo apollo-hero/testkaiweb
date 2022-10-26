@@ -92,7 +92,7 @@ $(document).ready(function(){
                     if (data.status === "ok"){
 
                         var reward_id = data.reward;
-                        const items = data.rare.concat(data.common);
+                        const items = shuffle(data.rare.concat(data.common));
                         for (let index = 0; index < items.length; index++) {
                             if(items[index].ID == reward_id){
                                 drawn_reward = index+1;
@@ -161,6 +161,23 @@ $(document).ready(function(){
     });
 });
 
+function shuffle(array) {
+  let currentIndex = array.length,  randomIndex;
+
+  // While there remain elements to shuffle.
+  while (currentIndex != 0) {
+
+    // Pick a remaining element.
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    // And swap it with the current element.
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex], array[currentIndex]];
+  }
+
+  return array;
+}
 
 
 var tick_delay = 66.25;
