@@ -62,13 +62,13 @@ $current_login_ip = $log[0]['log_ip'];
                                                 <th>Username</th>
                                                 <td><?php echo $USER['Name']; ?></td>
                                             </tr>
-                                            <tr>
+                                            <tr style="height:45px;">
                                                 <th>Email address</th>
-                                                <td><?php echo $USER['Email']; ?><a href="/?to=setting" class="btn btn-sm btn-primary float-right">Change</a></td>
+                                                <td><?php echo $USER['Email']; ?><a href="/?to=setting" class="btn btn-sm btn-primary float-right" style="position:absolute; top:42px;right:10px;">Change</a></td>
                                             </tr>
-                                            <tr>
+                                            <tr style="height:45px;">
                                                 <th>Password</th>
-                                                <td>******<a href="/?to=setting" class="btn btn-sm btn-primary float-right">Change</a></td>
+                                                <td>******<a href="/?to=setting" class="btn btn-sm btn-primary float-right" style="position:absolute; top:85px; right:10px;">Change</a></td>
                                             </tr>
                                             <tr>
                                                 <th>Site Name</th>
@@ -189,12 +189,12 @@ $current_login_ip = $log[0]['log_ip'];
                                                 $(".category").on('click', function() {
                                                     var category_id = $(this).attr("id");
                                                     console.log(category_id);
-                                                    $('.shopitem > tr').css("display", "none");
-                                                    $('.category-' + category_id).css("display", "table-row");
+                                                    $('.shop_table').css("display", "none");
+                                                    $('.category-' + category_id).css("display", "block");
                                                 })
 
                                                 $(".all").on('click', function() {
-                                                    $('.shopitem > tr').css("display", "table-row");
+                                                    $('.all_shop').css("display", "block");
                                                 })
                                             </script>
 
@@ -202,7 +202,7 @@ $current_login_ip = $log[0]['log_ip'];
                                                 <div class="col-12">
 
                                                     <div class="table-responsive-sm">
-                                                        <table class="table dmn-rankings-table table-striped">
+                                                        <table class="shop_table table dmn-rankings-table table-striped all_shop">
                                                             <tbody class="shopitem">
                                                                 <?php
                                                                 $sql_related_item = $con->select("shopitems", "*", ["visibility" => 1, "ORDER" => "productid"]);
@@ -210,12 +210,12 @@ $current_login_ip = $log[0]['log_ip'];
                                                                 foreach ($sql_related_item as $item) {
                                                                     $i++;
                                                                 ?>
-                                                                    <tr class="category-<?php echo $item['categoriesid']; ?>">
-                                                                        <td><?php echo $item['name']; ?></td>
+                                                                    <tr>
+                                                                        <td width="17%"><?php echo $item['name']; ?></td>
                                                                         <td>
                                                                             <img src="./assets/img/items/<?php echo $item['vnum']; ?>.png" height="40px" width="40px">
                                                                         </td>
-                                                                        <td class="text-center unit-pirce">
+                                                                        <td class="text-center unit-pirce" style="width: 150px;">
                                                                             <span class="font-bold"><?php echo $item['price']; ?></span>
                                                                             <span class="iconify text-warning" data-icon="majesticons:coins"></span>
                                                                         </td>
@@ -245,6 +245,52 @@ $current_login_ip = $log[0]['log_ip'];
                                                                 <?php } ?>
                                                             </tbody>
                                                         </table>
+                                                        <?php foreach($sql_category_item as $category){ ?>
+                                                        <table class="shop_table table dmn-rankings-table table-striped category-<?php echo $category['categoriesid']; ?> hidden">
+                                                            <tbody class="shopitem">
+                                                                <?php
+                                                                $temp = $con->query('SET search_path TO web;');
+                                                                $sql_related_item = $con->select("shopitems", "*", ["visibility" => 1, "ORDER" => "productid", "categoriesid" => $category['categoriesid']]);
+                                                                $i = 0;
+                                                                foreach ($sql_related_item as $item) {
+                                                                    $i++;
+                                                                ?>
+                                                                    <tr>
+                                                                        <td width="17%"><?php echo $item['name']; ?></td>
+                                                                        <td>
+                                                                            <img src="./assets/img/items/<?php echo $item['vnum']; ?>.png" height="40px" width="40px">
+                                                                        </td>
+                                                                        <td class="text-center unit-pirce" style="width: 150px;">
+                                                                            <span class="font-bold"><?php echo $item['price']; ?></span>
+                                                                            <span class="iconify text-warning" data-icon="majesticons:coins"></span>
+                                                                        </td>
+                                                                        <td>
+                                                                            <select name="SelectCharacter" class="select select-bordered ml-2  focus:border-info focus:ring-0 p-0 charactor-<?php echo $i; ?>" style="background: transparent;">
+                                                                                <option value="">Select character</option>
+                                                                                <?php
+                                                                                $temp = $con->query('SET search_path TO characters;');
+                                                                                $sql_character = $con->select("characters", "*", ["AccountId" => $_SESSION['USER_ID'], "DeletedAt" => null]); //('SELECT "Name", "Id" FROM ' . CHAR . ' WHERE "AccountId" = ?');
+
+                                                                                foreach ($sql_character as $CHARACTER) {
+                                                                                    if (substr($CHARACTER[CHAR_NICK], 1, 7) != "DELETED") {
+                                                                                        echo "<option value='" . $CHARACTER[CHAR_ID] . "' style='background:black;'>" . $CHARACTER[CHAR_NICK] . "</option>";
+                                                                                    }
+                                                                                } ?>
+                                                                            </select>
+                                                                        </td>
+                                                                        <td price="<?php echo $item['price']; ?>">
+                                                                            <input type="number" value="0" class="input input-bordered w-20 InputQty InputQty-<?php echo $i; ?>" name="InputQty" min="1" max="99">
+                                                                        </td>
+                                                                        <td class="price" style="width:70px;"></td>
+                                                                        <td>
+                                                                            <a href="javascript:;" class="btn btn-sm btn-primary float-right btn-buy buy" pro_id="<?php echo $item['productid']; ?>" itemid="<?php echo $i; ?>">Buy</a>
+                                                                        </td>
+                                                                        </form>
+                                                                    </tr>
+                                                                <?php } ?>
+                                                            </tbody>
+                                                        </table>
+                                                        <?php } ?>
                                                     </div>
                                                 </div>
                                             </div>
