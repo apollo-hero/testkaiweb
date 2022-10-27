@@ -26,7 +26,7 @@
                             <aside class="messageSidebar member" itemprop="author" itemscope itemtype="http://schema.org/Person">
                                 <div class="messageAuthor">
                                     <div class="userAvatar">
-                                        <img src="/assets/img/news/logo.png" style="width: 80px; height: 80px" alt="" class="userAvatarImage">
+                                        <img src="/assets/img/logo.png" style="width: 80px; height: 80px" alt="" class="userAvatarImage">
                                     </div>
                                     <div class="messageAuthorContainer">
                                         <span class="username userLink" style="color: #d63b37;" itemprop="name">Apolys</span>
@@ -48,14 +48,14 @@
                                 <div class="messageBody">
                                     <div class="messageText" itemprop="text">
                                         <p class="text-center">
-                                            <img src="../assets/img/news/patch.png" alt="patch.png" class="jsResizeImage"><br>
+                                            <img src="../assets/img/patch.png" alt="patch.png" class="jsResizeImage"><br>
                                         </p>
                                         <p><br></p>
                                         <p><br></p>
-                                        <p><strong><span style="font-size: 14pt;"><img src="/assets/img/news/changes.png" alt="changes.png" class="jsResizeImage"></span></strong>
+                                        <p><strong><span style="font-size: 14pt;"><img src="/assets/img/changes.png" alt="changes.png" class="jsResizeImage"></span></strong>
                                         </p>
                                         <p><br></p>
-                                        <p>— <img src="/assets/img/news/4161.png" alt="4161.png" class="jsResizeImage"> Lion Loa Sword (Swordman C55 main weapon) changes:</p>
+                                        <p>— <img src="/assets/img/items/4161.png" alt="4161.png" class="jsResizeImage"> Lion Loa Sword (Swordman C55 main weapon) changes:</p>
                                         <p>Critical chance:
                                             <span style="color:#FF0000;"><del>14%</del></span> 
                                             <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
@@ -68,7 +68,7 @@
                                             <span style="color:#008000;"><strong> 609</strong></span>
                                         </p>
                                         <p><br></p>
-                                        <p>— <img src="/assets/img/news/4164.png" alt="4164.png" class="jsResizeImage"> Eagle Loa Bow (Archer C55 main weapon) changes:</p>
+                                        <p>— <img src="/assets/img/items/4164.png" alt="4164.png" class="jsResizeImage"> Eagle Loa Bow (Archer C55 main weapon) changes:</p>
                                         <p>Damage:
                                             <span style="color:rgb(255,0,0);"><del>882~922</del></span> 
                                             <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
@@ -76,7 +76,7 @@
                                              <strong><span style="color:#008000;">1400~1450</span></strong>
                                         </p>
                                         <p><br></p>
-                                        <p>— <img src="/assets/img/news/4176.png" alt="4176.png" class="jsResizeImage"> Bat Loa Dagger (Archer C55 secondary weapon) changes:</p>
+                                        <p>— <img src="/assets/img/items/4176.png" alt="4176.png" class="jsResizeImage"> Bat Loa Dagger (Archer C55 secondary weapon) changes:</p>
                                         <p>Damage:
                                             <span style="color:rgb(255,0,0);"><del>647~687</del></span> 
                                             <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
@@ -94,7 +94,7 @@
                                              <span style="color:#008000;"><strong>40%</strong></span>
                                         </p>
                                         <p><br></p>
-                                        <p>— <img src="/assets/img/news/4188.png" alt="4188.png" class="jsResizeImage"> Eagle Loa Leather Armour (Archer C55 armor) changes:</p>
+                                        <p>— <img src="/assets/img/items/4188.png" alt="4188.png" class="jsResizeImage"> Eagle Loa Leather Armour (Archer C55 armor) changes:</p>
                                         <p>Melee Defence:
                                             <span style="color:rgb(255,0,0);"><del>627</del></span> 
                                             <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
@@ -111,7 +111,7 @@
                                              <strong><span style="color:#008000;">594</span></strong>
                                         </p>
                                         <p><br></p>
-                                        <p>— <img src="/assets/img/news/4170.png" alt="4170.png" class="jsResizeImage"> Bear Loa Gauntlets (Martial Artist C55 main weapon) changes:</p>
+                                        <p>— <img src="/assets/img/items/4170.png" alt="4170.png" class="jsResizeImage"> Bear Loa Gauntlets (Martial Artist C55 main weapon) changes:</p>
                                         <p>Critical chance:
                                             <span style="color:rgb(255,0,0);"><del>22%</del></span> 
                                             <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
@@ -139,28 +139,28 @@
                                         <p><br></p>
                                         <p>— Added a maximum value of 80% to the accumulation of MP consumption reduction.</p>
                                         <p><br></p>
-                                        <p>— Now it isn't allow to use the `[<img src="/assets/img/news/31271.png" alt="31271.png" class="jsResizeImage"> Echo Power] effect twice in a row with the same skill in less than 1 minute.</p>
+                                        <p>— Now it isn't allow to use the `[<img src="/assets/img/items/31271.png" alt="31271.png" class="jsResizeImage"> Echo Power] effect twice in a row with the same skill in less than 1 minute.</p>
                                         <p><br></p>
-                                        <p>— Reduced the cooldown reduction from 90% to 75% in `[<img src="/assets/img/news/31271.png" alt="31271.png" class="jsResizeImage"> Echo Power] rune.</p>
+                                        <p>— Reduced the cooldown reduction from 90% to 75% in `[<img src="/assets/img/items/31271.png" alt="31271.png" class="jsResizeImage"> Echo Power] rune.</p>
                                         <p><br></p>
                                         <p>— The time to do forced movement effects in skills will now take into account the distance between the damager and the target.<br></p>
                                         <p><br></p>
                                         <p>— Increased the probability of inflicting the
-                                            [<img width="20" src="/assets/img/news/50726.png" alt="50726.png" class="jsResizeImage"> Jötunheim Dragon's Breath] effect from 3% to 5% in
-                                            <img src="/assets/img/news/50703.png" alt="50703.png" class="jsResizeImage">Jötunheim Dragon's Costume Wings.
+                                            [<img width="20" src="/assets/img/items/50726.png" alt="50726.png" class="jsResizeImage"> Jötunheim Dragon's Breath] effect from 3% to 5% in
+                                            <img src="/assets/img/items/50703.png" alt="50703.png" class="jsResizeImage">Jötunheim Dragon's Costume Wings.
                                         </p>
                                         <p><br></p>
                                         <p>— Increased duration of
-                                            [<img src="/assets/img/news/10340.png" alt="10340.png" class="jsResizeImage"> Hard as Ice] from 3 to 5 seconds in
-                                            <img src="/assets/img/news/4283.png" alt="4283.png" class="jsResizeImage"> Ice Witch Costume Wings
+                                            [<img src="/assets/img/items/10340.png" alt="10340.png" class="jsResizeImage"> Hard as Ice] from 3 to 5 seconds in
+                                            <img src="/assets/img/items/4283.png" alt="4283.png" class="jsResizeImage"> Ice Witch Costume Wings
                                         </p>
                                         <p><br></p>
-                                        <p>— <img src="/assets/img/news/50735.png" alt="50735.png" class="jsResizeImage"> Jötunheim Blessing of the 4 classes changes:</p>
+                                        <p>— <img src="/assets/img/items/50735.png" alt="50735.png" class="jsResizeImage"> Jötunheim Blessing of the 4 classes changes:</p>
                                         <p>· <span style="color:#FF0000;"><strong>Removed:</strong> Damage against Glacernon bosses increases by 10%</span>
                                         </p>
                                         <p>· <span style="color:#008000;"><strong>Added:</strong> </span><span style="color:#FF8C00;">Damage against bosses increases by 8%</span><br></p>
                                         <p><br></p>
-                                        <p>— <img src="/assets/img/news/50735.png" alt="50735.png" class="jsResizeImage"> Jötunheim Blessing Magician changes:</p>
+                                        <p>— <img src="/assets/img/items/50735.png" alt="50735.png" class="jsResizeImage"> Jötunheim Blessing Magician changes:</p>
                                         <p>· <span style="color:#FF8C00;">Attack power increases by</span> <span style="color:#FF0000;"><del>8%</del></span> 
                                             <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
                                              <strong><span style="color:#008000;">10%</span></strong>
@@ -177,21 +177,21 @@
                                         <p><br></p>
                                         <div class="spoilerBox jsSpoilerBox">
                                             <div class="jsOnly spoilerBoxHeader">
-                                                <img src="/assets/img/news/32040.png ">
+                                                <img src="/assets/img/items/32040.png ">
                                                 <a class="news-button small jsSpoilerToggle" data-has-custom-label="true">
                                                     •
                                                     SWORDMAN</a>
                                             </div>
                                             <div class="spoilerBoxContent" style="display: none;">
-                                                <p><strong><img width="50" src="/assets/img/news/32502.png" alt="32502.png" class="jsResizeImage"> <span style="font-size: 14pt;">Warrior</span></strong><br></p>
+                                                <p><strong><img width="50" src="/assets/img/items/32502.png" alt="32502.png" class="jsResizeImage"> <span style="font-size: 14pt;">Warrior</span></strong><br></p>
                                                 <ul>
                                                     <li>
-                                                        <strong><img src="/assets/img/news/5813.png" alt="5813.png" class="jsResizeImage"> Iron Skin</strong>
+                                                        <strong><img src="/assets/img/items/5813.png" alt="5813.png" class="jsResizeImage"> Iron Skin</strong>
                                                         <ul>
-                                                            <li><span style="color:#FF0000;"><strong>Removed: </strong>There is a 100% chance of causing [<img width="20" src="/assets/img/news/50667.png" alt="50667.png" class="jsResizeImage"> Total Absorption]</span>
+                                                            <li><span style="color:#FF0000;"><strong>Removed: </strong>There is a 100% chance of causing [<img width="20" src="/assets/img/items/50667.png" alt="50667.png" class="jsResizeImage"> Total Absorption]</span>
                                                             </li>
                                                             <li>
-                                                                <strong><img width="20" src="/assets/img/news/5813.png" alt="5813.png" class="jsResizeImage"> Iron Skin (Buff)</strong>
+                                                                <strong><img width="20" src="/assets/img/items/5813.png" alt="5813.png" class="jsResizeImage"> Iron Skin (Buff)</strong>
                                                                 <ul>
                                                                     <li>Duration:
                                                                         <span style="color:rgb(255,0,0);"><del>30</del></span> 
@@ -205,7 +205,7 @@
                                                         </ul>
                                                     </li>
                                                     <li>
-                                                        <strong><img src="/assets/img/news/5814.png" alt="5814.png" class="jsResizeImage"> Whirlwind</strong><br>
+                                                        <strong><img src="/assets/img/items/5814.png" alt="5814.png" class="jsResizeImage"> Whirlwind</strong><br>
                                                         <ul>
                                                             <li>
                                                                 <strong>Cool time:</strong> <span style="color:#FF0000;"><del>18</del></span> 
@@ -215,24 +215,24 @@
                                                         </ul>
                                                     </li>
                                                     <li>
-                                                        <strong><img src="/assets/img/news/5815.png" alt="5815.png" class="jsResizeImage"> Provoke</strong>
+                                                        <strong><img src="/assets/img/items/5815.png" alt="5815.png" class="jsResizeImage"> Provoke</strong>
                                                         <ul>
-                                                            <li><span style="color:#FF0000;"><strong>Removed</strong>: There is a 100% chance of causing [<img src="/assets/img/news/10155.png" alt="10155.png" class="jsResizeImage"> Paralisys]</span>
+                                                            <li><span style="color:#FF0000;"><strong>Removed</strong>: There is a 100% chance of causing [<img src="/assets/img/items/10155.png" alt="10155.png" class="jsResizeImage"> Paralisys]</span>
                                                             </li>
                                                         </ul>
                                                         <ul>
                                                             <li>
-                                                                <span style="color:#008000;"><strong>Added:</strong> </span><span style="color:#FF8C00;">There is a 100% chance of causing [<img src="/assets/img/news/10305.png" alt="10305.png" class="jsResizeImage"> Provocation]</span>
+                                                                <span style="color:#008000;"><strong>Added:</strong> </span><span style="color:#FF8C00;">There is a 100% chance of causing [<img src="/assets/img/items/10305.png" alt="10305.png" class="jsResizeImage"> Provocation]</span>
                                                             </li>
                                                         </ul>
                                                         <ul>
                                                             <li>
                                                                 <strong><span style="color:#008000;"><strong>Added</strong>:
                                                                     </span>
-                                                                </strong><span style="color:#FF8C00;"><strong></strong> There is a 100% chance of causing [<img width="20" src="/assets/img/news/50805.png" alt="50805.png" class="jsResizeImage"> Paralysis]<br></span>
+                                                                </strong><span style="color:#FF8C00;"><strong></strong> There is a 100% chance of causing [<img width="20" src="/assets/img/items/50805.png" alt="50805.png" class="jsResizeImage"> Paralysis]<br></span>
                                                                 <ul>
                                                                     <li>
-                                                                        <img width="20" src="/assets/img/news/50805.png" alt="50805.png" class="jsResizeImage"> Paralysis
+                                                                        <img width="20" src="/assets/img/items/50805.png" alt="50805.png" class="jsResizeImage"> Paralysis
                                                                         <ul>
                                                                             <li>Debuff Level 3</li>
                                                                             <li>Duration: 2 seconds</li>
@@ -247,7 +247,7 @@
                                                         </ul>
                                                     </li>
                                                     <li>
-                                                        <strong><img src="/assets/img/news/5817.png" alt="5817.png" class="jsResizeImage"> Intimidate</strong>
+                                                        <strong><img src="/assets/img/items/5817.png" alt="5817.png" class="jsResizeImage"> Intimidate</strong>
                                                         <ul>
                                                             <li>
                                                                 <strong><strong>Cool time:</strong> </strong><span style="color:rgb(255,0,0);"><del>30</del></span> 
@@ -262,12 +262,12 @@
                                                         </ul>
                                                         <ul>
                                                             <li>
-                                                                <span style="color:#008000;"><strong>Added:</strong> </span><span style="color:rgb(255,140,0);">There is a 100% chance of causing [<img width="20" src="/assets/img/news/50667.png" alt="50667.png" class="jsResizeImage"> Total Absorption]</span>
+                                                                <span style="color:#008000;"><strong>Added:</strong> </span><span style="color:rgb(255,140,0);">There is a 100% chance of causing [<img width="20" src="/assets/img/items/50667.png" alt="50667.png" class="jsResizeImage"> Total Absorption]</span>
                                                             </li>
                                                         </ul>
                                                     </li>
                                                     <li>
-                                                        <strong><img src="/assets/img/news/50373.png" alt="50373.png" class="jsResizeImage"> Continuous Load</strong><br>
+                                                        <strong><img src="/assets/img/items/50373.png" alt="50373.png" class="jsResizeImage"> Continuous Load</strong><br>
                                                         <ul>
                                                             <li>
                                                                 <strong>Cool time:</strong><strong></strong> <span style="color:rgb(255,0,0);"><del>15</del></span> 
@@ -277,7 +277,7 @@
                                                         </ul>
                                                     </li>
                                                     <li>
-                                                        <strong><img src="/assets/img/news/5820.png" alt="5820.png" class="jsResizeImage"> Earth Shock</strong><br>
+                                                        <strong><img src="/assets/img/items/5820.png" alt="5820.png" class="jsResizeImage"> Earth Shock</strong><br>
                                                         <ul>
                                                             <li>
                                                                 <strong>Cool time: </strong><span style="color:#FF0000;"><del>40</del></span><strong> </strong>
@@ -287,7 +287,7 @@
                                                         </ul>
                                                     </li>
                                                     <li>
-                                                        <strong><img src="/assets/img/news/5821.png" alt="5821.png" class="jsResizeImage"> Rising Dragon</strong><br>
+                                                        <strong><img src="/assets/img/items/5821.png" alt="5821.png" class="jsResizeImage"> Rising Dragon</strong><br>
                                                         <ul>
                                                             <li>
                                                                 <strong><strong>Cool time:</strong> </strong><span style="color:rgb(255,0,0);"><del>120</del></span> 
@@ -302,7 +302,7 @@
                                         </div>
                                         <div class="spoilerBox jsSpoilerBox">
                                             <div class="jsOnly spoilerBoxHeader">
-                                                <img src="/assets/img/news/32080.png "> <a class="news-button small jsSpoilerToggle" data-has-custom-label="true"> • ARCHER</a>
+                                                <img src="/assets/img/items/32080.png "> <a class="news-button small jsSpoilerToggle" data-has-custom-label="true"> • ARCHER</a>
                                             </div>
                                             <div class="spoilerBoxContent" style="display: none;">
                                                 <p><strong><span style="font-size: 14pt;"><img src="" alt="unknown.png" class="jsResizeImage"> Ranger</span></strong>
@@ -319,7 +319,7 @@
                                                         </ul>
                                                     </li>
                                                     <li>
-                                                        <strong><img src="/assets/img/news/5837.png" alt="5837.png" class="jsResizeImage"> Flashbang</strong>
+                                                        <strong><img src="/assets/img/items/5837.png" alt="5837.png" class="jsResizeImage"> Flashbang</strong>
                                                         <p><br></p>
                                                         <ul>
                                                             <li>
@@ -330,7 +330,7 @@
                                                         </ul>
                                                     </li>
                                                     <li>
-                                                        <strong><img src="/assets/img/news/5838.png" alt="5838.png" class="jsResizeImage"> Triple Arrow</strong>
+                                                        <strong><img src="/assets/img/items/5838.png" alt="5838.png" class="jsResizeImage"> Triple Arrow</strong>
                                                         <ul>
                                                             <li>
                                                                 <strong>Target: </strong><span style="color:#FF0000;"><del>Special Area</del></span> 
@@ -340,7 +340,7 @@
                                                         </ul>
                                                     </li>
                                                     <li>
-                                                        <strong><img src="/assets/img/news/5842.png" width="20" alt="5842.png" class="jsResizeImage"> Rapid (Buff)</strong>
+                                                        <strong><img src="/assets/img/items/5842.png" width="20" alt="5842.png" class="jsResizeImage"> Rapid (Buff)</strong>
                                                         <ul>
                                                             <li>
                                                                 <strong><span style="color:#008000;">Added:</span></strong><span style="color:#FF8C00;"><strong></strong> Water energies increases by (Player Level * 3 )</span>
@@ -353,7 +353,7 @@
                                         </div>
                                         <div class="spoilerBox jsSpoilerBox">
                                             <div class="jsOnly spoilerBoxHeader">
-                                                <img src="/assets/img/news/32120.png "> <a class="news-button small jsSpoilerToggle" data-has-custom-label="true"> • MAGICIAN</a>
+                                                <img src="/assets/img/items/32120.png "> <a class="news-button small jsSpoilerToggle" data-has-custom-label="true"> • MAGICIAN</a>
                                             </div>
                                             <div class="spoilerBoxContent" style="display: none;">
                                                 <p><strong><span style="font-size: 14pt;"><img src="" alt="unknown.png" class="jsResizeImage"> Red Magician</span></strong><br></p>
@@ -369,7 +369,7 @@
                                                         </ul>
                                                     </li>
                                                     <li>
-                                                        <strong><img src="/assets/img/news/5857.png" alt="5857.png" class="jsResizeImage"> Fiery Breath</strong>
+                                                        <strong><img src="/assets/img/items/5857.png" alt="5857.png" class="jsResizeImage"> Fiery Breath</strong>
                                                         <ul>
                                                             <li>Changed Burn Debuff the same as the other specialist skills</li>
                                                         </ul>
@@ -380,7 +380,7 @@
                                         </div>
                                         <div class="spoilerBox jsSpoilerBox">
                                             <div class="jsOnly spoilerBoxHeader">
-                                                <img src="/assets/img/news/32160.png "> <a class="news-button small jsSpoilerToggle" data-has-custom-label="true"> • MARTIAL ARTIST</a>
+                                                <img src="/assets/img/items/32160.png "> <a class="news-button small jsSpoilerToggle" data-has-custom-label="true"> • MARTIAL ARTIST</a>
                                             </div>
                                             <div class="spoilerBoxContent" style="display: none;">
                                                 <p><strong><span style="font-size: 14pt;"><img src="" alt="unknown.png" class="jsResizeImage"> Draconic Fist</span></strong>
