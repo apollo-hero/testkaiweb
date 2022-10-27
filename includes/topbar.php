@@ -3,7 +3,7 @@
         <div class="topPanel-wrapper_left flex-c">
             <ul class="menu flex-c-c">
                 <li><a href="/news">News</a></li>
-                <li><a href="" onclick="new modal('#register_modal');return false">Registration</a></li>
+                <li><a href="javascript:;" onclick="new modal('#register_modal');return false">Registration</a></li>
                 <li><a href="/downloads">Downloads</a></li>
                 <li><a href="/ranking">Rankings</a></li>
                 <li><a href="/rules">Rules</a></li>

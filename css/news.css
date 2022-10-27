@@ -1,0 +1,480 @@
+.main {
+    padding: 0 0;
+}
+
+@media screen and (min-width: 1025px){
+    .main {
+        padding: 30px 0;
+    }
+}
+
+@media screen and (min-width: 1025px){
+    .main {
+        padding: 60px 0;
+    }
+}
+
+.main {
+    flex: 1 0 auto;
+}
+
+@media screen and (max-width:544px){
+    .main>.layoutBoundary{
+        display:flex;
+        flex-wrap:wrap
+    }
+    .main>.layoutBoundary>.content{
+        flex:0 0 100%;
+        order:3
+    }
+    .main>.layoutBoundary>.boxesSidebarLeft{
+        order:1
+    }
+    .main>.layoutBoundary>.boxesSidebarRight{
+        order:2
+    }
+    .boxesSidebarLeft,.boxesSidebarRight{
+        flex:1 0 100%;
+        pointer-events:none
+    }
+    .boxesSidebarLeft>.boxContainer,.boxesSidebarRight>.boxContainer{
+        pointer-events:all
+    }
+    .boxesSidebarLeft:not(.open),.boxesSidebarRight:not(.open){
+        flex:1 50%
+    }
+    .boxesSidebarLeft:not(.open)>.boxContainer,.boxesSidebarRight:not(.open)>.boxContainer{
+        display:none
+    }
+    .boxesSidebarLeft::before,.boxesSidebarRight::before{
+        background-color:#ecf1f7;
+        color:#d63b37;
+        content:attr(data-show-sidebar);
+        display:block;
+        padding:10px 0;
+        pointer-events:all;
+        text-align:center
+    }
+    .boxesSidebarLeft.open::before,.boxesSidebarRight.open::before{
+        content:attr(data-hide-sidebar);
+        margin-bottom:20px
+    }
+    .boxesSidebarLeft.boxesSidebarLeftHasMenu::before{
+        content:attr(data-show-navigation)
+    }
+    .boxesSidebarLeft.boxesSidebarLeftHasMenu.open::before{
+        content:attr(data-hide-navigation)
+    }
+    .boxesSidebarLeft:not(.open)+.content+.boxesSidebarRight:not(.open){
+        border-left:1px solid #fafafa;
+        margin-left:10px;
+        margin-top:0
+    }
+    .content:first-child+.boxesSidebarRight{
+        margin-bottom:20px;
+        margin-top:0
+    }
+}
+
+.layoutBoundary{
+    margin:0 auto
+}
+@media screen and (max-width:1024px){
+    .layoutBoundary{
+        padding:0 10px;
+        width:100%
+    }
+}
+@media screen and (min-width:1025px),print{
+    .layoutBoundary{
+        padding:0 20px;
+        min-width:1000px;
+        max-width:1400px
+    }
+}
+
+.layoutBoundary>.content {
+    background-color: #f2f2f2;
+    border: thin #fff solid;
+    border-radius: 6px;
+    padding: 8px;
+}
+
+@media screen and (min-width: 1025px)
+{
+    .content {
+        flex: 1 1 0px;
+    }
+}
+
+@media screen and (min-width: 769px){
+    .contentHeader {
+        display: flex;
+        align-items: flex-start;
+    }
+}
+
+.contentHeader, .boxHeadline {
+    color: #d63b37;
+}
+
+@media screen and (min-width: 1025px){
+    .contentHeader.messageGroupContentHeader>.contentHeaderIcon {
+        position: relative;
+    }
+}
+
+
+@media screen and (min-width: 769px){
+    .contentHeader .contentHeaderIcon {
+        flex: 0 0 64px;
+        margin-right: 15px;
+    }
+}
+
+.userAvatarImage {
+    border-radius: 2%!important;
+    background-color: transparent!important;
+}
+
+.wbbAnnouncementIcon, .wbbStickyIcon, .wbbMovedIcon {
+    border-radius: 50%;
+    position: absolute;
+}
+
+@media screen and (min-width: 769px){
+    .wbbAnnouncementIcon, .wbbStickyIcon, .wbbMovedIcon {
+        border: 1px solid #fafafa;
+        box-sizing: content-box;
+        padding: 4px;
+        right: -8px;
+        top: -2px;
+    }
+}
+
+.wbbStickyIcon {
+    background-color: #a02925;
+}
+
+.icon.wbbStickyIcon {
+    color: #fff!important;
+}
+
+.fa-thumb-tack:before {
+    content: "\f08d";
+}
+
+@media screen and (min-width: 769px){
+    .contentHeader .contentHeaderTitle {
+        flex: 1 1 0%;
+    }    
+}
+
+@media screen and (min-width: 769px){
+    .contentHeader .contentTitle {
+        margin-top: 37px!important;
+    }    
+}
+
+@media screen and (min-width: 769px){
+    .contentHeader .contentTitle, .boxHeadline .contentTitle, .contentHeader>h1, .boxHeadline>h1 {
+        font-size: 28px;
+    }
+}
+
+.contentHeader .contentTitle, .boxHeadline .contentTitle, .contentHeader>h1, .boxHeadline>h1 {
+    font-weight: 300;
+    line-height: 1.05;
+}
+.contentTitle {
+    font-family: Arial Black,Arial,sans-serif;
+}
+
+.contentHeader .contentHeaderMetaData {
+    color: #7b1325;
+    margin-top: 5px;
+}
+.inlineList {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contentHeader .contentHeaderMetaData.inlineList>li:not(:last-child) {
+    margin-right: 10px;
+}
+
+.inlineList>li {
+    flex: 0 1 auto;
+}
+
+.contentHeader, .boxHeadline, .contentTitle {
+    color: #d63b37 !important;
+}
+
+.contentHeader .contentHeaderMetaData>li a, .contentHeader .contentHeaderMetaData>li a:hover, .contentHeader .contentHeaderMetaData>li .icon {
+    color: #7b1325;
+}
+
+.content>.section, .content>form, .sectionContainer {
+    border: 1px solid #ecf1f7;
+    background-color: #fff;
+    padding: 20px;
+}
+
+.contentHeader+.section, .contentHeader+form, .contentHeader+.sectionContainer {
+    margin-top: 30px;
+}
+
+@media screen and (min-width: 769px){
+    .messageList:not(.messageReducedList) {
+        border-top: 1px solid #ac312d;
+    }
+}
+
+.content>.section>.messageList {
+    border-top-width: 0;
+}
+
+
+@media screen and (min-width: 769px){
+    .messageList:not(.messageReducedList)>li {
+        border-bottom: 1px solid #ac312d;
+        padding: 30px 0;
+    }
+}
+
+.content>.section>.messageList>:first-child {
+    padding-top: 0;
+}
+
+.content>.section>.messageList>:last-child {
+    border-bottom-width: 0;
+    padding-bottom: 0;
+}
+
+.wbbPost {
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #eaeaea;
+    border-radius: 3px;
+}
+
+.messageSidebar {
+    background-color: #ecf1f7;
+    color: #2c3e50;
+    position: relative;
+}
+
+@media screen and (min-width: 769px){
+    .messageSidebar {
+        align-self: flex-start;
+        border-radius: 3px;
+        flex: 0 0 240px;
+        padding: 20px;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 769px){
+    .messageContent {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 769px){
+    .messageSidebar+.messageContent {
+        flex-basis: calc(100% - 270px);
+        margin-left: 30px;
+        max-width: calc(100% - 270px);
+    }
+}
+
+@media screen and (min-width: 769px){
+    .message {
+        display: flex;
+    }
+}
+
+.messageHeader {
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media screen and (min-width: 769px){
+    .messageHeader {
+        flex: 0 0 auto;
+    }
+}
+
+.message .messageHeader {
+    padding-right: 10px;
+}
+
+.messageHeaderBox {
+    align-items: center;
+    display: flex;
+    flex: 1 1 auto;
+    flex-wrap: wrap;
+}
+
+.messageHeaderMetaData {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: 400;
+}
+
+@media screen and (min-width: 769px){
+    .messageHeaderMetaData {
+        font-size: 12px;
+    }
+}
+
+
+.messageHeaderBox>.messageHeaderMetaData, .messageHeaderBox>.messageStatus {
+    flex: 0 0 auto;
+}
+
+.messageHeaderMetaData>li {
+    flex: 0 1 auto;
+}
+.messageHeaderMetaData .messagePublicationTime {
+    color: #7b1325;
+}
+
+.messageBody {
+    color: #2c3e50;
+    font-family: cerapro,Arial,Helvetica,sans-serif;
+    line-height: 1.48;
+}
+
+.messageBody img {
+    vertical-align: middle;
+}
+
+.messageBody p {
+    margin-bottom: 0px;
+}
+
+
+@media screen and (min-width: 769px){
+    .messageFooter {
+        flex: 0 0 auto;
+    }
+}
+
+.messageFooterGroup {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.messageFooterGroup {
+    margin-bottom: -10px;
+    margin-right: -10px;
+}
+
+.likesSummary {
+    color: #7b1325;
+    cursor: pointer;
+    flex: 0 0 auto;
+}
+
+.messageFooterGroup>.likesSummary {
+    flex: 0 1 auto;
+    font-weight: 400;
+}
+
+@media screen and (min-width: 769px){
+    .messageFooterGroup>.likesSummary {
+        font-size: 12px;
+    }
+}
+
+.messageFooterGroup:not(:first-child)>.likesSummary, .messageFooterGroup:not(:first-child)>.messageFooterButtons, .messageFooterGroup:not(:first-child)>.messageFooterButtonsExtra {
+    margin-top: 20px;
+}
+
+.likesSummary>.icon {
+    color: #7b1325;
+    margin-right: 5px;
+}
+
+.badge-new, a.badge-new {
+    background-color: #2c3e50;
+    border-radius: 2px;
+    color: #fafafa;
+    display: inline-block;
+    line-height: 1.28;
+    padding: 2px 6px;
+    position: relative;
+    vertical-align: middle;
+    white-space: nowrap;
+    word-wrap: normal;
+    font-weight: 400;
+}
+
+@media screen and (min-width: 769px){
+    .badge-new, a.badge-new {
+        font-size: 12px;
+    }
+}
+
+.badge-new {
+    border-radius: 9px!important;
+    background-color: #7b1325;
+    color: #fff;
+}
+
+.badge-new.label {
+    font-weight: 400!important;
+    border-radius: 4px!important;
+}
+
+.wcfLikeCounter.likeCounterLiked {
+    color: #060!important;
+}
+
+.messageStatus {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: 400;
+}
+
+@media screen and (min-width: 769px){
+    .messageStatus {
+        font-size: 12px;
+    }
+}
+
+.messageHeaderBox>.messageHeaderMetaData, .messageHeaderBox>.messageStatus {
+    flex: 0 0 auto;
+}
+
+.messageHeaderMetaData+.messageStatus {
+    margin-left: 5px;
+}
+
+a.badge-new {
+    border-radius: 9px!important;
+    background-color: #7b1325;
+    color: #fff;
+}
+
+.messageStatus>li:not(:last-child) {
+    margin-right: 5px;
+}
+
+@media screen and (min-width: 769px) {
+    .messageAuthorContainer:not(:last-child) {
+        margin-bottom: 5px;
+    }
+}
+
+html, body, select, input[type=submit], a, button, .button, icon, span, img, label {
+    cursor: url(../assets/nos.png),auto!important;
+}

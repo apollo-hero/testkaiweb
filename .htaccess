@@ -39,7 +39,7 @@ RewriteRule ^slot-machine(|/)$ ./index.php?to=slot
 RewriteRule ^consult(|/)$ ./php/query.php
 RewriteRule ^logout(|/)$ ./php/query.php?from=Logout
 RewriteRule ^index(|/)$ ./index.php
-RewriteRule ^news(|/)$ ./index.php?to=news&&page=-1
+RewriteRule ^news(|/)$ ./index.php
 RewriteRule ^guides(|/)$ ./index.php?to=guides
 RewriteRule ^downloads(|/)$ ./index.php?to=downloads
 RewriteRule ^ranking(|/)$ ./index.php?to=ranking
