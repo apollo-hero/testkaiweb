@@ -1718,3 +1718,7 @@ height: 180px;
   padding-bottom: 2px;
   pointer-events: none;
 }
+
+.footer-info {
+	color:#ff8a56
+}

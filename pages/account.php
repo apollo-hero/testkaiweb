@@ -201,7 +201,7 @@ $current_login_ip = $log[0]['log_ip'];
                                             <div class="row">
                                                 <div class="col-12">
 
-                                                    <div class="table-responsive-sm">
+                                                    <div class="">
                                                         <table class="shop_table table dmn-rankings-table table-striped all_shop">
                                                             <tbody class="shopitem">
                                                                 <?php
@@ -210,12 +210,12 @@ $current_login_ip = $log[0]['log_ip'];
                                                                 foreach ($sql_related_item as $item) {
                                                                     $i++;
                                                                 ?>
-                                                                    <tr>
+                                                                    <tr height="70px">
                                                                         <td width="17%"><?php echo $item['name']; ?></td>
                                                                         <td>
                                                                             <img src="./assets/img/items/<?php echo $item['vnum']; ?>.png" height="40px" width="40px">
                                                                         </td>
-                                                                        <td class="text-center unit-pirce" style="width: 150px;">
+                                                                        <td class="text-center unit-pirce" width="10%">
                                                                             <span class="font-bold"><?php echo $item['price']; ?></span>
                                                                             <span class="iconify text-warning" data-icon="majesticons:coins"></span>
                                                                         </td>
@@ -234,9 +234,9 @@ $current_login_ip = $log[0]['log_ip'];
                                                                             </select>
                                                                         </td>
                                                                         <td price="<?php echo $item['price']; ?>">
-                                                                            <input type="number" value="0" class="input input-bordered w-20 InputQty InputQty-<?php echo $i; ?>" name="InputQty" min="1" max="99">
+                                                                            <input type="number" value="1" class="input input-bordered w-20 InputQty InputQty-<?php echo $i; ?>" name="InputQty" min="1" max="99">
                                                                         </td>
-                                                                        <td class="price" style="width:70px;"></td>
+                                                                        <td class="price" width="12%"></td>
                                                                         <td>
                                                                             <a href="javascript:;" class="btn btn-sm btn-primary float-right btn-buy buy" pro_id="<?php echo $item['productid']; ?>" itemid="<?php echo $i; ?>">Buy</a>
                                                                         </td>
@@ -255,12 +255,12 @@ $current_login_ip = $log[0]['log_ip'];
                                                                 foreach ($sql_related_item as $item) {
                                                                     $i++;
                                                                 ?>
-                                                                    <tr>
+                                                                    <tr height="70px">
                                                                         <td width="17%"><?php echo $item['name']; ?></td>
                                                                         <td>
                                                                             <img src="./assets/img/items/<?php echo $item['vnum']; ?>.png" height="40px" width="40px">
                                                                         </td>
-                                                                        <td class="text-center unit-pirce">
+                                                                        <td class="text-center unit-pirce" width="10%">
                                                                             <span class="font-bold"><?php echo $item['price']; ?></span>
                                                                             <span class="iconify text-warning" data-icon="majesticons:coins"></span>
                                                                         </td>
@@ -279,9 +279,9 @@ $current_login_ip = $log[0]['log_ip'];
                                                                             </select>
                                                                         </td>
                                                                         <td price="<?php echo $item['price']; ?>">
-                                                                            <input type="number" value="0" class="input input-bordered w-20 InputQty InputQty-<?php echo $i; ?>" name="InputQty" min="1" max="99">
+                                                                            <input type="number" value="1" class="input input-bordered w-20 InputQty InputQty-<?php echo $i; ?>" name="InputQty" min="1" max="99">
                                                                         </td>
-                                                                        <td class="price" style="width:70px;"></td>
+                                                                        <td class="price" width="12%"></td>
                                                                         <td>
                                                                             <a href="javascript:;" class="btn btn-sm btn-primary float-right btn-buy buy" pro_id="<?php echo $item['productid']; ?>" itemid="<?php echo $i; ?>">Buy</a>
                                                                         </td>

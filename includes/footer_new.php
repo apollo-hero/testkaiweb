@@ -15,14 +15,14 @@
 		</div><!-- footer-block-t -->
 		<div class="footer-end flex-s-c">
 			<div class="footer-block-coperite">
-				<span class="copyright">Copyright 2022 © <a href="#">Apolys.com</a></span><br><br>
+				<span class="copyright">Copyright 2022 © <a href="#"><?php echo $site['name']; ?></a></span><br><br>
 				<span><a href="/rules">Terms of Service &amp; Privacy Policy</a></span>
 			</div>
 			<div class="footer-block-r">
                 <div class="flex gap-2 mb-5">
-                    <a class="text-info" href='<?php echo $link_url['site_link_ragezone'] ; ?>' target="_blank"><span class="iconify" data-icon=''></span>Ragezone</a>/
-            <a class="text-info" href='<?php echo $link_url['site_link_elitepvpers'] ; ?>' target="_blank"><span class="iconify" data-icon=''></span>Elitepvpers</a>/
-            <a class="text-info" href='<?php echo $link_url['site_social_discord']; ?>' target="_blank"><span class="iconify" data-icon=''></span>Discord</a>
+                    <a class="footer-info" href='<?php echo $link_url['site_link_ragezone'] ; ?>' target="_blank"><span class="iconify" data-icon=''></span>Ragezone</a>/
+            <a class="footer-info" href='<?php echo $link_url['site_link_elitepvpers'] ; ?>' target="_blank"><span class="iconify" data-icon=''></span>Elitepvpers</a>/
+            <a class="footer-info" href='<?php echo $link_url['site_social_discord']; ?>' target="_blank"><span class="iconify" data-icon=''></span>Discord</a>
                 </div>
 			</div>			
 		</div>
