@@ -9,7 +9,7 @@
                     <ul class="inlineList contentHeaderMetaData">
                         <li>
                             <span class="icon icon16"><i class="fa fa-user" aria-hidden="true"></i></span>
-                            <span class="userLink" style="color: #cb3a35;">Eastmile</span>
+                            <span class="userLink" style="color: #cb3a35;"><?php echo $site['name']; ?></span>
                         </li>
                         <li>
                             <span class="icon icon16"><i class="fa fa-clock-o" aria-hidden="true"></i></span>
@@ -29,10 +29,10 @@
                                         <img src="/assets/img/logo.png" style="width: 80px; height: 80px" alt="" class="userAvatarImage">
                                     </div>
                                     <div class="messageAuthorContainer">
-                                        <span class="username userLink" style="color: #d63b37;" itemprop="name">Apolys</span>
+                                        <span class="username userLink" style="color: #d63b37;" itemprop="name"><?php echo $site['name']; ?></span>
                                     </div>
                                     <div class="userTitle">
-                                        <span class="badge-new userTitlebadge-new Apolys">Apolys</span>
+                                        <span class="badge-new userTitlebadge-new Apolys"><?php echo $site['name']; ?></span>
                                     </div>
                                 </div>
                             </aside>
