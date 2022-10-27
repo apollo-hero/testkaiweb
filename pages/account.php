@@ -236,7 +236,7 @@ $current_login_ip = $log[0]['log_ip'];
                                                                         <td price="<?php echo $item['price']; ?>">
                                                                             <input type="number" value="1" class="input input-bordered w-20 InputQty InputQty-<?php echo $i; ?>" name="InputQty" min="1" max="99">
                                                                         </td>
-                                                                        <td class="price" width="12%"></td>
+                                                                        <td class="price" width="12%"><?php echo $item['price']; ?></td>
                                                                         <td>
                                                                             <a href="javascript:;" class="btn btn-sm btn-primary float-right btn-buy buy" pro_id="<?php echo $item['productid']; ?>" itemid="<?php echo $i; ?>">Buy</a>
                                                                         </td>
@@ -281,7 +281,7 @@ $current_login_ip = $log[0]['log_ip'];
                                                                         <td price="<?php echo $item['price']; ?>">
                                                                             <input type="number" value="1" class="input input-bordered w-20 InputQty InputQty-<?php echo $i; ?>" name="InputQty" min="1" max="99">
                                                                         </td>
-                                                                        <td class="price" width="12%"></td>
+                                                                        <td class="price" width="12%"><?php echo $item['price']; ?></td>
                                                                         <td>
                                                                             <a href="javascript:;" class="btn btn-sm btn-primary float-right btn-buy buy" pro_id="<?php echo $item['productid']; ?>" itemid="<?php echo $i; ?>">Buy</a>
                                                                         </td>
@@ -392,8 +392,9 @@ $current_login_ip = $log[0]['log_ip'];
             var total = parseInt($(this).parent().prev().text());
             // var total = parseInt($("#buy-price").val()) * amount;
             var itemid = $(this).attr("itemid");
-            var amount = $(".InputQty-" + itemid).val();
-            var character = $(".charactor-" + itemid).val();
+            // var amount = $(".InputQty-" + itemid).val();
+            var amount = $(this).parent().prev().prev().find(".InputQty-"+itemid).val();
+            var character = $(this).parent().prev().prev().prev().find(".charactor-"+itemid).val();
             var _error = false;
             if (coin <= 0 || total > coin) {
                 //    $.toast({
