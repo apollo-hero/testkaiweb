@@ -235,6 +235,6 @@
     </div>
 	<title>Kaisen - News - Launch Notes </title>
     <div class="w-100  ">
-        <?php include "includes/footer.php"; ?>
+        <?php //include "includes/footer.php"; ?>
     </div>
 </div>

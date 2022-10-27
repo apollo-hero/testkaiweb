@@ -209,6 +209,16 @@
             var refreshId = setInterval(function() {
                 $('#cart-amount').load('includes/cart_amount.php');
             }, 1000);
+
+            $('.news-button').on("click", function(){
+                var display = $(this).parent().next().css("display");
+                if(display == "none"){
+                    $(this).parent().next().css("display", "block");
+                } else {
+                    $(this).parent().next().css("display", "none");
+                }
+                
+            })
         });
     </script>
 </body>

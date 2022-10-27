@@ -478,3 +478,49 @@ a.badge-new {
 html, body, select, input[type=submit], a, button, .button, icon, span, img, label {
     cursor: url(../assets/nos.png),auto!important;
 }
+
+.news-button {
+    background-color: #a02925;
+    border-radius: 2px;
+    border-width: 0;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 400;
+    margin: 0;
+    padding: 8px 18px;
+    text-decoration: none;
+    font-family: cerapro,Arial,Helvetica,sans-serif;
+    line-height: 1.48;
+    -webkit-appearance: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.spoilerBox>.spoilerBoxContent {
+    background-color: #fafafa;
+    box-shadow: 0 0 3px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 24%);
+    padding: 10px 20px;
+    margin-top: 10px;
+}
+
+.htmlContent ul, .messageBody>.messageText ul, .messageSignature>div ul, .redactor-layer ul, .htmlContent ol, .messageBody>.messageText ol, .messageSignature>div ol, .redactor-layer ol {
+    margin: 1em 0 1em 40px;
+}
+
+.htmlContent ul, .messageBody>.messageText ul, .messageSignature>div ul, .redactor-layer ul {
+    list-style-type: disc;
+}
+
+.spoilerBox {
+    clear: both;
+    margin: 1em 0;
+}
+
+.spoilerBox, .quoteBox, .codeBox {
+    width: 98%;
+}
