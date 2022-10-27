@@ -190,8 +190,8 @@
     <script src="assets/demo/chart-bar-demo.js"></script> -->
     <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
-    <script src="assets/demo/datatables-demo.js"></script>
-    <script src="assets/demo/modalx.js"></script>
+    <script src="/assets/demo/datatables-demo.js"></script>
+    <script src="/assets/demo/modalx.js"></script>
     <script src="<?php echo $site['assets']['javascript']; ?>/forms.js?r=9"> </script>
     <script src="<?php echo $site['assets']['javascript']; ?>/validator.js?r=30"> </script>
     <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
