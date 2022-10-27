@@ -3,8 +3,6 @@
         <div id="content" class="content">
             <div class="contentHeader messageGroupContentHeader wbbThread" data-thread-id="8087" data-is-link="0">
                 <div class="contentHeaderIcon">
-                    <img src="https://board.eastmile.org/images/avatars/06/1273-069323b3d76327187a40bf34d04a34fe4c4f6570.png" style="width: 64px; height: 64px" alt="" class="userAvatarImage">
-                    <span class="icon icon16 jsTooltip jsIconSticky wbbStickyIcon" title="Pinned"><i class="fa fa-thumb-tack" aria-hidden="true"></i></span>
                 </div>
                 <div class="contentHeaderTitle">
                     <h1 class="contentTitle">[24/10/2022] Balance changes</h1>
@@ -15,7 +13,7 @@
                         </li>
                         <li>
                             <span class="icon icon16"><i class="fa fa-clock-o" aria-hidden="true"></i></span>
-                            <a href="https://board.eastmile.org/forum/thread/8087-24-10-2022-balance-changes/"><time datetime="2022-10-24T01:43:00+02:00" class="datetime" data-timestamp="1666568580" data-date="Oct 24th 2022" data-time="1:43 am" data-offset="7200">Monday, 1:43 am</time></a>
+                            <time datetime="2022-10-24T01:43:00+02:00" class="datetime" data-timestamp="1666568580" data-date="Oct 24th 2022" data-time="1:43 am" data-offset="7200">Monday, 1:43 am</time></a>
                         </li>
                     </ul>
                 </div>
@@ -28,13 +26,13 @@
                             <aside class="messageSidebar member" itemprop="author" itemscope itemtype="http://schema.org/Person">
                                 <div class="messageAuthor">
                                     <div class="userAvatar">
-                                        <img src="https://board.eastmile.org/images/avatars/06/1273-069323b3d76327187a40bf34d04a34fe4c4f6570.png" style="width: 128px; height: 128px" alt="" class="userAvatarImage">
+                                        <img src="/assets/img/logo.png" style="width: 80px; height: 80px" alt="" class="userAvatarImage">
                                     </div>
                                     <div class="messageAuthorContainer">
-                                        <span class="username userLink" style="color: #d63b37;" itemprop="name">Eastmile</span>
+                                        <span class="username userLink" style="color: #d63b37;" itemprop="name">Apolys</span>
                                     </div>
                                     <div class="userTitle">
-                                        <span class="badge-new userTitlebadge-new eastmile">Eastmile</span>
+                                        <span class="badge-new userTitlebadge-new Apolys">Apolys</span>
                                     </div>
                                 </div>
                             </aside>
@@ -42,24 +40,10 @@
                                 <div class="messageHeader">
                                     <div class="messageHeaderBox">
                                         <ul class="messageHeaderMetaData">
-                                            <li><a href="https://board.eastmile.org/forum/thread/8087-24-10-2022-balance-changes/?postID=29919#post29919" class="permalink messagePublicationTime"><time datetime="2022-10-24T01:43:00+02:00" class="datetime" data-timestamp="1666568580" data-date="Oct 24th 2022" data-time="1:43 am" data-offset="7200">Monday,
+                                            <a class="permalink messagePublicationTime"><time datetime="2022-10-24T01:43:00+02:00" class="datetime" data-timestamp="1666568580" data-date="Oct 24th 2022" data-time="1:43 am" data-offset="7200">Monday,
                                                         1:43 am</time></a></li>
                                         </ul>
-                                        <ul class="messageStatus">
-                                            <li><span class="badge-new label newMessagebadge">New</span></li>
-                                            <li>
-                                                <a href="#" class="wcfLikeCounter likeCounterLiked" data-tooltip="2 Likes">
-                                                    <span class="icon icon16">
-                                                        <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
-                                                    </span>
-                                                    <span class="wcfLikeValue">+2</span>
-                                                </a>
-                                            </li>
-                                        </ul>
                                     </div>
-                                    <ul class="messageQuickOptions">
-                                        <li><a href="https://board.eastmile.org/forum/thread/8087-24-10-2022-balance-changes/?postID=29919#post29919" class="badge-new jsTooltip jsButtonShare" title="Share" data-link-title="[24/10/2022] Balance changes">1</a></li>
-                                    </ul>
                                 </div>
                                 <div class="messageBody">
                                     <div class="messageText" itemprop="text">
@@ -68,7 +52,7 @@
                                         </p>
                                         <p><br></p>
                                         <p><br></p>
-                                        <p><strong><span style="font-size: 14pt;"><img src="https://eastmile.org/images/changes.webp" alt="changes.webp" class="jsResizeImage"></span></strong>
+                                        <p><strong><span style="font-size: 14pt;"><img src="/assets/img/changes.png" alt="changes.png" class="jsResizeImage"></span></strong>
                                         </p>
                                         <p><br></p>
                                         <p>— <img src="https://eastmile.org/icons/4161.png" alt="4161.png" class="jsResizeImage"> Lion Loa Sword (Swordman C55 main weapon) changes:</p>
@@ -1715,7 +1699,7 @@
                                         </div>
                                         <p><br></p>
                                         <p><br></p>
-                                        <p><strong><span style="font-size: 18pt;"><img src="https://eastmile.org/images/bugs.webp" alt="bugs.webp" class="jsResizeImage"></span></strong>
+                                        <p><strong><span style="font-size: 18pt;"><img src="/assets/img/bugs.png" alt="bugs.png" class="jsResizeImage"></span></strong>
                                         </p>
                                         <p><strong><br><br></strong></p>
                                         <p>— The maximum 25% is actually 12.5% because it reduces pvp damage by half. Readjusted to 25%
@@ -1729,7 +1713,6 @@
                                     <div class="messageFooterNotes">
                                     </div>
                                     <div class="messageFooterGroup">
-                                        <div class="likesSummary"><span class="icon icon16"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></span><span class="likesSummaryContent">Beazel and Jack like this.</span></div>
                                         <ul class="messageFooterButtonsExtra buttonList smallButtons jsMobileNavigationExtra">
                                         </ul>
                                         <ul class="messageFooterButtons buttonList smallButtons jsMobileNavigation">
