@@ -191,6 +191,11 @@ button:hover,
 
 .menu {
   margin-top: -32px;
+  position: absolute; 
+  width: 100%; 
+  top: 28px; 
+  left: -311px; 
+  z-index: 20; 
 }
 
 .menu li {
@@ -199,7 +204,7 @@ button:hover,
 
 .menu a {
   color: #eec3ef;
-  font-size: 15px;
+  font-size: 16px;
   text-transform: uppercase;
   padding: 0px 26px;
   display: block;
@@ -235,7 +240,7 @@ header { height: 710px; position: relative; }
   position: absolute; 
   width: 100%; 
   top: 0px; 
-  /* left: 50px;  */
+  left: 255px; 
   z-index: 20; 
 }
 .topPanel-wrapper { 

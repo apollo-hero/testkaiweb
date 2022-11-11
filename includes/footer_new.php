@@ -9,8 +9,8 @@
 				<li><a href="/downloads" title="Downloads">Downloads</a></li>
 				<li><a href="/ranking" title="Rankings">Rankings</a></li>
 				<li><a href="/rules" title="Rules">Rules</a></li>
-				<li><a href="/guides" title="Guides">Guides</a></li>
-				<li><a href="<?php echo $link_url['site_link_elitepvpers'] ; ?>" target="_blank">ELITEPVPERS</a></li>
+				<li><a href="/account">Donate</a></li>
+				<li><a href="<?php echo $link_url['site_social_discord'] ; ?>" target="_blank">DISCORD</a></li>
 			</ul>
 		</div><!-- footer-block-t -->
 		<div class="footer-end flex-s-c">
@@ -20,8 +20,9 @@
 			</div>
 			<div class="footer-block-r">
                 <div class="flex gap-2 mb-5">
-                    <a class="footer-info" href='<?php echo $link_url['site_link_ragezone'] ; ?>' target="_blank"><span class="iconify" data-icon=''></span>Ragezone</a>/
-            <a class="footer-info" href='<?php echo $link_url['site_link_elitepvpers'] ; ?>' target="_blank"><span class="iconify" data-icon=''></span>Elitepvpers</a>/
+                    <a class="footer-info" href='<?php echo $link_url['site_link_ragezone'] ; ?>' target="_blank"><span class="iconify" data-icon=''></span>Ragezone</a>-
+            <a class="footer-info" href='<?php echo $link_url['site_link_elitepvpers'] ; ?>' target="_blank"><span class="iconify" data-icon=''></span>Elitepvpers</a>-
+            <a class="footer-info" href='<?php echo $link_url['site_link_inforge'] ; ?>' target="_blank"><span class="iconify" data-icon=''></span>Inforge</a>-
             <a class="footer-info" href='<?php echo $link_url['site_social_discord']; ?>' target="_blank"><span class="iconify" data-icon=''></span>Discord</a>
                 </div>
 			</div>			

@@ -224,7 +224,7 @@
                             <!-- <div class="row mb-5">
                                 <div class="col-12">
                                     <div class="mx-auto" style="width: 350px;">
-                                        <form method="post" action="https://Apolys.org/rankings/search/DEFAULT">
+                                        <form method="post" action="https://nt-apolys.com/rankings/search/DEFAULT">
                                             <div class="form-row align-items-center">
                                                 <div class="col-auto">
                                                     <label class="sr-only" for="inlineFormInput">Name</label>

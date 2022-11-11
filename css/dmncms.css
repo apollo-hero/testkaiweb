@@ -1381,7 +1381,7 @@ div[id*="item-slot-occupied-"] img:hover {
 */
 .dmn-content{
 	width: 805px;
-	  padding: 40px 40px 40px 40px;
+	  padding: 20px 20px 20px 20px;
 	  margin-left: 10px;
 	  background: url(../assets/img/games/page-content-top.jpg)top no-repeat, url(../assets/img/games/page-content-bottom.jpg) bottom no-repeat, url(../assets/img/games/page-content-center.jpg) repeat-y;
 	  z-index: 1;

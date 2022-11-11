@@ -7,8 +7,8 @@
                 <li><a href="/downloads">Downloads</a></li>
                 <li><a href="/ranking">Rankings</a></li>
                 <li><a href="/rules">Rules</a></li>
-                <li><a href="/guides">Guides</a></li>
-                <li><a href='<?php echo $link_url['site_link_elitepvpers']; ?>' target="_blank">ELITEPVPERS </a></li>
+                <li><a href="/account">Donate</a></li>
+                <li><a href='<?php echo $link_url['site_social_discord']; ?>' target="_blank">DISCORD </a></li>
             </ul>
         </div>
         <?php
@@ -54,11 +54,10 @@
     <div class="modal_form">
         <form id="FormLogin" name="FormLogin" method="POST" action="/consult?from=Login">
             <h3 class="text-center w-full mb-6">
-                Don't forget to join with
+                Join our Discord server to stay up to date on all of our news!
                 <a href='<?php echo $link_url['site_social_discord']; ?>' target="_blank" class="text-lg font-bold text-info">
-                    Discord
+				Discord
                 </a>
-                add a random one
             </h3>
             <div class="formGroup">
                 <span class="formGroup-name">Username or Email</span>
@@ -88,7 +87,7 @@
 <!-- register modal -->
 <div class="modal_window" id="register_modal">
     <a href="#" id="close_modal" class="close_mw"></a>
-    <h3>Welcome back to testkaiweb!</h3>
+    <h3>Welcome to Apolys</h3>
     <div class="modal_form">
         <form id="register_form" method="POST" action="/consult?from=Register">
             <div class="formGroup">

@@ -475,9 +475,6 @@ a.badge-new {
     }
 }
 
-html, body, select, input[type=submit], a, button, .button, icon, span, img, label {
-    cursor: url(../assets/nos.png),auto!important;
-}
 
 .news-button {
     background-color: #a02925;

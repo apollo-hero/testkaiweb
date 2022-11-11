@@ -26,16 +26,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="keywords" content="Apolys Season 17, MMORPG, Season 17, Kundun Memphis, Lemuria Mage">
+    <meta name="keywords" content="Apolys">
     <meta name="description" content="Fight to be the top1! All in your hands!">
     <meta name="google-site-verification" content="DJv89q-eHOQvXAcRQNV9iEfxo-5y_0pyIgQYijgg_SA">
     <meta name="yandex-verification" content="8f2d70814ae84d53">
-    <meta property="og:title" content="testkaiweb">
+    <meta property="og:title" content="Apolys">
     <meta property="og:image" content="<?php echo $site['favicon']['path']; ?>">
-    <meta property="og:url" content="https://apolys.org/">
+    <meta property="og:url" content="https://nt-apolys.com/">
     <meta property="og:description" content="Fight to be the top1! All in your hands!">
     <meta property="og:type" content="website">
-    <title>testkaiweb</title>
+    <title>Apolys</title>
     <link rel="icon" type="<?php echo $site['favicon']['type']; ?>" href="<?php echo $site['favicon']['path']; ?>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="<?php echo $site['assets']['css']; ?>/bootstrap.min.css" rel="stylesheet" type="text/css">

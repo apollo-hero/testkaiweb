@@ -11,12 +11,9 @@ $last_login_ip = $log[1]['log_ip'];
 $current_login_ip = $log[0]['log_ip'];
 ?>
 <main class="content">
-    <div class="block-widget-2">
+    <div class="block-widget-2 justify-content-center">
         <div class="block-widget-1">
-            <?php include 'includes/top_player.php'; ?>
-            <!--block-TOP PLAYERS-->
             <div class="block-left"></div>
-            <?php include 'includes/top_guilds.php'; ?>
             <!--block-TOP GUILDS-->
 
             <div class="block-left"></div>

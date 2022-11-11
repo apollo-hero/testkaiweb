@@ -50,7 +50,7 @@
 <!-- register modal -->
 <!-- <div class="modal_window" id="register_modal">
     <a href="#" id="close_modal" class="close_mw"></a>
-    <h3>Welcome back to testkaiweb!</h3>
+    <h3>Welcome back to Apolys!</h3>
     <div class="modal_form">
         <form id="register_form" method="POST" action="/consult?from=Register">
             <div class="formGroup">

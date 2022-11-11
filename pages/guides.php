@@ -17,14 +17,16 @@
                 <div class="dmn-page-content">
                     <div class="row">
                         <div class="col-12">
-                            <h2 class="title">Server Guides List</h2>
+                            <h2 class="title"></h2>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-12">
                             <?php 
                             $guides = [
-                               ["title" => 'Mini-Games Drop List', 'index' => 1],
+                               ["title" => 'Item Sale Prices', 'index' => 1],
+                               ["title" => 'SP Guides', 'index' => 2],
+                               ["title" => 'Box Rewards', 'index' => 3],
                             ];
                             for ($i = 0; $i < count($guides); $i++) {
                             ?>
