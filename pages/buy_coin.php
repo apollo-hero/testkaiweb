@@ -18,7 +18,7 @@
                     <div class="row">
                         <?php if ($site['coin_status'] == 'MAINTENANCE') { ?>
                             <div class="w-100 text-center text-light bg-danger p-3">
-                                <b><i class="fad fa-exclamation-circle"></i> The coins store is currently in maintenance mode.</b>
+                                <b></i>The coins store is currently in maintenance mode.</b>
                             </div>
                         <?php } else { ?>
                         <table class="table dmn-account-table table-condensed table-bordered table-striped">

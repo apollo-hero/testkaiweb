@@ -48,7 +48,7 @@ $current_login_ip = $log[0]['log_ip'];
                                     <a class="nav-link" id="character-services-tab" data-toggle="tab" href="#character-services" role="tab" aria-controls="character-services" aria-selected="false">Shop</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" id="wheel-fortune-tab" data-toggle="tab" href="#wheel-fortune" role="tab" aria-controls="wheel-fortune" aria-selected="false">wheel fortune</a>
+                                    <a class="nav-link" id="wheel-fortune-tab" data-toggle="tab" href="#wheel-fortune" role="tab" aria-controls="wheel-fortune" aria-selected="false">Wheel of Fortune</a>
                                 </li>
                             </ul>
                             <div class="tab-content" id="myTabContent">
@@ -99,7 +99,7 @@ $current_login_ip = $log[0]['log_ip'];
                                 <div class="tab-pane fade p-2" id="user-services" role="tabpanel" aria-labelledby="user-services-tab">
                                     <?php if ($site['coin_status'] == 'MAINTENANCE') { ?>
                                         <div class="w-100 text-center text-light bg-danger p-3">
-                                            <b><i class="fad fa-exclamation-circle"></i> The coins store is currently in maintenance mode.</b>
+                                            <b></i>The coins store is currently in maintenance mode.</b>
                                         </div>
                                     <?php } else { ?>
                                         <table class="table dmn-account-table table-condensed table-bordered table-striped">
@@ -210,7 +210,7 @@ $current_login_ip = $log[0]['log_ip'];
                                                                     <tr height="70px">
                                                                         <td width="17%"><?php echo $item['name']; ?></td>
                                                                         <td>
-                                                                            <img src="./assets/img/items/<?php echo $item['vnum']; ?>.png" height="40px" width="40px">
+                                                                            <img src="./assets/img/items/<?php echo $item['image']; ?>.png" height="40px" width="40px">
                                                                         </td>
                                                                         <td class="text-center unit-pirce" width="10%">
                                                                             <span class="font-bold"><?php echo $item['price']; ?></span>
@@ -255,7 +255,7 @@ $current_login_ip = $log[0]['log_ip'];
                                                                     <tr height="70px">
                                                                         <td width="17%"><?php echo $item['name']; ?></td>
                                                                         <td>
-                                                                            <img src="./assets/img/items/<?php echo $item['vnum']; ?>.png" height="40px" width="40px">
+                                                                            <img src="./assets/img/items/<?php echo $item['image']; ?>.png" height="40px" width="40px">
                                                                         </td>
                                                                         <td class="text-center unit-pirce" width="10%">
                                                                             <span class="font-bold"><?php echo $item['price']; ?></span>
@@ -325,7 +325,7 @@ $current_login_ip = $log[0]['log_ip'];
                                                 ?>
                                                 <div class="items-group">
                                                     <a href="javascript:;" class="nt-slot-item hover-show-name " data-element-type="item">
-                                                        <img src="<?php echo $site['assets']['images'] . '/items/' . $jackpot['VNUM'] ?>.png">
+                                                        <img src="<?php echo $site['assets']['images'] . '/items/' . $jackpot['image'] ?>.png">
                                                         <p class="amount"><?php echo $jackpot['Amount']; ?></p>
                                                     </a>
                                                 </div>
@@ -343,7 +343,7 @@ $current_login_ip = $log[0]['log_ip'];
                                                 ?>
                                                 <div class="items-group">
                                                     <a href="javascript:;" class="nt-slot-item hover-show-name " data-element-type="item" data-id="2159" data-name="Partner Medicine<br>" data-amount="50">
-                                                        <img src="<?php echo $site['assets']['images'] . '/items/' . $item['VNUM'] ?>.png">
+                                                        <img src="<?php echo $site['assets']['images'] . '/items/' . $item['image'] ?>.png">
                                                         <p class="amount"><?php echo $item['Amount'];?></p>
                                                     </a>
                                                 </div>

@@ -3,7 +3,7 @@
 if ($site['coin_status'] == 'WORKING' || $_SESSION['USER_RANGE'] >= ROLE_OWNER) {
     if ($site['coin_status'] == 'MAINTENANCE') { ?>
         <div class="w-100 text-center text-light bg-danger p-3">
-            <b><i class="fad fa-exclamation-circle"></i> The coins store is currently in maintenance mode. <a class="text-dark" href="index?to=admin&&card=coins">Change</a></b>
+            <b></i>The coins store is currently in maintenance mode. <a class="text-dark" href="index?to=admin&&card=coins">Change</a></b>
         </div><?php
             }
             //('SELECT * FROM ' . CART . ' 
@@ -25,7 +25,7 @@ if ($site['coin_status'] == 'WORKING' || $_SESSION['USER_RANGE'] >= ROLE_OWNER) 
                     <h3 class="text-lg text-stone-400 flex gap-2 p-2 x"><a href='/' class="text-info">Home</a>/<a href='/shop' class="text-info">Shop</a></h3>
                 </div>
                 <div class="shop-page-message">
-                    <p>Happy Hour extra coins 30% for the rest of the week! <br><div syle="color:white;">Coins may take between 1-2 minutes to be delivered.</div></p>
+                    <p><br><div syle="color:white;"></div></p>
                 </div>
                 <div class='grid sm:grid-cols-2 lg:grid-cols-3 gap-2 justify-center'>
                     <?php
