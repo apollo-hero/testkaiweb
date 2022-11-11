@@ -27,8 +27,8 @@ if ($sql_related_item) {
          ?>
             <div class="flex h-48 items-center flex-col p-2 rounded-lg gap-4 border border-base-100 hover:border-info cursor-pointer ">
                <form id="submitForm" name="FormAddtoCart" class="h-full" method="POST" data-autosubmit>
-                  <a data-img='./assets/img/items/<?php echo $RELATED['vnum']; ?>.png' data-name='<?php echo $RELATED['name']; ?>' data-price='<?php echo ($RELATED['price']); ?>' data-id='<?php echo ($RELATED['productid']); ?>' onclick="ask(this)" class="flex h-full justify-between items-center flex-col " data-title ='<?php echo ($RELATED['description']); ?>' >
-                     <img src="./assets/img/items/<?php echo $RELATED['vnum']; ?>.png" height="40px" width="40px">
+                  <a data-img='./assets/img/items/<?php echo $RELATED['image']; ?>.png' data-name='<?php echo $RELATED['name']; ?>' data-price='<?php echo ($RELATED['price']); ?>' data-id='<?php echo ($RELATED['productid']); ?>' onclick="ask(this)" class="flex h-full justify-between items-center flex-col " data-title ='<?php echo ($RELATED['description']); ?>' >
+                     <img src="./assets/img/items/<?php echo $RELATED['image']; ?>.png" height="40px" width="40px">
                      <div class="items-center flex gap-2 justify-center py-2 border-b border-gray-700 mb-2">
                         <span class="font-bold "><?php echo $RELATED['price']; ?></span>
                         <span class="iconify text-warning" data-icon="majesticons:coins"></span>
