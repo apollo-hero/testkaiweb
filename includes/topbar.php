@@ -3,7 +3,7 @@
         <div class="topPanel-wrapper_left flex-c">
             <ul class="menu flex-c-c">
                 <li><a href="/news">News</a></li>
-                <li><a href="javascript:;" onclick="new modal('#register_modal');return false">Registration</a></li>
+                <li><a href="javascript:;" onclick="register();">Registration</a></li>
                 <li><a href="/downloads">Downloads</a></li>
                 <li><a href="/ranking">Rankings</a></li>
                 <li><a href="/rules">Rules</a></li>
@@ -266,7 +266,22 @@ The Terms' ownership provisions, warranty disclaimers, indemnification, and liab
     })
 
     function register_modal() {
+        var register = "<?php echo $site['register_status']; ?>";
+        if (register != "WORKING") {
+            notice('error', 'error', "Now you can't register!");
+            return;
+        }
         $('.close_mw').click();
+        new modal('#register_modal');
+        return false;
+    }
+
+    function register() {
+        var register = "<?php echo $site['register_status']; ?>";
+        if (register != "WORKING") {
+            notice('error', 'error', "Now you can't register!");
+            return;
+        }
         new modal('#register_modal');
         return false;
     }

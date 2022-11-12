@@ -203,6 +203,14 @@
     </script>
     <script>
         $(document).ready(function() {
+            // var status = "<?php //echo $_SESSION["register_status"]; ?>";
+            // if (status == "success"){
+            //     notice('success', 'success', "account created!");
+            // } elseif (status == "failed"){
+            //     notice('error', 'error', "Username or email are already registered.!");
+            // } elseif (status == "error"){
+            //     notice('error', 'error', "whoops!");
+            // }
             var refreshId = setInterval(function() {
                 $('#user-balance').load('includes/user_balance.php');
             }, 1000);

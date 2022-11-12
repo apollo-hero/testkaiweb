@@ -10,6 +10,14 @@ $last_login = $log[0];
 $last_login_ip = $log[1]['log_ip'];
 $current_login_ip = $log[0]['log_ip'];
 ?>
+<style>
+     .dmn-content {
+        width: 1100px;
+    }
+    .dmn-content:after, .dmn-content:before {
+        background:  transparent;
+    }
+</style>
 <main class="content">
     <div class="block-widget-2 justify-content-center">
         <div class="block-widget-1">
@@ -18,7 +26,7 @@ $current_login_ip = $log[0]['log_ip'];
 
             <div class="block-left"></div>
         </div>
-        <div class="dmn-content">
+        <div class="dmn-content"> 
             <div class="dmn-page-box">
                 <div class="dmn-page-title">
                     <h1>Account Panel</h1>
@@ -166,6 +174,11 @@ $current_login_ip = $log[0]['log_ip'];
                                     <?php } ?>
                                 </div>
                                 <div class="tab-pane fade p-2" id="character-services" role="tabpanel" aria-labelledby="character-services-tab">
+                                    <?php if ($site['shop_status'] == 'MAINTENANCE' && $USER['Authority'] < 1) { ?>
+                                        <div class="w-100 text-center text-light bg-danger p-3">
+                                            <b></i>The shop is currently in maintenance mode.</b>
+                                        </div>
+                                    <?php } else { ?>
                                     <div id="top_list" class="rankings">
                                         <div class="row">
                                             <div class="col-12">
@@ -208,7 +221,7 @@ $current_login_ip = $log[0]['log_ip'];
                                                                     $i++;
                                                                 ?>
                                                                     <tr height="70px">
-                                                                        <td width="17%"><?php echo $item['name']; ?></td>
+                                                                        <td width="17%" style="min-width:200px;"><?php echo $item['name']; ?></td>
                                                                         <td>
                                                                             <img src="./assets/img/items/<?php echo $item['image']; ?>.png" height="40px" width="40px">
                                                                         </td>
@@ -236,6 +249,9 @@ $current_login_ip = $log[0]['log_ip'];
                                                                         <td class="price" width="12%"><?php echo $item['price']; ?></td>
                                                                         <td>
                                                                             <a href="javascript:;" class="btn btn-sm btn-primary float-right btn-buy buy" pro_id="<?php echo $item['productid']; ?>" itemid="<?php echo $i; ?>">Buy</a>
+                                                                        </td>
+                                                                        <td>
+                                                                            <a href="javascript:;" class="btn btn-sm btn-primary float-right btn-description" image="<?php echo $item['image']; ?>" item="<?php echo $item['name']; ?>" content="<?php echo $item['description']; ?>">description</a>
                                                                         </td>
                                                                         </form>
                                                                     </tr>
@@ -253,7 +269,7 @@ $current_login_ip = $log[0]['log_ip'];
                                                                     $i++;
                                                                 ?>
                                                                     <tr height="70px">
-                                                                        <td width="17%"><?php echo $item['name']; ?></td>
+                                                                        <td width="17%" style="min-width:200px;"><?php echo $item['name']; ?></td>
                                                                         <td>
                                                                             <img src="./assets/img/items/<?php echo $item['image']; ?>.png" height="40px" width="40px">
                                                                         </td>
@@ -282,6 +298,9 @@ $current_login_ip = $log[0]['log_ip'];
                                                                         <td>
                                                                             <a href="javascript:;" class="btn btn-sm btn-primary float-right btn-buy buy" pro_id="<?php echo $item['productid']; ?>" itemid="<?php echo $i; ?>">Buy</a>
                                                                         </td>
+                                                                        <td>
+                                                                            <a href="javascript:;" class="btn btn-sm btn-primary float-right btn-description" image="<?php echo $item['image']; ?>" item="<?php echo $item['name']; ?>" content="<?php echo $item['description']; ?>">description</a>
+                                                                        </td>
                                                                         </form>
                                                                     </tr>
                                                                 <?php } ?>
@@ -293,10 +312,17 @@ $current_login_ip = $log[0]['log_ip'];
                                             </div>
                                         </div>
                                     </div>
+                                    <?php } ?>
                                 </div>
                                 <div class="tab-pane fade p-2 text-center" id="wheel-fortune" role="tabpanel" aria-labelledby="wheel-fortune-tab">
+                                    <?php if ($site['roulette_status'] == 'MAINTENANCE' && $USER['Authority'] < 1) { ?>
+                                        <div class="w-100 text-center text-light bg-danger p-3">
+                                            <b></i>The wheel is currently in maintenance mode.</b>
+                                        </div>
+                                    <?php } else { ?>
                                     <?php include 'roulette_new.php'; ?>
                                     <div class="w-100">
+                                        <!-- <input onchange="check()" id="double-jackpot" type="checkbox"><label>double jackpot</label> -->
                                         <select class="form-control w-100 mb-3" id="wheel-character">
                                             <option value="" disabled="" selected="">Select character</option>
                                             <?php
@@ -351,12 +377,26 @@ $current_login_ip = $log[0]['log_ip'];
                                             </div>
                                         </div>
                                     </div>
+                                    <?php } ?>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <!-- description modal -->
+    <div class="modal_window" id="description">
+        <a href="#" id="close_modal" class="close_mw"></a>
+        <h3 id="item_name"></h3>
+        <div class="modal_form">
+            <img src="./assets/img/items/<?php echo $item['image']; ?>.png" height="40px" width="40px" id="image">
+            
+            <p id="content" style="margin-top:30px; text-align: justify;">
+                
+            </p>
         </div>
     </div>
 </main>
@@ -384,6 +424,35 @@ $current_login_ip = $log[0]['log_ip'];
     })
     var coin = <?php echo $USER['Coins']; ?>;
     $(document).ready(function() {
+
+        $('#double-jackpot').on('click', function(){
+            if ($('#double-jackpot').is(':checked')) {
+
+                $('.jackpot-2').css('display', 'block');
+
+                } else {
+                $('.jackpot-2').css('display', 'none');
+            }
+        })
+        function check() {
+            console.log('check');
+            if ($('#double-jackpot').is(':checked')) {
+
+                $('.jackpot-2').css('display', 'block');
+
+            } else {
+                $('.jackpot-2').css('display', 'none');
+            }
+        }
+        $(".btn-description").on('click', function(){
+            var description = $(this).attr("content");
+            var name = $(this).attr("item");
+            var image = $(this).attr("image");
+            $('#content').html(description);
+            $('#item_name').html(name);
+            $('#image').attr('src', './assets/img/items/'+image+'.png');
+            new modal('#description');
+        })
         $(".buy").on('click', function() {
 
             var total = parseInt($(this).parent().prev().text());

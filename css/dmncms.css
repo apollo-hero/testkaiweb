@@ -1491,7 +1491,7 @@ form table td, .item_table td, .each_item td, .full td, .form table td{
 }
 .dmn-account-table tr th,.dmn-account-table tr td, .dmn-rankings-table tr th,.dmn-rankings-table tr td{
     border-bottom:1px solid #4b2931;
-    padding:10px 10px 10px 18px!important;
+    padding:10px 18px 10px 18px!important;
 }
 .dmn-rankings-table > thead > tr {
 	/*background-color: #191825 !important;

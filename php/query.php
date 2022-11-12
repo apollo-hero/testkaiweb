@@ -49,9 +49,10 @@
 						$temp = $con->query('SET search_path TO accounts;');
 						$SQL_USER_CHECK = $con->count("accounts",["OR" => ["Name" => htmlentities($_POST['InputUsername']), "Email" => htmlentities($_POST['InputEmail'])]]);//('SELECT COUNT(*) FROM ' . USER . ' WHERE ' . USER_NICK . ' = ? OR ' . USER_EMAIL . ' = ?');
 
-						if($SQL_USER_CHECK > 0)
-							echo "<script>alert('Username or email are already registered.');window.location='./index';</script>";
-
+						if($SQL_USER_CHECK > 0){
+							$_SESSION["register_status"] = "failed";
+							echo "<script>window.location='./index';</script>";
+						}
 						else {
 
 							$USER_PASS = hash('sha512', $_POST["InputPassword"]);
@@ -70,10 +71,15 @@
 
 							
 
-							if ($SQL_USER_REGISTER->rowCount() > 0)
-								echo "<script>alert('Successful registration. Proceed to login');window.location='./index';</script>";
-							else
-								echo "<script>alert('Error " . $TIME . " " . $DATE . "');window.location='./index';</script>";
+							if ($SQL_USER_REGISTER->rowCount() > 0){
+								$_SESSION["register_status"] = "success";
+								echo "<script>window.location='./index';</script>";
+							}
+							else{
+								$_SESSION["register_status"] = "error";
+								echo "<script>window.location='./index';</script>";
+							}
+								
 						}
 					}
 				}
@@ -1871,9 +1877,9 @@
 			$USER = $SQL_USER_DATA[0];
 
 
-			if ($USER['Coins'] < 150) {
+
+			if (($USER['Coins'] < 150 && $site['double_jackpot'] == 0) || ($USER['Coins'] < 300 && $site['double_jackpot'] == 1)) {
 				echo json_encode(["status"=>"failed", "message"=>'no enough balance']);
-			
 			}
 			else{
 				$coin = $USER['Coins'] - 150;
@@ -1882,107 +1888,91 @@
 
 				$temp = $con->query('SET search_path TO web;')->fetchAll();
 
-				$sql = "select * from rouletteweb where \"Rare\" = '0' order by RANDOM() limit 1";
+				if($site['double_jackpot'] == 0){
+					$sql = "select * from rouletteweb where \"Rare\" = '0' order by RANDOM() limit 1";
 		
-				  $jackpots = $con->query($sql)->fetchAll();
+				  	$jackpots = $con->query($sql)->fetchAll();
+				} else {
+					$sql = "select * from rouletteweb where \"Rare\" = '0' order by RANDOM() limit 2";
+		
+				  	$jackpots = $con->query($sql)->fetchAll();
+				}
+
+				
 	
 				$sql = "select * from rouletteweb where \"Rare\" = '1' order by RANDOM() limit 5";
 	
 				$rare = $con->query($sql)->fetchAll();
+
+				if($site['double_jackpot'] == 0 ){
+					$sql = "select * from rouletteweb where \"Rare\" = '2' order by RANDOM() limit 10";
+	
+					$common = $con->query($sql)->fetchAll();	
+				} else {
+
+					$sql = "select * from rouletteweb where \"Rare\" = '2' order by RANDOM() limit 9";
+	
+					$common = $con->query($sql)->fetchAll();
+				}
 	
 				$sql = "select * from rouletteweb where \"Rare\" = '2' order by RANDOM() limit 10";
 	
 				$common = $con->query($sql)->fetchAll();
 
-				$time_probablity = array(30,30,20,10, 10);
-				$times = array('2*1', '2*2', '2*3','3*1', '3*1+2*1');
-				$time_value = weighted_random($times, $time_probablity);
-
-				$value = array('rare', 'common');
-				$weight = array(30, 70);
-				if ($time_value == "2*1"){
-					$selected = weighted_random($value, $weight);
-					if ($selected == "rare"){
-						$rare[4] = $rare[rand(0,2)];
-					} else {
-						$common[9] = $common[rand(0,8)];
-					}
-				} elseif ($time_value == "2*2"){
-					$selected = weighted_random($value, $weight);
-					$selected_second = weighted_random($value, $weight);
-					if ($selected == "rare"){
-						$rare[4] = $rare[0];
-					} else {
-						$common[9] = $common[0];
-					}
-
-					if ($selected_second == "rare"){
-						$rare[3] = $rare[1];
-					} else {
-						$common[8] = $common[1];
-					}
-
-				} elseif ($time_value == '2*3'){
-					$selected = weighted_random($value, $weight);
-					$selected_second = weighted_random($value, $weight);
-					$selected_third = weighted_random($value, $weight);
-					if ($selected == "rare"){
-						$rare[4] = $rare[0];
-					} else {
-						$common[9] = $common[0];
-					}
-
-					if ($selected_second == "rare"){
-						$rare[3] = $rare[1];
-					} else {
-						$common[8] = $common[1];
-					}
-					
-					$common[7] = $common[2];
-				
-				} elseif ($time_value == '3*1'){
-					$selected = weighted_random($value, $weight);
-					if ($selected == "rare"){
-						$rare[4] = $rare[0];
-						$rare[3] = $rare[0];
-					} else {
-						$common[9] = $common[0];
-						$common[8] = $common[0];
-					}
-				} else {
-					$selected = weighted_random($value, $weight);
-					$selected_second = weighted_random($value, $weight);
-					if ($selected == "rare"){
-						$rare[4] = $rare[0];
-						$rare[3] = $rare[0];
-					} else {
-						$common[9] = $common[0];
-						$common[8] = $common[0];
-					}
-
-					if ($selected_second == "rare"){
-						$rare[2] = $rare[1];
-					} else {
-						$common[7] = $common[1];
-					}
-				}
-
-				// reward part //
 				$values = array('jackpot','rare','common');
-
-				$weights = array(3,37,60);
+				$weights = array(3,37,60); // Probability
 
 				$weighted_value = weighted_random($values, $weights);
 
 				if($weighted_value == "jackpot"){
-					$reward = $jackpots[0]['ID'];
+					if($site['double_jackpot'] == 0){
+						$reward = $jackpots[0]['ID']; // 1
+					} else {
+						$reward = $jackpots[rand(0,1)]['ID']; // 2
+					}
+					
 				} elseif ($weighted_value == "rare"){
-					$reward = $rare[rand(0,4)]['ID'];
+					$reward = $rare[rand(0,4)]['ID']; // 5
 				} else {
-					$reward = $common[rand(0, 9)]['ID'];
+					if($site['double_jackpot'] == 0){
+						$reward = $common[rand(0, 9)]['ID']; // 10
+					} else {
+						$reward = $common[rand(0, 8)]['ID']; // 9
+					}
+
+					
 				}
+
+				// $items = array();
+				// for ($i=0 ; $i<3; $i++){
+				// 	$items[$i] = $jackpots[0]['ID']; 
+				// }
 	
-				echo json_encode(["status"=>"ok", "times"=>$time_value, "reward"=>$reward, "jackpot"=>$jackpots, "rare" => $rare, "common" => $common]);
+				// for ($i=0 ; $i<5; $i++){
+				// 	$items[3+$i*7] = $rare[$i]['ID'];
+				// 	$items[4+$i*7] = $rare[$i]['ID']; 
+				// 	$items[5+$i*7] = $rare[$i]['ID'];
+				// 	$items[6+$i*7] = $rare[$i]['ID'];
+				// 	$items[7+$i*7] = $rare[$i]['ID'];
+				// 	$items[8+$i*7] = $rare[$i]['ID'];
+				// 	$items[9+$i*7] = $rare[$i]['ID'];
+				// }
+	
+				// $items[39] = $rare[3];
+				// $items[38] = $rare[4];
+	
+				// for ($i=0 ; $i<10; $i++){
+				// 	$items[41+$i*6] = $common[$i]['ID'];
+				// 	$items[42+$i*6] = $common[$i]['ID'];
+				// 	$items[43+$i*6] = $common[$i]['ID'];
+				// 	$items[44+$i*6] = $common[$i]['ID'];
+				// 	$items[45+$i*6] = $common[$i]['ID'];
+				// 	$items[40+$i*6] = $common[$i]['ID'];
+				// }
+	
+				// $reward = $items[rand(0,100)];
+	
+				echo json_encode(["status"=>"ok", "reward"=>$reward, "jackpot"=>$jackpots, "rare" => $rare, "common" => $common]);
 			}
 		
 			

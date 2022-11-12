@@ -191,11 +191,11 @@ include_once $_SERVER['DOCUMENT_ROOT'].'/vendor/autoload.php';
 				}
 			}
 			else{
-				for ($i = 0; $i < $Amount; $i++){
+				for ($i = 0; $i < $Amount; $i++){  //amount is rouletteweb amount 
 
 					$ARR = array(
 
-						"Amount" 	=> $DATO['amount'],
+						"Amount" 	=> $DATO['amount'], //shopitems amount
 						"ItemVNum" 	  	=> $VNum
 						);
 					$temp = $con->query('SET search_path TO mails;')->fetchAll();
