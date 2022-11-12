@@ -327,25 +327,31 @@ function reset_wheel_values(){
 }
 
 function bounce_won(element) {
-    console.log("animation");
-    var diff_height = element.height() * 0.8;
-    var diff_witdh = element.width() * 0.8;
+    // console.log("animation");
+    // var diff_height = element.height() * 0.8;
+    // var diff_witdh = element.width() * 0.8;
 
     
-    for(i = 0; i < 3; i++) {
-        element.animate({
-            width: '+=' + diff_witdh / (i+1),
-            height: '+=' + diff_height / (i+1),
-            maxWidth: '+=' + diff_witdh / (i+1),
-            maxHeight: '+=' + diff_height / (i+1),
-        },200)
-        .animate({
-            width: '-=' + diff_witdh / (i+1),
-            height: '-=' + diff_height / (i+1),
-            maxWidth: '+=' + diff_witdh / (i+1),
-            maxHeight: '+=' + diff_height / (i+1),
-        },200)
-    }        
+    // for(i = 0; i < 3; i++) {
+    //     element.animate({
+    //         width: '+=' + diff_witdh / (i+1),
+    //         height: '+=' + diff_height / (i+1),
+    //         maxWidth: '+=' + diff_witdh / (i+1),
+    //         maxHeight: '+=' + diff_height / (i+1),
+    //     },200)
+    //     .animate({
+    //         width: '-=' + diff_witdh / (i+1),
+    //         height: '-=' + diff_height / (i+1),
+    //         maxWidth: '+=' + diff_witdh / (i+1),
+    //         maxHeight: '+=' + diff_height / (i+1),
+    //     },200)
+    // }  
+    var keyframes = [
+          {transform: 'scale3d(1, 1, 1)', offset: 0}, 
+          {transform: 'scale3d(1.05, 1.05, 1.05)', offset: 0.5}, 
+          {transform: 'scale3d(1, 1, 1)', offset: 1}];
+    var timing = {duration: 900, iterations: 3};
+    element.animate(keyframes, timing);      
 }
 
 function add_to_saved(){
